@@ -5,6 +5,11 @@
     font-weight: bold;
     .block{
         display: block !important;
+        &.social{
+            p{
+                cursor: pointer;
+            }
+        }
     }
     .logo{
         img{
