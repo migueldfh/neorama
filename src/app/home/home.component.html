@@ -1,0 +1,71 @@
+<div class="main" fxLayout="row">
+    <div fxLayout="row" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center" class="baner">
+        <div fxFlex="80%" class="main-search">
+            <h3>Propiedades</h3>
+            <div class="options">
+                <mat-list fxLayoutGap="5.5%" fxLayoutAlign="center">
+                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 1" (click)="status(1)"><p>Comprar</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 2" (click)="status(2)"><p>Rentar</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 3" (click)="status(3)"><p>Desarrollos</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 4" (click)="status(4)"><p>Comercial</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 5" (click)="status(5)"><p>Temporal</p></mat-list-item>
+                </mat-list>
+            </div>
+            <div class="search-bar">
+                <div fxFlex="16%" class="select-search">
+                    <!-- <mat-form-field>
+                        <mat-select placeholder="Ver Desarrollos">
+                            <mat-option>Comprar</mat-option>
+                            <mat-option>Rentar</mat-option>
+                            <mat-option>Desarrollos</mat-option>
+                            <mat-option>Comercial</mat-option>
+                            <mat-option>Temporal</mat-option>
+                        </mat-select>
+                    </mat-form-field> -->
+                    <p>Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p>
+                </div>
+                <div fxFlex="90%" class="lookfor">
+                    <form class="example-form">
+                        <mat-form-field appearance="fill">
+                            <input matInput placeholder="Buscar por ubicación" class="classRed">
+                        </mat-form-field>
+                    </form>
+                </div>
+            </div>
+            <div class="last-filters">
+                <button mat-button class="sub">Buscar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div fxLayout="row" class="text-section">
+    <div fxFlex="20%" class="logo-n">
+        <img src="../../assets/img/Neorama_Web_min.png">
+    </div>
+    <div fxFlex="40%" class="left content">
+        Una entrada a lo que es Neorama, podría ser algo
+        sobre los valores de la empresa o el trabajo que
+        desempeñan los agentes.
+    </div>
+</div>
+<div fxLayout="row" class="properties-section">
+    <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start center" class="baner">
+        <div fxFlex="30%" class="details" *ngFor="let prop of properties">
+            <div fxLayout="column">
+                <div fxLayout="row">
+                    <img src="{{prop.img}}">
+                </div>
+                <div fxLayout="row" class="bottom-column">
+                    <div class="flex text" fxFlex="40%">
+                        <h3>Desde {{prop.price | currency }}</h3>
+                    </div>
+                    <div class="flex buttons" fxFlex="60%">
+                        <button mat-button class="blue-rounded">Tour</button>
+                        <button mat-button class="blue-rounded">Detalles</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

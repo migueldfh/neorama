@@ -1,0 +1,74 @@
+.aboutus{
+    background: #acb9c7;
+    height: 100vh;
+    .title{
+        h2{
+            color: #fff;
+            font-size: 4rem;
+            position: relative;
+            z-index: 1000;
+            width: 70%;
+            left: 4rem;
+            bottom: 11rem;
+            line-height: 50px;
+        }
+        img{
+            &.contrato{
+                position: absolute;
+                width: 50%;
+                left: 4rem;
+                top: 27rem;
+            }
+        }
+    }
+    .sub{
+        h3{
+            color: #001c2b;
+            font-weight: 100;
+            font-size: 2rem;
+            width: 100%;
+            position: relative;
+            right: 3rem;
+            bottom: 9rem;
+        }
+        img{
+            &.logo-middle{
+                position: absolute;
+                width: 55%;
+                left: 33rem;
+                bottom: -8rem;
+            }
+        }
+    }
+}
+.people{
+    background: #acb9c7;
+    height: 160vh;
+    .baner {
+        margin-left: 12rem;
+    }
+    img{
+        &.empleados{
+            width: 100%;
+        }
+    }
+    .details{
+        h2{
+            position: relative;
+            width: 50%;
+            font-size: 3rem;
+            color: #fff;
+            font-weight: bold;
+            line-height: 40px;
+            bottom: 6rem;
+            z-index: 10000;
+            margin-bottom: -6rem;
+        }
+        h3{
+            margin-bottom: 7rem;
+        }
+    }
+}
+.mat-toolbar.mat-primary{
+    background: #acb9c7 !important;
+}

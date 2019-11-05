@@ -1,0 +1,26 @@
+.footer{
+    background: #95acbd;
+    color: #001c2b;
+    height: 43vh;
+    font-weight: bold;
+    .block{
+        display: block !important;
+    }
+    .logo{
+        img{
+            position: relative;
+            bottom: 20px;
+        }
+    }
+    .info{
+        font-size: 0.9rem;
+        p:first-child{
+            width: 60%;
+            margin: 60px 0px;
+        }
+    }
+    .copy{
+        padding-left: 1.8vw;
+        margin-top: 4vh;
+    }
+}

@@ -1,0 +1,30 @@
+<div fxLayout="row wrap" fxLayout="100%" fxLayoutAlign="flex-start center" class="contact">
+    <div fxLayout="100%">
+        <div fxLayout="50%" class="title">
+            <h3>No dude en comunicarse con nosotros en cualquier momento. <br/><br/>Envie sus preguntas y comentarios para que podamos abordar su consulta de manera más efectiva.</h3>
+        </div>
+        <div fxLayout="50%">
+            <img src="../../assets/img/chair-discussing-facial-expression-1181557.png" alt="Contacto" class="contact-img">
+        </div>
+    </div>
+</div>
+<div fxLayout="row wrap" fxLayout="100%" class="contact-form">
+    <div fxLayout="50%" class="title" fxLayoutAlign="flex-start center">
+        <h2>Póngase en contacto con nosotros</h2>
+        <p>Complete sus datos y agente de Neorama se pondrá en contacto con usted en breve. <br/><br/>Sea uno de los primeros en enterarse de noticias exclusivas sobre proyectos, información y consejos de nuestros expertos para ayudarlo.</p>
+    </div>
+    <div fxLayout="50%">
+        <!-- <form class="example-form">
+            <mat-form-field appearance="standard">
+                <input matInput placeholder="Email" class="classRed">
+            </mat-form-field>
+        </form> -->
+    </div>
+</div>
+
+<div fxLayout="100%" fxLayoutAlign="flex-start center" class="map">
+    <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+</div>
+<app-footer></app-footer>

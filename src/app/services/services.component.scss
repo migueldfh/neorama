@@ -1,0 +1,61 @@
+.services{
+    .blue-back{
+        background: #001c2b;
+        height: 80vh;
+        width: 30%;
+    }
+    .img-back{
+        img{
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+            width: 70%;
+            margin-left: -1px;
+            height: 80.1vh;
+        }
+    }
+    .over-txt{
+        position: absolute;
+        color: #001c2b;
+        font-size: 3.5rem;
+        left: 41%;
+        top: 19%;
+        h3{
+            &:first-child{
+                margin-bottom: 0px;
+            }
+            &:last-child{
+                margin-top: 0px;
+                position: relative;
+                bottom: 16px;
+            }
+        }
+    }
+}
+.services-tabs{
+    height: 100vh;
+    background: #001c2b;
+    .tabs-container{
+        width: 100%;
+        position: relative;
+        bottom: 30%;
+        .tabs{
+            width: 70%;
+            height: 80vh;
+            position: relative;
+            top: 210px;
+            p{
+                color: #fff;
+                font-size: 1.5rem;
+            }
+            .mat-tab-label .mat-tab-label-content{
+                font-size: 1.2rem !important;
+            }
+            .mat-tab-label{
+                color: #fff;
+            }
+            md-tabs .md-tab.md-active{
+                color: rgb(16,108,200);
+            }
+        }
+    }
+}

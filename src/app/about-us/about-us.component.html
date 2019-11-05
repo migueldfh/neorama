@@ -1,0 +1,29 @@
+<div fxLayout="row wrap" fxLayout="100%" fxLayoutAlign="flex-start center" class="aboutus">
+    <div fxLayout="50%" class="title">
+        <h2>Creamos un futuro para tu familia</h2>
+        <img src="../../assets/img/us-hands.png" class="contrato" alt="Neorama Logo">
+    </div>
+    <div fxLayout="50%" class="sub" fxLayoutAlign="center">
+        <h3>Expertos en el área inmobiliaria</h3>
+        <img src="../../assets/img/Neorama_Web_logo_full.png" class="logo-middle" alt="Neorama Logo">
+    </div>
+</div>
+<div fxLayout="row wrap" fxLayoutAlign="flex-start center" class="people">
+    <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start center" class="baner">
+        <div fxFlex="20%" class="details" *ngFor="let prop of empleados">
+            <div fxLayout="column">
+                <div fxLayout="row">
+                    <img class="empleados" src="{{prop.img}}">
+                </div>
+                <div fxLayout="row">
+                    <div class="flex" fxFlex="100%">
+                        <h2>{{prop.name}}</h2>
+                        <p>{{prop.email}}</p>
+                        <h3>T. {{prop.phone}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

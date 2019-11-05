@@ -1,0 +1,60 @@
+.contact{
+    height: 100vh;
+    margin-top: -5rem;
+    .title{
+        h3{
+            font-size: 1.7rem;
+            font-weight: 400;
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+    img{
+        &.contact-img{
+            position: relative;
+            width: 75%;
+            left: 9rem;
+        }
+    }
+}
+.contact-form{
+    height: 50vh;
+    margin-top: -11rem;
+    .title{
+        display: block !important; 
+        padding-left: 7rem;
+        h2{
+            font-size: 2rem;
+            font-weight: bold;
+            color: #001c2b;   
+            margin-bottom: 3rem; 
+            position: relative;
+            top: -3rem;        
+        }
+        p{
+            color: #001c2b;   
+            width: 40%;
+            font-size: 1.2rem;
+        }
+    }
+    .example-form{
+        color: #001c2b; 
+        z-index: 100000;
+        position: relative;
+        top: 2rem;  
+        ::ng-deep {
+            .classRed::placeholder {   
+                color: #001c2b !important;  
+                }
+            }
+    }
+}
+.map{
+    margin-left: 10rem;
+    margin-bottom: 6rem;
+    agm-map {
+        height: 60vh;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
