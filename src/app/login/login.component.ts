@@ -33,15 +33,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  reg(data){
-    console.log("info: ", data);
-    this.user.register(data).subscribe((data_resp) =>{
-      console.log("Response: ", data_resp);
-    },(err)=>{
-      console.log(err);
-    });
-  }
-
   signup(x){
     if(x){
       this.signup_val = true;

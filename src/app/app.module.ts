@@ -19,6 +19,8 @@ import { AgmCoreModule } from '@agm/core';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-sucursales.component';
+import { DashboardConsultoresComponent } from './dashboard-consultores/dashboard-consultores.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     DashboardComponent,
     LoginComponent,
+    DashboardSucursalesComponent,
+    DashboardConsultoresComponent,
   ],
   imports: [
     BrowserModule,
