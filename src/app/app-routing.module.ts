@@ -6,6 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { PropertiesComponent } from './properties/properties.component';
+import { LoginComponent } from './login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-sucursales.component';
+import { DashboardConsultoresComponent } from './dashboard-consultores/dashboard-consultores.component';
 
 
 const routes: Routes = [
@@ -15,6 +19,10 @@ const routes: Routes = [
   { path: 'develops', component: DesarrollosComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'log', component: LoginComponent },
+  { path: 'dash', component: DashboardComponent },
+  { path: 'sucursales', component: DashboardSucursalesComponent },
+  { path: 'consultores', component: DashboardConsultoresComponent }
 ];
 
 @NgModule({
