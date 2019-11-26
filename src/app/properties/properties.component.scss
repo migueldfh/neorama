@@ -143,3 +143,46 @@
         width: 100%;
     }
 }
+.block{
+    display: block !important;
+    position: fixed;
+    z-index: 100;
+    .red{
+        background: #D32E85;
+        padding: 20px;
+        margin: 0px;
+        width: 43% !important;
+        -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.5s;
+        &:hover{
+            width: 70% !important; 
+        }
+    }
+    .blue{
+        background: #4267B2;
+        padding: 20px;
+        margin: 0px;
+        -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.5s;
+        width: 43% !important;
+        &:hover{
+            width: 70% !important; 
+        }
+    }
+    .yellow{
+        background: #1991DA;
+        padding: 20px;
+        margin: 0px;
+        -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.5s;
+        width: 43% !important;
+        &:hover{
+            width: 70% !important; 
+        }
+    }
+    &.social{
+        p{
+            cursor: pointer;
+        }
+    }
+}

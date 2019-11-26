@@ -8,7 +8,7 @@
             position: relative;
             z-index: 1000;
             width: 70%;
-            left: 4rem;
+            left: 4.5rem;
             bottom: 11rem;
             line-height: 50px;
         }
@@ -16,7 +16,7 @@
             &.contrato{
                 position: absolute;
                 width: 50%;
-                left: 4rem;
+                left: 4.6rem;
                 top: 27rem;
             }
         }
@@ -38,6 +38,16 @@
                 left: 33rem;
                 bottom: -8rem;
             }
+        }
+    }
+}
+.info{
+    background: #acb9c7;
+    .div-block{
+        display: block !important;
+        &.us-info{
+            margin: 0 auto 5vh auto;
+            font-size: 1.2rem;
         }
     }
 }
@@ -71,4 +81,47 @@
 }
 .mat-toolbar.mat-primary{
     background: #acb9c7 !important;
+}
+.block{
+    display: block !important;
+    position: fixed;
+    z-index: 100;
+    .red{
+        background: #D32E85;
+        padding: 20px;
+        margin: 0px;
+        width: 43% !important;
+        -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.5s;
+        &:hover{
+            width: 70% !important; 
+        }
+    }
+    .blue{
+        background: #4267B2;
+        padding: 20px;
+        margin: 0px;
+        -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.5s;
+        width: 43% !important;
+        &:hover{
+            width: 70% !important; 
+        }
+    }
+    .yellow{
+        background: #1991DA;
+        padding: 20px;
+        margin: 0px;
+        -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.5s;
+        width: 43% !important;
+        &:hover{
+            width: 70% !important; 
+        }
+    }
+    &.social{
+        p{
+            cursor: pointer;
+        }
+    }
 }
