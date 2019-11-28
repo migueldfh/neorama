@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from '../../providers/user-api/user-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,8 @@ export class LoginComponent implements OnInit {
   signup_val: boolean;
 
   constructor(
-    public user: UserServicesService
+    public user: UserServicesService,
+    private router: Router
   ) { 
     this.signup_val = false;
   }
@@ -28,6 +30,9 @@ export class LoginComponent implements OnInit {
 
     this.user.login(merged).subscribe((data) =>{
       console.log("Response: ", data);
+      if(data == 401){
+        this.router.navigateByUrl(`/dash`);
+      }
     },(err)=>{
       console.log(err);
     });

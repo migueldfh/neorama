@@ -1,0 +1,64 @@
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { UserServicesService } from 'src/providers/user-api/user-services.service';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { DialogAddConsultorComponent } from './dialog-add-consultor/dialog-add-consultor.component';
+
+@Component({
+  selector: 'app-dashboard-sucursal',
+  templateUrl: './dashboard-sucursal.component.html',
+  styleUrls: ['./dashboard-sucursal.component.scss']
+})
+export class DashboardSucursalComponent implements OnInit {
+  sucursalData: ArrayBuffer;
+  get_id: string;
+  sucursalData_users: any;
+  users: boolean = false;
+  stylesUrlEnviroment: string;
+
+  constructor(
+    private readonly route: ActivatedRoute,
+    public user: UserServicesService,
+    public dialog: MatDialog
+  ) {
+    this.stylesUrlEnviroment = "dist/neorama";
+   }
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this.get_id = params.get("id");
+    });
+    this.goSucursal(this.get_id);
+    console.log("User state?", this.users)
+  }
+
+  goSucursal(id){
+    this.user.getSucursal(id).subscribe(
+      (resp)=> {
+        this.sucursalData = resp;
+        this.sucursalData_users = resp['users'];
+        console.log("Usuarios?", resp['users']);
+        if(resp['users'] === []){
+          this.users = false;
+        }else{
+          this.users = true;
+        }
+      },(err)=>{
+        console.log(err);
+      }
+    )
+  }
+  
+  agregarUsuarios(){
+    const dialogRef = this.dialog.open(DialogAddConsultorComponent, {
+      width: '60%',
+      data: {id: this.get_id}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      //Regargar lista de usuarios
+      this.goSucursal(this.get_id);
+    });
+  }
+
+}
