@@ -10,7 +10,15 @@ import { DialogAddConsultorComponent } from './dialog-add-consultor/dialog-add-c
   styleUrls: ['./dashboard-sucursal.component.scss']
 })
 export class DashboardSucursalComponent implements OnInit {
-  sucursalData: ArrayBuffer;
+  sucursalData: {
+    name: string,
+    state: string,
+    address: string
+  } = {
+    name: '',
+    state: '',
+    address: '',
+  }
   get_id: string;
   sucursalData_users: any;
   users: boolean = false;
@@ -33,7 +41,9 @@ export class DashboardSucursalComponent implements OnInit {
   goSucursal(id){
     this.user.getSucursal(id).subscribe(
       (resp)=> {
-        this.sucursalData = resp;
+        this.sucursalData.name = resp['name'];
+        this.sucursalData.address = resp['address'];
+        this.sucursalData.state = resp['state'];
         this.sucursalData_users = resp['users'];
         console.log("Usuarios?", resp['users']);
         if(resp['users'] === []){

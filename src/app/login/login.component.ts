@@ -45,4 +45,8 @@ export class LoginComponent implements OnInit {
       this.signup_val = false;
     }
   }
+
+  reg(val){
+    console.log("Datos para registro: ", val);
+  }
 }
