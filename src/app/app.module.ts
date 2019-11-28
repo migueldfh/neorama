@@ -20,7 +20,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-sucursales.component';
-import { DashboardConsultoresComponent } from './dashboard-consultores/dashboard-consultores.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { DashboardSucursalComponent } from './dashboard-sucursal/dashboard-sucursal.component';
+import { DialogAddConsultorComponent } from './dashboard-sucursal/dialog-add-consultor/dialog-add-consultor.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,8 @@ import { DashboardConsultoresComponent } from './dashboard-consultores/dashboard
     DashboardComponent,
     LoginComponent,
     DashboardSucursalesComponent,
-    DashboardConsultoresComponent,
+    DashboardSucursalComponent,
+    DialogAddConsultorComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,8 @@ import { DashboardConsultoresComponent } from './dashboard-consultores/dashboard
     MatIconModule,
     MatButtonModule,
     MatTabsModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
@@ -60,6 +66,9 @@ import { DashboardConsultoresComponent } from './dashboard-consultores/dashboard
     })
   ],
   providers: [],
+  entryComponents:[
+    DialogAddConsultorComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -49,6 +49,32 @@ export class UserServicesService {
     return seq;
   }
 
+  getSucursal(id){
+
+    let seq = this.api.get("venue/"+id);
+   
+    seq.subscribe((res: any) => {
+      console.log("get sucursal resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+  
+  addSucursal(body){
+
+    let seq = this.api.post("venues", body);
+   
+    seq.subscribe((res: any) => {
+      console.log("register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
   _loggedIn(resp) {
     this._user = resp.user;
   }

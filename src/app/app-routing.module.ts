@@ -9,7 +9,7 @@ import { PropertiesComponent } from './properties/properties.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-sucursales.component';
-import { DashboardConsultoresComponent } from './dashboard-consultores/dashboard-consultores.component';
+import { DashboardSucursalComponent } from './dashboard-sucursal/dashboard-sucursal.component';
 
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: 'log', component: LoginComponent },
   { path: 'dash', component: DashboardComponent },
   { path: 'sucursales', component: DashboardSucursalesComponent },
-  { path: 'consultores', component: DashboardConsultoresComponent }
+  { path: 'sucursal/:id', component: DashboardSucursalComponent },
 ];
 
 @NgModule({
