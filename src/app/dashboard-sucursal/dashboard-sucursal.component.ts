@@ -14,14 +14,12 @@ export class DashboardSucursalComponent implements OnInit {
   get_id: string;
   sucursalData_users: any;
   users: boolean = false;
-  stylesUrlEnviroment: string;
 
   constructor(
     private readonly route: ActivatedRoute,
     public user: UserServicesService,
     public dialog: MatDialog
   ) {
-    this.stylesUrlEnviroment = "dist/neorama";
    }
 
   ngOnInit() {
