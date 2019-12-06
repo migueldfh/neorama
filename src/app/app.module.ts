@@ -24,6 +24,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { DashboardSucursalComponent } from './dashboard-sucursal/dashboard-sucursal.component';
 import { DialogAddConsultorComponent } from './dashboard-sucursal/dialog-add-consultor/dialog-add-consultor.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { StickComponent } from './stick/stick.component';
+import { DashboardPropiedadesComponent } from './dashboard-propiedades/dashboard-propiedades.component';
+import { PreviewComponent } from './home/preview/preview.component';
+import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-propiedad.component';
+import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-agregar-propiedad/dialog-agregar-propiedad.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +45,12 @@ import { MatDialogModule } from '@angular/material/dialog';
     LoginComponent,
     DashboardSucursalesComponent,
     DashboardSucursalComponent,
-    DialogAddConsultorComponent
+    DialogAddConsultorComponent,
+    PreviewComponent,
+    StickComponent,
+    DashboardPropiedadesComponent,
+    DashboardPropiedadComponent,
+    DialogAgregarPropiedadComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +77,9 @@ import { MatDialogModule } from '@angular/material/dialog';
   ],
   providers: [],
   entryComponents:[
-    DialogAddConsultorComponent
+    DialogAddConsultorComponent,
+    PreviewComponent,
+    DialogAgregarPropiedadComponent
   ],
   bootstrap: [AppComponent]
 })

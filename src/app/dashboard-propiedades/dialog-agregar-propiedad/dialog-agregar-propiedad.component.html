@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>Agregar Prpiedad</h2>
+
+<mat-dialog-content>
+    <div class="m-subheader">
+        <div fxLayoutAlign="left" class="main-container" *ngIf="!result">
+            <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="reg(register.value)">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Nombre Completo" name="name" autocomplete="off" ngModel>
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="E-mail" name="email" autocomplete="off" ngModel>
+                    </mat-form-field>
+                <div class="m-login__form-action">
+                    <button class="mat-raised-button">
+                        <input type="submit" value="Agregar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-dialog-content>

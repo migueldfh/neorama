@@ -10,6 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-sucursales.component';
 import { DashboardSucursalComponent } from './dashboard-sucursal/dashboard-sucursal.component';
+import { DashboardPropiedadesComponent } from './dashboard-propiedades/dashboard-propiedades.component';
+import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-propiedad.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
   { path: 'dash', component: DashboardComponent },
   { path: 'sucursales', component: DashboardSucursalesComponent },
   { path: 'sucursal/:id', component: DashboardSucursalComponent },
+  { path: 'propiedades', component:  DashboardPropiedadesComponent },
+  { path: 'propiedad/:id', component:  DashboardPropiedadComponent },
 ];
 
 @NgModule({

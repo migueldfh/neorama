@@ -1,47 +1,43 @@
 <app-menu></app-menu>
 <div class="main" fxLayout="row">
-    <div fxLayout="40%" class="social block">
-        <a href="https://www.facebook.com/neoramamx/" target="_blank"><p class="blue"><img src="../../assets/img/Fb.png" alt=""></p></a>
-        <a href="https://www.instagram.com/neoramamx/" target="_blank"><p class="red"><img src="../../assets/img/insta.png" alt=""></p></a>
-        <a href="http://www.twitter.com/" target="_blank"><p class="yellow"><img src="../../assets/img/tw.png" alt=""></p></a>
-    </div>
-        <div fxLayout="row" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center" class="baner">
-            <div fxFlex="80%" class="main-search">
-                <h3>Propiedades</h3>
-                <div class="options">
-                    <mat-list fxLayoutGap="5.5%" fxLayoutAlign="center">
-                        <mat-list-item fxFlex="10%"><p>Comprar</p></mat-list-item>
-                        <mat-list-item fxFlex="10%"><p>Rentar</p></mat-list-item>
-                        <mat-list-item fxFlex="10%"><p>Desarrollos</p></mat-list-item>
-                        <mat-list-item fxFlex="10%"><p>Comercial</p></mat-list-item>
-                        <mat-list-item fxFlex="10%"><p>Temporal</p></mat-list-item>
-                    </mat-list>
+<app-stick></app-stick>
+    <div fxLayout="row" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center" class="baner">
+        <div fxFlex="80%" class="main-search">
+            <h3>Propiedades</h3>
+            <div class="options">
+                <mat-list fxLayoutGap="5.5%" fxLayoutAlign="center">
+                    <mat-list-item fxFlex="10%"><p>Comprar</p></mat-list-item>
+                    <mat-list-item fxFlex="10%"><p>Rentar</p></mat-list-item>
+                    <mat-list-item fxFlex="10%"><p>Desarrollos</p></mat-list-item>
+                    <mat-list-item fxFlex="10%"><p>Comercial</p></mat-list-item>
+                    <mat-list-item fxFlex="10%"><p>Temporal</p></mat-list-item>
+                </mat-list>
+            </div>
+            <div class="search-bar">
+                <div fxFlex="16%" class="select-search">
+                    <!-- <mat-form-field>
+                        <mat-select placeholder="Ver Desarrollos">
+                            <mat-option>Comprar</mat-option>
+                            <mat-option>Rentar</mat-option>
+                            <mat-option>Desarrollos</mat-option>
+                            <mat-option>Comercial</mat-option>
+                            <mat-option>Temporal</mat-option>
+                        </mat-select>
+                    </mat-form-field> -->
+                    <p>Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p>
                 </div>
-                <div class="search-bar">
-                    <div fxFlex="16%" class="select-search">
-                        <!-- <mat-form-field>
-                            <mat-select placeholder="Ver Desarrollos">
-                                <mat-option>Comprar</mat-option>
-                                <mat-option>Rentar</mat-option>
-                                <mat-option>Desarrollos</mat-option>
-                                <mat-option>Comercial</mat-option>
-                                <mat-option>Temporal</mat-option>
-                            </mat-select>
-                        </mat-form-field> -->
-                        <p>Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p>
-                    </div>
-                    <div fxFlex="90%" class="lookfor">
-                        <form class="example-form">
-                            <mat-form-field appearance="fill">
-                                <input matInput placeholder="Buscar por ubicación" class="classRed">
-                            </mat-form-field>
-                        </form>
-                    </div>
+                <div fxFlex="90%" class="lookfor">
+                    <form class="example-form">
+                        <mat-form-field appearance="fill">
+                            <input matInput placeholder="Buscar por ubicación" class="classRed">
+                        </mat-form-field>
+                    </form>
                 </div>
-                <div class="last-filters">
-                    <button mat-button class="sub">Buscar</button>
-                </div>
+            </div>
+            <div class="last-filters">
+                <button mat-button class="sub">Buscar</button>
             </div>
         </div>
     </div>
+</div>
 <app-footer></app-footer>

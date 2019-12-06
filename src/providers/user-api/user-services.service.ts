@@ -28,7 +28,7 @@ export class UserServicesService {
     let seq = this.api.post("salesman", body);
    
     seq.subscribe((res: any) => {
-      console.log("register resp: ", res);
+      // console.log("Register resp: ", res);
     }, err => {
       console.error('ERROR', err);
     });
@@ -41,7 +41,46 @@ export class UserServicesService {
     let seq = this.api.get("venues");
    
     seq.subscribe((res: any) => {
-      console.log("register resp: ", res);
+      // console.log("Sucursales resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  propiedades(){
+
+    let seq = this.api.get("holdings");
+   
+    seq.subscribe((res: any) => {
+      console.log("Propiedades resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  getPropiedad(id){
+
+    let seq = this.api.get("holdings/"+id);
+   
+    seq.subscribe((res: any) => {
+      console.log("Propiedades resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  postPropiedad(body){
+
+    let seq = this.api.post("holdings", body);
+   
+    seq.subscribe((res: any) => {
+      console.log("Propiedades resp: ", res);
     }, err => {
       console.error('ERROR', err);
     });
@@ -54,7 +93,7 @@ export class UserServicesService {
     let seq = this.api.get("venue/"+id);
    
     seq.subscribe((res: any) => {
-      console.log("get sucursal resp: ", res);
+      // console.log("get sucursal resp: ", res);
     }, err => {
       console.error('ERROR', err);
     });

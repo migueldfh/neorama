@@ -1,0 +1,30 @@
+.prop-container{
+    display: block !important;
+    .img img{
+        width: 100%;
+    }
+    .prop-info{
+        padding: 10px;
+        h4{
+            margin-bottom: 0;
+        }
+        h2{
+            margin-top: 5px;
+        }
+        button.blue{
+            background: #001c2b;
+            color: #fff;
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: 100;
+            padding: 5px;
+        }
+    }
+}
+.mat-dialog-content{
+    overflow: hidden;
+}
+.mat-dialog-container{
+    background: #fff !important;
+    color: black !important;
+}

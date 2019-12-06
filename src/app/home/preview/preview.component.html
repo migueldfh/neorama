@@ -1,0 +1,21 @@
+<mat-dialog-content>
+    <div class="m-subheader">
+        <div fxLayoutAlign="left" class="main-container">
+            <div fxLayout="row" class="prop-container">
+                <div class="img">
+                    <img src="{{prop.img}}" alt="{{prop.name}}">
+                </div>
+                <div class="prop-info">
+                    <h4>Desde</h4>
+                    <h2>MXN {{prop.price | currency}}</h2>
+                    <p>{{prop.address}}</p>
+                    <button class="mat-raised-button blue">Contactar!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<!-- <mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+</mat-dialog-actions> -->

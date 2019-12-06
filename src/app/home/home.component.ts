@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { PreviewComponent } from './preview/preview.component';
 
 @Component({
   selector: 'app-home',
@@ -38,38 +40,52 @@ export class HomeComponent implements OnInit {
 
   properties: any = [
     {
+      id: 1,
       name: 'Monterrey',
       img: '../../assets/img/architectural-design-architecture-balcony-2775313.jpg',
-      price: '33000'
+      price: 33000,
+      address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
+      id: 2,
       name: 'Escobedo',
       img: '../../assets/img/apartments-architectural-design-architecture-2334160.jpg',
-      price: '33000'
+      price: 33000,
+      address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
+      id: 3,
       name: 'San Nicolás',
       img: '../../assets/img/pexels-photo-206172.jpeg',
-      price: '33000'
+      price: 33000,
+      address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
+      id: 4,
       name: 'Linda Vista',
       img: '../../assets/img/architectural-design-architecture-country-home-2287310.jpg',
-      price: '33000'
+      price: 33000,
+      address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
+      id: 5,
       name: 'Centro de Mty',
       img: '../../assets/img/architectural-design-architecture-balcony-2775313.jpg',
-      price: '33000'
+      price: 33000,
+      address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
+      id: 6,
       name: 'Monterrey',
       img: '../../assets/img/pexels-photo-293983.jpeg',
-      price: '33000'
+      price: 33000,
+      address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
   ]
   
-  constructor() { 
+  constructor(
+    public dialog: MatDialog
+  ) { 
     this.selected = false;
   }
 
@@ -104,5 +120,18 @@ export class HomeComponent implements OnInit {
       }
       this.selected = true;
     }
+  }
+
+  preview(prop){
+    const dialogRef = this.dialog.open(PreviewComponent, {
+      width: '30%',
+      data: {
+        propObj: prop
+      }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      //Nothing here
+    });
   }
 }
