@@ -11,14 +11,20 @@ export interface DialogData {
   styleUrls: ['./preview.component.scss']
 })
 export class PreviewComponent implements OnInit {
-  prop: any[];
+  img: any;
+  name: any;
+  price: any;
+  address: any;
 
   constructor(
     public dialogRef: MatDialogRef<PreviewComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
   ) { 
     //Obtener datos de la propiedad
-    this.prop = data.propObj;
+    this.img = data.propObj['img'];
+    this.name = data.propObj['name'];
+    this.price = data.propObj['price'];
+    this.address = data.propObj['address'];
   }
 
 

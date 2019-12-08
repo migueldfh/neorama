@@ -12,4 +12,7 @@ export class DialogAgregarPropiedadComponent implements OnInit {
   ngOnInit() {
   }
 
+  reg(val){
+    console.log("Values: ", val);
+  }
 }

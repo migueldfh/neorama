@@ -2,7 +2,7 @@
 
 <mat-dialog-content>
     <div class="m-subheader">
-        <div fxLayoutAlign="left" class="main-container" *ngIf="!result">
+        <div fxLayoutAlign="left" class="main-container">
             <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="reg(register.value)">
                     <mat-form-field>
                         <input matInput type="text" placeholder="Nombre Completo" name="name" autocomplete="off" ngModel>
