@@ -64,7 +64,20 @@ export class UserServicesService {
 
   getPropiedad(id){
 
-    let seq = this.api.get("holdings/"+id);
+    let seq = this.api.get("holding/"+id);
+   
+    seq.subscribe((res: any) => {
+      console.log("Propiedades resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  deletePropiedad(id){
+
+    let seq = this.api.get("holdings/d/"+id);
    
     seq.subscribe((res: any) => {
       console.log("Propiedades resp: ", res);

@@ -12,16 +12,16 @@
     border-radius: 5px;
     margin: 0 10px;
 }
+.btns{
+    display: flex;
+    text-align: center;
+}
 .m-widget1{
     padding: 12px !important;
 }
 .disabled{
     opacity: 0.5;
     cursor: not-allowed;
-}
-.btns{
-    display: flex;
-    text-align: center;
 }
 .listado{
     margin: 10px 0;

@@ -51,7 +51,8 @@ export class DialogAgregarPropiedadComponent implements OnInit {
 
     let body = {
       reference: data.reference,
-      image: data. image,
+      // image: data.image,
+      image: "/",
       price: data.price,
       owner: data.owner,
       producer: data.producer,
@@ -78,7 +79,7 @@ export class DialogAgregarPropiedadComponent implements OnInit {
       city: data.city,
       state: data.state,
       zipcode: data.zipcode,
-      url: null
+      url: "/"
     }
     
     this.user.postPropiedad(body).subscribe((data_resp) =>{
