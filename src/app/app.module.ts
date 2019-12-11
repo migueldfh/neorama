@@ -29,7 +29,6 @@ import { DashboardPropiedadesComponent } from './dashboard-propiedades/dashboard
 import { PreviewComponent } from './home/preview/preview.component';
 import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-propiedad.component';
 import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-agregar-propiedad/dialog-agregar-propiedad.component';
-import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -72,7 +71,6 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
-    MatCarouselModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBRJy3OD4q4_BAx__3fZGlEXGwQHMB5YU4'
     })
