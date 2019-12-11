@@ -32,20 +32,24 @@
 </div>
 <div fxLayout="row wrap" fxLayoutAlign="flex-start center" class="people">
     <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start center" class="baner">
-        <div fxFlex="20%" class="details" *ngFor="let prop of empleados">
-            <div fxLayout="column">
-                <div fxLayout="row">
-                    <img class="empleados" src="{{prop.img}}">
-                </div>
-                <div fxLayout="row">
-                    <div class="flex" fxFlex="100%">
-                        <h2>{{prop.name}}</h2>
-                        <p>{{prop.email}}</p>
-                        <h3>T. {{prop.phone}}</h3>
+            <!-- <mat-carousel>
+                <mat-carousel-slide> -->
+                    <div fxFlex="20%" class="details owl-carousel owl-theme" *ngFor="let prop of empleados">
+                        <div fxLayout="column">
+                            <div fxLayout="row">
+                                <img class="empleados" src="{{prop.img}}">
+                            </div>
+                            <div fxLayout="row">
+                                <div class="flex" fxFlex="100%">
+                                    <h2>{{prop.name}}</h2>
+                                    <p>{{prop.email}}</p>
+                                    <h3>T. {{prop.phone}}</h3>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                <!-- </mat-carousel-slide>
+            </mat-carousel> -->
     </div>
 </div>
 <app-footer></app-footer>

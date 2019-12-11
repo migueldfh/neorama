@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare let $: any;
 
 @Component({
   selector: 'app-about-us',
@@ -58,6 +59,25 @@ export class AboutUsComponent implements OnInit {
   ]
   constructor() { }
 
+  ngAfterViewInit(){
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  }
+  
   ngOnInit() {
   }
 

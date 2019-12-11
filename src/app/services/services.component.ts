@@ -11,15 +11,15 @@ export class ServicesComponent implements OnInit {
   tabs: any = [
     {
       name: 'Comercialización de Inmuebles',
-      content: 'Nos especializamos en la Venta, Renta y Administración de bienes inmuebles brindando Atención Integral durante todo el proceso.'
+      content: 'Nos especializamos en la Venta, Renta y Administración de Bienes Inmuebles brindando atención integral durante todo el proceso; ya que contamos con las mejores opciones y recursos para publicitar tu inmueble y garantizar resultados en el menor tiempo y con el mejor servicio.'
     },
     {
       name: 'Asesoría financiera',
-      content: 'Ofrecemos estrategias y planes de inversión en el sector inmobiliario de acuerdo a las necesidades y especificaciones del cliente.'
+      content: 'Ofrecemos estrategias y planes de inversión en el sector inmobiliario presentando los mejores rendimientos del mercado, podemos realizar un plan de acuerdo a tus necesidades; y lo mejor de todo es que no es necesario que tengas experiencia en inversiones de ningún tipo, nosotros te asesoramos.'
     },
     {
       name: 'Trámites hipotecarios',
-      content: 'Contamos con la información más completa de todas las opciones de crédito disponibles en el mercado y brindamos la asesoría total durante el trámite.'
+      content: 'Contamos con la información más completa de todas las opciones de crédito hipotecario disponibles en el mercado, te asesoramos para tomar en cuenta todas las posibilidades y variantes, además de que te acompañamos y brindamos la asesoría total durante el trámite.'
     },
     {
       name: 'Asesoría y Acompañamiento legal',
