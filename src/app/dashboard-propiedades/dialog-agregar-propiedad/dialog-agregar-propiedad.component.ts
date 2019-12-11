@@ -78,7 +78,7 @@ export class DialogAgregarPropiedadComponent implements OnInit {
       city: data.city,
       state: data.state,
       zipcode: data.zipcode,
-      url: data.url
+      url: null
     }
     
     this.user.postPropiedad(body).subscribe((data_resp) =>{
