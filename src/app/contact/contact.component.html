@@ -4,13 +4,29 @@
     <div fxLayout="100%">
         <div fxLayout="50%" class="title">
             <h2>¡Contacta con nuestros Consultores!</h2>
-    
+            <br>
             <p>
             Somos expertos inmobiliarios y estamos listos para apoyarte. Déjanos tus dudas o comentarios
             y en breve estaremos en contacto para brindarte la asesoría que se ajuste a tus necesidades; o
             bien para recibir una asesoría completa y personalizada sobre el servicio de tu interés.
             </p>  
             <!-- <h3>No dude en comunicarse con nosotros en cualquier momento. <br/><br/>Envie sus preguntas y comentarios para que podamos abordar su consulta de manera más efectiva.</h3> -->
+            <div class="form">
+                <h2>Envíanos tus dudas/comentarios</h2>
+                <form class="m-login__form m-form" #login="ngForm" (ngSubmit)="onClickSubmit(login.value)">
+                    <div class="form-group m-form__group">
+                        <input class="form-control m-input" type="text" placeholder="E-mail" name="email" autocomplete="off" ngModel>
+                    </div>
+                    <div class="form-group m-form__group">
+                        <input class="form-control m-input m-login__form-input--last" type="text" placeholder="Mensaje" name="password" ngModel>
+                    </div>
+                    <div class="m-login__form-action">
+                        <button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">
+                            <input type="submit" value="Enviar">
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
         <div fxLayout="50%">
             <img src="../../assets/img/chair-discussing-facial-expression-1181557.png" alt="Contacto" class="contact-img">

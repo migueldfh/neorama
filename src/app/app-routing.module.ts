@@ -12,6 +12,8 @@ import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-s
 import { DashboardSucursalComponent } from './dashboard-sucursal/dashboard-sucursal.component';
 import { DashboardPropiedadesComponent } from './dashboard-propiedades/dashboard-propiedades.component';
 import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-propiedad.component';
+import { DashboardBitacoraComponent } from './dashboard-bitacora/dashboard-bitacora.component';
+import { DashboardBuzonComponent } from './dashboard-buzon/dashboard-buzon.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'log', component: LoginComponent },
   { path: 'dash', component: DashboardComponent },
   { path: 'sucursales', component: DashboardSucursalesComponent },
+  { path: 'buzon', component: DashboardBuzonComponent },
+  { path: 'bitacora', component: DashboardBitacoraComponent },
   { path: 'sucursal/:id', component: DashboardSucursalComponent },
   { path: 'propiedades', component:  DashboardPropiedadesComponent },
   { path: 'propiedad/:id', component:  DashboardPropiedadComponent },

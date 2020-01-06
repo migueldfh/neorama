@@ -8,17 +8,17 @@
         img{
             -webkit-transform: scaleX(-1);
             transform: scaleX(-1);
-            width: 70%;
+            width: 100%;
             margin-left: -1px;
             height: 80.1vh;
         }
     }
     .over-txt{
         position: absolute;
-        color: #001c2b;
+        color: #fff;
         font-size: 3.5rem;
-        left: 41%;
-        top: 19%;
+        left: 37%;
+        top: 23%;
         h3{
             &:first-child{
                 margin-bottom: 0px;
@@ -32,17 +32,19 @@
     }
 }
 .services-tabs{
-    height: 100vh;
+    // height: 100vh;
     background: #001c2b;
+    width: 70%;
     .tabs-container{
         width: 100%;
         position: relative;
         bottom: 30%;
         .tabs{
-            width: 70%;
+            width: 80%;
             height: 80vh;
             position: relative;
             top: 210px;
+            margin: 0 auto;
             p{
                 color: #fff;
                 font-size: 1.5rem;

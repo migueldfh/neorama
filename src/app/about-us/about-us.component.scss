@@ -82,3 +82,60 @@
 .mat-toolbar.mat-primary{
     background: #acb9c7 !important;
 }
+.carousel-control-next {
+    right: -10%;
+  }
+  .carousel-control-prev {
+    left: -10%;
+  }
+  
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    background-color: black;
+  }
+
+  p {
+    font-family: Lato;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: black;
+    border-radius: 20%;
+  }
+.mainpeople{
+    background: #acb9c7;
+    margin-top: -4vh;
+    margin-bottom: 0vh;
+}
+.mainbaner{
+    display: flex !important;
+    .details{
+        margin: 0 !important;
+        &:first-child{
+            margin-left: 90px !important;
+        }
+    }
+    .padd30{
+        padding: 30px;
+        // &:nth-child(1){
+        //     margin-left: 35px;
+        //     h2{
+        //         width: 90%;
+        //     }
+        // }
+        p{
+            font-weight: bold;
+        }
+        h1{
+            font-weight: 300;
+            font-size: 1rem;
+        }
+        .director-info{
+            img{
+                width: 50%;
+            }
+        }
+    }
+}
+  

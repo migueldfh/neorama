@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { PreviewComponent } from './preview/preview.component';
+import { NewsletterComponent } from '../newsletter/newsletter.component';
 
 @Component({
   selector: 'app-home',
@@ -90,6 +91,16 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit(){
+    const dialogRef = this.dialog.open(NewsletterComponent, {
+      width: '50%'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      //Nothing here
+    });
   }
 
   educationLevelChangeAction(education) {

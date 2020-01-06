@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 export interface DialogData {
   id: number;
@@ -23,6 +24,7 @@ export class DialogAddConsultorComponent implements OnInit {
     public dialogRef: MatDialogRef<DialogAddConsultorComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
     public user: UserServicesService,
+    private spinner: NgxSpinnerService
   ) {
     this.venue_id = data.id;
    }
@@ -47,6 +49,7 @@ export class DialogAddConsultorComponent implements OnInit {
         this.result = true;
         this.email = data_resp['email'];
         this.pass = data_resp['generated_password'];
+        this.sp();
       }else{
         this.err = true;
         this.error = data_resp['message'];
@@ -56,4 +59,10 @@ export class DialogAddConsultorComponent implements OnInit {
     });
   }
 
+  sp(){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
+  }
 }

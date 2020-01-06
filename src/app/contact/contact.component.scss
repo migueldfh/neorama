@@ -1,7 +1,9 @@
 .contact{
-    height: 100vh;
+    height: 65vh;
     margin-top: -5rem;
     .title{
+        display: block !important;
+        padding-left: 10%;
         h3{
             font-size: 1.7rem;
             font-weight: 400;
@@ -18,7 +20,7 @@
     }
 }
 .contact-form{
-    height: 50vh;
+    height: 25vh;
     margin-top: -11rem;
     .title{
         display: block !important; 
@@ -56,5 +58,27 @@
         height: 60vh;
         width: 90%;
         margin: 0 auto;
+    }
+}
+.form{
+    margin-top: 60px;
+    h2{
+        margin: 0 !important;
+    }
+    .m-input{
+        width: 60%;
+        border: none;
+        border-bottom: 1px solid;
+        font-size: 1rem;
+        margin: 10px 0;
+        z-index: 9999999999999999;
+    }
+    #m_login_signin_submit, #m_login_signup_submit{
+        border-radius: 30px;
+        input{
+            background: transparent;
+            font-size: 0.8rem;
+            border: none;
+        }
     }
 }

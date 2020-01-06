@@ -13,7 +13,7 @@ export class DashboardSucursalesComponent implements OnInit {
 
   constructor(
     public user: UserServicesService,
-    private router: Router
+    private router: Router,
   ) {
     this.mat = false;
   }

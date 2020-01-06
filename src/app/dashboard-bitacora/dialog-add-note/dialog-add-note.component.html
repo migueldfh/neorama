@@ -1,0 +1,27 @@
+<ngx-spinner></ngx-spinner>
+
+<h2 mat-dialog-title>Agregar Nota</h2>
+
+<mat-dialog-content>
+    <div class="m-subheader">
+        <div fxLayoutAlign="left" class="main-container">
+            <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="agregarNota(register.value)">
+                    <mat-form-field class="w90">
+                        <input matInput type="text" placeholder="Titulo de la Nota" name="titulo" autocomplete="off" ngModel>
+                    </mat-form-field>
+                    <mat-form-field class="w90">
+                        <input matInput type="text-area" placeholder="Mensaje" name="mensaje" autocomplete="off" ngModel>
+                    </mat-form-field>
+                <div class="m-login__form-action">
+                    <button class="mat-raised-button">
+                        <input type="submit" value="Agregar">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</mat-dialog-content>
+
+<!-- <mat-dialog-actions>
+    <button class="mat-raised-button" (click)="close()">Close</button>
+</mat-dialog-actions> -->

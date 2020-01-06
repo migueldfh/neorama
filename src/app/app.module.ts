@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DesarrollosComponent } from './desarrollos/desarrollos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule, MatTabsModule, MatFormField, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, } from '@angular/material';
+import { MatInputModule, MatTabsModule, MatFormField, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatTableModule, } from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MenuComponent } from './menu/menu.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -29,6 +29,13 @@ import { DashboardPropiedadesComponent } from './dashboard-propiedades/dashboard
 import { PreviewComponent } from './home/preview/preview.component';
 import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-propiedad.component';
 import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-agregar-propiedad/dialog-agregar-propiedad.component';
+import { DashboardBuzonComponent } from './dashboard-buzon/dashboard-buzon.component';
+import { DashboardBitacoraComponent } from './dashboard-bitacora/dashboard-bitacora.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { DialogAddNoteComponent } from './dashboard-bitacora/dialog-add-note/dialog-add-note.component';
+import { DialogSendEmailComponent } from './dashboard-buzon/dialog-send-email/dialog-send-email.component';
+import { CarouselDirective } from './about-us/carousel.directive';
+import { NewsletterComponent } from './newsletter/newsletter.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +58,12 @@ import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-
     DashboardPropiedadesComponent,
     DashboardPropiedadComponent,
     DialogAgregarPropiedadComponent,
+    DashboardBuzonComponent,
+    DashboardBitacoraComponent,
+    DialogAddNoteComponent,
+    DialogSendEmailComponent,
+    CarouselDirective,
+    NewsletterComponent
   ],
   imports: [
     BrowserModule,
@@ -66,11 +79,13 @@ import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    MatTableModule,
     MatTabsModule,
     MatProgressSpinnerModule,
     MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
+    NgxSpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBRJy3OD4q4_BAx__3fZGlEXGwQHMB5YU4'
     })
@@ -79,7 +94,9 @@ import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-
   entryComponents:[
     DialogAddConsultorComponent,
     PreviewComponent,
-    DialogAgregarPropiedadComponent
+    DialogAgregarPropiedadComponent,
+    DialogAddNoteComponent,
+    NewsletterComponent
   ],
   bootstrap: [AppComponent]
 })

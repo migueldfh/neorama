@@ -35,6 +35,20 @@
             width: 70% !important; 
         }
     }
+    .green{
+        background: #1DBDA5;
+        padding: 20px;
+        margin: 0px;
+        -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
+        transition: width 0.5s;
+        width: 43% !important;
+        // img{
+        //     width: 10%;
+        // }
+        &:hover{
+            width: 70% !important; 
+        }
+    }
     &.social{
         p{
             cursor: pointer;

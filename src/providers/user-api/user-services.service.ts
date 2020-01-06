@@ -36,6 +36,54 @@ export class UserServicesService {
     return seq;
   }
 
+  sendEmail(body){
+    let seq = this.api.post("holding/send", body);
+   
+    seq.subscribe((res: any) => {
+      // console.log("Register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  getEmail(){
+    let seq = this.api.get("holding");
+   
+    seq.subscribe((res: any) => {
+      // console.log("Register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  bitacora(){
+    let seq = this.api.get("binnacles");
+   
+    seq.subscribe((res: any) => {
+      // console.log("Register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
+  bitacoraPostNote(body){
+    let seq = this.api.post("binnacles/holding", body);
+   
+    seq.subscribe((res: any) => {
+      // console.log("Register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+
   sucursales(){
 
     let seq = this.api.get("venues");
