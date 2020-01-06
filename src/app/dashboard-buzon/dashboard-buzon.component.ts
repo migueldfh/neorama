@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
-import { NgxSpinnerService } from 'ngx-spinner';
+// import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-dashboard-buzon',
@@ -14,7 +14,7 @@ export class DashboardBuzonComponent implements OnInit {
 
   constructor(
     public user: UserServicesService,
-    private spinner: NgxSpinnerService
+    // private spinner: NgxSpinnerService
   ) { 
     this.email = false;
   }
@@ -33,17 +33,17 @@ export class DashboardBuzonComponent implements OnInit {
       this.data = resp;
       if(this.data == 200){
         this.email = true;
-        this.sp();
+        // this.sp();
       }
     });
   }
 
-  sp(){
-    this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 2000);
-  }
+  // sp(){
+  //   this.spinner.show();
+  //   setTimeout(() => {
+  //     this.spinner.hide();
+  //   }, 2000);
+  // }
 
   buzon(){
     this.email = false;

@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { DialogAddConsultorComponent } from './dialog-add-consultor/dialog-add-consultor.component';
-import { NgxSpinnerService } from 'ngx-spinner';
+// import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-dashboard-sucursal',
@@ -28,7 +28,7 @@ export class DashboardSucursalComponent implements OnInit {
     private readonly route: ActivatedRoute,
     public user: UserServicesService,
     public dialog: MatDialog,
-    private spinner: NgxSpinnerService
+    // private spinner: NgxSpinnerService
   ) {
    }
 
@@ -37,16 +37,16 @@ export class DashboardSucursalComponent implements OnInit {
       this.get_id = params.get("id");
     });
     this.goSucursal(this.get_id);
-    this.sp();
+    // this.sp();
     console.log("User state?", this.users)
   }
 
-  sp(){
-    this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 2000);
-  }
+  // sp(){
+  //   this.spinner.show();
+  //   setTimeout(() => {
+  //     this.spinner.hide();
+  //   }, 2000);
+  // }
 
   goSucursal(id){
     this.user.getSucursal(id).subscribe(
@@ -76,7 +76,7 @@ export class DashboardSucursalComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       //Regargar lista de usuarios
       this.goSucursal(this.get_id);
-      this.sp();
+      // this.sp();
     });
   }
 

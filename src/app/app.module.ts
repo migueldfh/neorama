@@ -31,10 +31,10 @@ import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-pro
 import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-agregar-propiedad/dialog-agregar-propiedad.component';
 import { DashboardBuzonComponent } from './dashboard-buzon/dashboard-buzon.component';
 import { DashboardBitacoraComponent } from './dashboard-bitacora/dashboard-bitacora.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
+// import { NgxSpinnerModule } from 'ngx-spinner';
 import { DialogAddNoteComponent } from './dashboard-bitacora/dialog-add-note/dialog-add-note.component';
 import { DialogSendEmailComponent } from './dashboard-buzon/dialog-send-email/dialog-send-email.component';
-import { CarouselDirective } from './about-us/carousel.directive';
+// import { CarouselDirective } from './about-us/carousel.directive';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 
 @NgModule({
@@ -62,7 +62,6 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     DashboardBitacoraComponent,
     DialogAddNoteComponent,
     DialogSendEmailComponent,
-    CarouselDirective,
     NewsletterComponent
   ],
   imports: [
@@ -85,7 +84,6 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
-    NgxSpinnerModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBRJy3OD4q4_BAx__3fZGlEXGwQHMB5YU4'
     })

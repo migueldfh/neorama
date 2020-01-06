@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
 import { DialogAddNoteComponent } from './dialog-add-note/dialog-add-note.component';
 import { MatDialog } from '@angular/material';
-import { NgxSpinnerService } from 'ngx-spinner';
+// import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-dashboard-bitacora',
@@ -17,7 +17,7 @@ export class DashboardBitacoraComponent implements OnInit {
   constructor(
     public user: UserServicesService,
     public dialog: MatDialog,
-    private spinner: NgxSpinnerService
+    // private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit() {
@@ -40,14 +40,14 @@ export class DashboardBitacoraComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       //Regargar lista de usuarios
       this.getNotas();
-      this.sp();
+      // this.sp();
     });
   }
 
-  sp(){
-    this.spinner.show();
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 2000);
-  }
+  // sp(){
+  //   this.spinner.show();
+  //   setTimeout(() => {
+  //     this.spinner.hide();
+  //   }, 2000);
+  // }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
-import { NgxSpinnerService } from 'ngx-spinner';
+// import { NgxSpinnerService } from 'ngx-spinner';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
@@ -14,7 +14,7 @@ export class DialogAddNoteComponent implements OnInit {
 
   constructor(
     public user: UserServicesService,
-    private spinner: NgxSpinnerService,
+    // private spinner: NgxSpinnerService,
     public dialogRef: MatDialogRef<DialogAddNoteComponent>,
   ) { }
 
