@@ -107,6 +107,19 @@
     background: #acb9c7;
     margin-top: -4vh;
     margin-bottom: 0vh;
+    .details{
+        h2{
+            position: relative;
+            width: 70%;
+            font-size: 3rem;
+            color: #fff;
+            font-weight: bold;
+            line-height: 40px;
+            bottom: 6rem;
+            z-index: 10000;
+            margin-bottom: -6rem;
+        }
+    }
 }
 .mainbaner{
     display: flex !important;
