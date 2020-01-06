@@ -18,7 +18,10 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  onClickSubmit(log){
+    console.log("values: ", log);
+  }
 
   ngAfterViewInit(){
     const dialogRef = this.dialog.open(NewsletterComponent, {
