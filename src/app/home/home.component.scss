@@ -147,6 +147,12 @@
     }
     .details{
         margin-bottom: 5rem;
+        .text{
+            h3{
+                width: 150%;
+                margin: 0px;
+            }
+        }
         .bottom-column{
             margin-top: 1rem;
             .buttons{
