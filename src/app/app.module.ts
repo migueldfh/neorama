@@ -21,7 +21,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { StickComponent } from './stick/stick.component';
 import { PreviewComponent } from './home/preview/preview.component';
-// import { CarouselDirective } from './about-us/carousel.directive';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 
 @NgModule({
