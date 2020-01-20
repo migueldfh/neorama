@@ -16,24 +16,11 @@ import { FooterComponent } from './footer/footer.component';
 import { ServicesComponent } from './services/services.component';
 import { ContactComponent } from './contact/contact.component';
 import { AgmCoreModule } from '@agm/core';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-sucursales.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import { DashboardSucursalComponent } from './dashboard-sucursal/dashboard-sucursal.component';
-import { DialogAddConsultorComponent } from './dashboard-sucursal/dialog-add-consultor/dialog-add-consultor.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { StickComponent } from './stick/stick.component';
-import { DashboardPropiedadesComponent } from './dashboard-propiedades/dashboard-propiedades.component';
 import { PreviewComponent } from './home/preview/preview.component';
-import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-propiedad.component';
-import { DialogAgregarPropiedadComponent } from './dashboard-propiedades/dialog-agregar-propiedad/dialog-agregar-propiedad.component';
-import { DashboardBuzonComponent } from './dashboard-buzon/dashboard-buzon.component';
-import { DashboardBitacoraComponent } from './dashboard-bitacora/dashboard-bitacora.component';
-// import { NgxSpinnerModule } from 'ngx-spinner';
-import { DialogAddNoteComponent } from './dashboard-bitacora/dialog-add-note/dialog-add-note.component';
-import { DialogSendEmailComponent } from './dashboard-buzon/dialog-send-email/dialog-send-email.component';
 // import { CarouselDirective } from './about-us/carousel.directive';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 
@@ -48,20 +35,8 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     FooterComponent,
     ServicesComponent,
     ContactComponent,
-    DashboardComponent,
-    LoginComponent,
-    DashboardSucursalesComponent,
-    DashboardSucursalComponent,
-    DialogAddConsultorComponent,
     PreviewComponent,
     StickComponent,
-    DashboardPropiedadesComponent,
-    DashboardPropiedadComponent,
-    DialogAgregarPropiedadComponent,
-    DashboardBuzonComponent,
-    DashboardBitacoraComponent,
-    DialogAddNoteComponent,
-    DialogSendEmailComponent,
     NewsletterComponent
   ],
   imports: [
@@ -90,10 +65,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
   ],
   providers: [],
   entryComponents:[
-    DialogAddConsultorComponent,
     PreviewComponent,
-    DialogAgregarPropiedadComponent,
-    DialogAddNoteComponent,
     NewsletterComponent
   ],
   bootstrap: [AppComponent]

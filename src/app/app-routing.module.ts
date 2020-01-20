@@ -6,14 +6,6 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { PropertiesComponent } from './properties/properties.component';
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { DashboardSucursalesComponent } from './dashboard-sucursales/dashboard-sucursales.component';
-import { DashboardSucursalComponent } from './dashboard-sucursal/dashboard-sucursal.component';
-import { DashboardPropiedadesComponent } from './dashboard-propiedades/dashboard-propiedades.component';
-import { DashboardPropiedadComponent } from './dashboard-propiedad/dashboard-propiedad.component';
-import { DashboardBitacoraComponent } from './dashboard-bitacora/dashboard-bitacora.component';
-import { DashboardBuzonComponent } from './dashboard-buzon/dashboard-buzon.component';
 
 
 const routes: Routes = [
@@ -22,15 +14,7 @@ const routes: Routes = [
   { path: 'properties', component: PropertiesComponent },
   { path: 'develops', component: DesarrollosComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'contact', component: ContactComponent },
-  { path: 'log', component: LoginComponent },
-  { path: 'dash', component: DashboardComponent },
-  { path: 'sucursales', component: DashboardSucursalesComponent },
-  { path: 'buzon', component: DashboardBuzonComponent },
-  { path: 'bitacora', component: DashboardBitacoraComponent },
-  { path: 'sucursal/:id', component: DashboardSucursalComponent },
-  { path: 'propiedades', component:  DashboardPropiedadesComponent },
-  { path: 'propiedad/:id', component:  DashboardPropiedadComponent },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
