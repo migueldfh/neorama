@@ -2,7 +2,7 @@ h2{
     text-align: center;
 }
 .m-form{
-    height: 42vh;
+    height: 45vh;
     .mat-form-field{
         width: 100%;
     }
@@ -20,18 +20,25 @@ h2{
     }
     .m-login__form-action{
         text-align: center;
+        button{
+            background: #001c2b;
+            color: #fff;
+        }
     }
 }
 .close{
     float: right;
     position: relative;
-    bottom: 60px;
+    bottom: 75px;
     width: 8%;
     padding: 0;
-    border-radius: 30px;
+    left: 10px;
     button{
+        box-shadow: none !important;
+        background: transparent !important;
         padding: 0px !important;
         font-size: 0.5rem;
         border-radius: 30px;
+        font-size: 1.7vw !important;
     }
 }

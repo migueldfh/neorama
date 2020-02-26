@@ -15,15 +15,17 @@
                 <h2>Envíanos tus dudas/comentarios</h2>
                 <form class="m-login__form m-form" #login="ngForm" (ngSubmit)="onClickSubmit(login.value)">
                     <div class="form-group m-form__group">
-                        <input class="form-control m-input" type="text" placeholder="E-mail" name="email" autocomplete="off" ngModel>
-                    </div>
-                    <div class="form-group m-form__group">
-                        <input class="form-control m-input m-login__form-input--last" type="text" placeholder="Mensaje" name="password" ngModel>
+                    <mat-form-field>
+                        <input matInput class="form-control m-input" type="text" placeholder="E-mail" name="email" autocomplete="off" ngModel>
+                    </mat-form-field>
+                </div>
+                <div class="form-group m-form__group">
+                    <mat-form-field>
+                        <input matInput class="form-control m-input m-login__form-input--last" type="text" placeholder="Mensaje" name="password" ngModel>
+                    </mat-form-field>
                     </div>
                     <div class="m-login__form-action">
-                        <button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">
-                            <input type="submit" value="Enviar">
-                        </button>
+                        <button mat-button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">Enviar</button>
                     </div>
                 </form>
             </div>
@@ -33,22 +35,11 @@
         </div>
     </div>
 </div>
-<div fxLayout="row wrap" fxLayout="100%" class="contact-form">
-    <!-- <div fxLayout="50%" class="title" fxLayoutAlign="flex-start center">
-        
-    </div> -->
-    <div fxLayout="50%">
-        <!-- <form class="example-form">
-            <mat-form-field appearance="standard">
-                <input matInput placeholder="Email" class="classRed">
-            </mat-form-field>
-        </form> -->
-    </div>
-</div>
 
 <div fxLayout="100%" fxLayoutAlign="flex-start center" class="map">
-    <agm-map [latitude]="lat" [longitude]="lng">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.0688083235486!2d-100.33213448528024!3d25.669013683678894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662be1f26f078df%3A0xbdd554f5cc3d4903!2sValle%20del%20Mirador%20203%2C%20Mirador%2C%2064910%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1582690878299!5m2!1ses-419!2smx" width="90%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    <!-- <agm-map [latitude]="lat" [longitude]="lng">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-    </agm-map>
+    </agm-map> -->
 </div>
 <app-footer></app-footer>

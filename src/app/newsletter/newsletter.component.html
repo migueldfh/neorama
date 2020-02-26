@@ -1,14 +1,14 @@
 <h2 mat-dialog-title>¿Deseas vender, rentar o comprar?</h2>
 
 <mat-dialog-actions class="close">
-    <button class="mat-raised-button" (click)="close()">x</button>
+    <button mat-button class="mat-raised-button" (click)="close()">x</button>
 </mat-dialog-actions>
 
 <mat-dialog-content>
     <div class="m-subheader">
         <div fxLayoutAlign="left" class="main-container">
             <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="close()">
-                    <mat-form-field >
+                    <mat-form-field>
                         <input matInput type="text" placeholder="Nombre Completo" name="name" autocomplete="off" ngModel>
                     </mat-form-field>
                     <mat-form-field>
@@ -21,9 +21,7 @@
                         <input matInput type="text" placeholder="Duda..." name="duda" autocomplete="off" ngModel>
                     </mat-form-field>
                 <div class="m-login__form-action">
-                    <button class="mat-raised-button">
-                        <input type="submit" value="Enviar">
-                    </button>
+                    <button mat-button class="mat-raised-button">Enviar</button>
                 </div>
             </form>
         </div>

@@ -1,6 +1,6 @@
 .contact{
     height: 65vh;
-    margin-top: -5rem;
+    margin-top: -5vh;
     .title{
         display: block !important;
         padding-left: 10%;
@@ -43,17 +43,11 @@
         color: #001c2b; 
         z-index: 100000;
         position: relative;
-        top: 2rem;  
-        ::ng-deep {
-            .classRed::placeholder {   
-                color: #001c2b !important;  
-                }
-            }
+        top: 2rem;
     }
 }
 .map{
-    margin-left: 10rem;
-    margin-bottom: 6rem;
+    margin: 5rem 0rem 6rem 10rem;
     agm-map {
         height: 60vh;
         width: 90%;
@@ -62,23 +56,19 @@
 }
 .form{
     margin-top: 60px;
+    position: relative;
+    z-index: 9999999999999 !important;
+    .mat-form-field{
+        &:first-child{
+            margin-top: 1vh;
+        }
+        width: 70%;
+    }
     h2{
         margin: 0 !important;
     }
-    .m-input{
-        width: 60%;
-        border: none;
-        border-bottom: 1px solid;
-        font-size: 1rem;
-        margin: 10px 0;
-        z-index: 9999999999999999;
-    }
-    #m_login_signin_submit, #m_login_signup_submit{
-        border-radius: 30px;
-        input{
-            background: transparent;
-            font-size: 0.8rem;
-            border: none;
-        }
+    button{
+        background: #001c2b;
+        color: #fff;
     }
 }
