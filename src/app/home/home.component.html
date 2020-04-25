@@ -51,11 +51,12 @@
                     <img src="{{prop.img}}">
                 </div>
                 <div fxLayout="row" class="bottom-column">
-                    <div class="flex text" fxFlex="40%">
+                    <div class="flex text" fxFlex="60%">
                         <h3>{{prop.name}}</h3>
-                        <h4>Desde {{prop.price | currency }}</h4>
+                        <h4 class="nomargin">{{prop.mts}} mts<sup>2</sup></h4>
+                        <h4><span>Desde {{prop.price | currency }}</span></h4>
                     </div>
-                    <div class="flex buttons" fxFlex="60%">
+                    <div class="flex buttons" fxFlex="40%">
                         <button mat-button class="blue-rounded" (click)="preview(prop)">Ver más</button>
                     </div>
                 </div>

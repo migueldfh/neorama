@@ -158,12 +158,25 @@
             .buttons{
                 text-align: right;
             }
+            .text{
+                h4.nomargin{
+                    margin: 0px;
+                }
+                h4{
+                    span{
+                        font-size: 1.1rem;
+                        font-weight: 600;
+                    }
+                }
+            }
             .blue-rounded{
                 border: 2px solid #001c2b;
                 border-radius: 20px;
                 padding: 0px 20px;
+                position: relative;
+                top: 4vh;
                 &:first-child{
-                    margin: 0.5rem 1rem 0 1rem;
+                    margin: 0.5rem 0rem 0 1rem;
                 }
                 &:hover{
                     border: 2px solid #feaa61;

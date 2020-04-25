@@ -45,6 +45,7 @@ export class HomeComponent implements OnInit {
       name: 'Terreno en Renta, Monterrey',
       img: '../../assets/img/architectural-design-architecture-balcony-2775313.jpg',
       price: 33000,
+      mts: 20,
       address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
@@ -52,6 +53,7 @@ export class HomeComponent implements OnInit {
       name: 'Casa en Renta, Monterrey',
       img: '../../assets/img/apartments-architectural-design-architecture-2334160.jpg',
       price: 33000,
+      mts: 25,
       address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
@@ -59,6 +61,7 @@ export class HomeComponent implements OnInit {
       name: 'Terreno en Venta, San Nicolás',
       img: '../../assets/img/pexels-photo-206172.jpeg',
       price: 33000,
+      mts: 50,
       address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
@@ -66,6 +69,7 @@ export class HomeComponent implements OnInit {
       name: 'Oficinas en Renta, Linda Vista',
       img: '../../assets/img/architectural-design-architecture-country-home-2287310.jpg',
       price: 33000,
+      mts: 75,
       address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
@@ -73,6 +77,7 @@ export class HomeComponent implements OnInit {
       name: 'Oficinas en Venta, Centro de Mty',
       img: '../../assets/img/architectural-design-architecture-balcony-2775313.jpg',
       price: 33000,
+      mts: 80,
       address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
     {
@@ -80,6 +85,7 @@ export class HomeComponent implements OnInit {
       name: 'Casa en Venta, Monterrey',
       img: '../../assets/img/pexels-photo-293983.jpeg',
       price: 33000,
+      mts: 60,
       address: 'Valle del Mirador #203 Colonia Mirador, Monterrey, NL. C.P. 64910'
     },
   ]
