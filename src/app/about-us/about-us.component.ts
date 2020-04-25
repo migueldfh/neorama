@@ -61,33 +61,13 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
   ]
   
   constructor() { }
+  public imagesUrl;
 
   ngAfterViewInit() {
-    $("#myCarousel").on("slide.bs.carousel", function(e) {
-      var $e = $(e.relatedTarget);
-      var idx = $e.index();
-      var itemsPerSlide = 3;
-      var totalItems = $(".carousel-item").length;
-
-      if (idx >= totalItems - (itemsPerSlide - 1)) {
-        var it = (totalItems - idx*itemsPerSlide);
-        for (var i = 0; i < it; i++) {
-          // append slides to end
-          if (e.direction == "left") {
-            $(".carousel-item")
-              .eq(i)
-              .appendTo(".carousel-inner");
-          } else {
-            $(".carousel-item")
-              .eq(0)
-              .appendTo($(this).find(".carousel-inner"));
-          }
-        }
-      }
-    });
   }
 
   ngOnInit() {
+    this.imagesUrl = ['../../assets/img/1.png', '../../assets/img/3.png', '../../assets/img/4.png', '../../assets/img/2.png', '../../assets/img/5.png'];
   }
 
 }

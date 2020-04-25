@@ -22,6 +22,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { StickComponent } from './stick/stick.component';
 import { PreviewComponent } from './home/preview/preview.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
+import { SliderModule } from 'angular-image-slider';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    SliderModule,
     FormsModule, 
     ReactiveFormsModule,
     MatInputModule, 

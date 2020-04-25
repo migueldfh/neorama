@@ -51,11 +51,22 @@
         }
     }
 }
+.overlay-right[_ngcontent-xkb-c4]{
+    background-color: transparent !important;
+}
 .people{
     background: #acb9c7;
-    height: 160vh;
+    height: 70vh;
     .baner {
-        margin-left: 12rem;
+        margin-left: 6rem;
+        width: 100% !important;
+        angular-image-slider{
+            width: 97% !important;
+            .overlay-right{
+                opacity: 0.3 !important;
+                left: 0px;
+            }
+        }
     }
     img{
         &.empleados{
@@ -151,4 +162,3 @@
         }
     }
 }
-  

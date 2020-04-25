@@ -35,11 +35,77 @@ export class ServicesComponent implements OnInit {
     }
   ];
   selected = new FormControl(0);
+  display1: boolean;
+  display2: boolean;
+  display3: boolean;
+  display4: boolean;
+  display_transparent: boolean;
+  display5: boolean;
+  display6: boolean;
 
-  constructor() { }
+  constructor() {
+    this.display1 = true;
+    this.display2 = false;
+    this.display_transparent = false;
+    this.display3 = false;
+    this.display4 = false;
+    this.display5 = false;
+    this.display6 = false;
+   }
 
   ngOnInit() {
   }
 
+  goTo(x){
+    if(x == 1){
+      this.display1 = true;
+      this.display_transparent = false;
+      this.display2 = false;
+      this.display3 = false;
+      this.display4 = false;
+      this.display5 = false;
+      this.display6 = false;
+    }else if(x == 2){
+      this.display1 = false;
+      this.display_transparent = false;
+      this.display2 = true;
+      this.display3 = false;
+      this.display4 = false;
+      this.display5 = false;
+      this.display6 = false;
+    }else if(x == 3){
+      this.display1 = false;
+      this.display_transparent = false;
+      this.display2 = false;
+      this.display3 = true;
+      this.display4 = false;
+      this.display5 = false;
+      this.display6 = false;
+    }else if(x == 4){
+      this.display1 = false;
+      this.display_transparent = false;
+      this.display2 = false;
+      this.display3 = false;
+      this.display4 = true;
+      this.display5 = false;
+      this.display6 = false;
+    }else if(x == 5){
+      this.display1 = false;
+      this.display_transparent = false;
+      this.display2 = false;
+      this.display3 = false;
+      this.display4 = false;
+      this.display5 = true;
+      this.display6 = false;
+    }else if(x == 6){
+      this.display1 = false;
+      this.display_transparent = false;
+      this.display2 = false;
+      this.display3 = false;
+      this.display4 = false;
+      this.display5 = false;
+      this.display6 = true;
+    }
+  }
 
 }

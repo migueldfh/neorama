@@ -1,23 +1,35 @@
 .contact{
     height: 65vh;
-    margin-top: -5vh;
+    margin-top: 10vh;
     .title{
         display: block !important;
-        padding-left: 10%;
+        padding-left: 7%;
+        width: 100%;
         h3{
             font-size: 1.7rem;
             font-weight: 400;
             width: 60%;
             margin: 0 auto;
         }
+        p{
+            font-size: 1.5rem;
+            text-align: justify;
+            position: relative;
+            top: 20%;
+        }
     }
     img{
         &.contact-img{
             position: relative;
-            width: 75%;
-            left: 9rem;
+            width: 100%;
+            left: 3rem;
         }
     }
+}
+h2.title{
+    font-size: 2.4rem;
+    margin-top: 0;
+    text-align: center;
 }
 .contact-form{
     height: 25vh;
@@ -55,9 +67,11 @@
     }
 }
 .form{
-    margin-top: 60px;
+    margin-top: 13vh;
     position: relative;
     z-index: 9999999999999 !important;
+    width: 100%;
+    text-align: center;
     .mat-form-field{
         &:first-child{
             margin-top: 1vh;

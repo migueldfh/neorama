@@ -174,6 +174,44 @@ export class UserServicesService {
 
     return seq;
   }
+  
+  getClients(){
+
+    let seq = this.api.get("clients");
+   
+    seq.subscribe((res: any) => {
+      console.log("register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+  
+  addClients(body){
+
+    let seq = this.api.post("clients", body);
+   
+    seq.subscribe((res: any) => {
+      console.log("register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
+  
+  deleteClients(id, body){
+    let seq = this.api.post("clients/" + id + "/delete", body);
+   
+    seq.subscribe((res: any) => {
+      console.log("register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
 
   _loggedIn(resp) {
     this._user = resp.user;

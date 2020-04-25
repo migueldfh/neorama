@@ -13,7 +13,8 @@ const httpOptions = {
 
 export class APIServiceService {
 
-  url: string = 'http://www.neorama.mx/index.php/api';
+  // url: string = 'http://www.neorama.mx/index.php/api';
+  url: string = 'https://agile-forest-99854.herokuapp.com/api';
 
   constructor(public http: HttpClient) { }
 
