@@ -13,15 +13,17 @@ export class UserServicesService {
   ) { }
 
   login(body){
-    let seq = this.api.post("login", body);
+    return this.api.post("login", body);
+    
+    // let seq = this.api.post("login", body);
    
-    seq.subscribe((res: any) => {
-      console.log("user resp: ", res);
-    }, err => {
-      console.error('ERROR', err);
-    });
+    // seq.subscribe((res: any) => {
+    //   console.log("user resp: ", res);
+    // }, err => {
+    //   console.error('ERROR', err);
+    // });
 
-    return seq;
+    // return seq;
   }
 
   register(body){
@@ -98,16 +100,7 @@ export class UserServicesService {
   }
 
   propiedades(){
-
-    let seq = this.api.get("holdings");
-   
-    seq.subscribe((res: any) => {
-      console.log("Propiedades resp: ", res);
-    }, err => {
-      console.error('ERROR', err);
-    });
-
-    return seq;
+    return this.api.get("holdings");
   }
 
   getPropiedad(id){

@@ -48,12 +48,12 @@
         <div fxFlex="30%" class="details" *ngFor="let prop of properties">
             <div fxLayout="column">
                 <div fxLayout="row">
-                    <img src="{{prop.img}}">
+                    <img src="{{prop.image}}">
                 </div>
                 <div fxLayout="row" class="bottom-column">
                     <div class="flex text" fxFlex="60%">
                         <h3>{{prop.name}}</h3>
-                        <h4 class="nomargin">{{prop.mts}} mts<sup>2</sup></h4>
+                        <h4 class="nomargin">{{prop.surface}} mts<sup>2</sup></h4>
                         <h4><span>Desde {{prop.price | currency }}</span></h4>
                     </div>
                     <div class="flex buttons" fxFlex="40%">
