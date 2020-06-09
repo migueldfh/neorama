@@ -23,6 +23,7 @@ import { StickComponent } from './stick/stick.component';
 import { PreviewComponent } from './home/preview/preview.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SliderModule } from 'angular-image-slider';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -60,9 +61,14 @@ import { SliderModule } from 'angular-image-slider';
     MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
+    MatCarouselModule.forRoot(),
+    MatCarouselModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBRJy3OD4q4_BAx__3fZGlEXGwQHMB5YU4'
-    })
+    }),
+  ],
+  exports: [
+    MatCarouselModule
   ],
   providers: [],
   entryComponents:[

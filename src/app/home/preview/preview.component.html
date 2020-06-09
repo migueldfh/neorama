@@ -3,7 +3,27 @@
         <div fxLayoutAlign="left" class="main-container">
             <div fxLayout="row" class="prop-container">
                 <div class="img">
-                    <img src="{{img}}" alt="{{name}}">
+                    <mat-carousel
+                    class="thiscarousel"
+                    timings="250ms ease-in"
+                    [autoplay]="false"
+                    interval="5000"
+                    color="primary"
+                    slides="5"
+                    [loop]="true"
+                    [hideArrows]="false"
+                    [hideIndicators]="true"
+                    [useKeyboard]="false"
+                    [useMouseWheel]="false"
+                    orientation="ltr">
+                    <mat-carousel-slide
+                        #matCarouselSlide
+                        *ngFor="let slide of img; let i = index"
+                        overlayColor="#00000040"
+                        [hideOverlay]="false">
+                        <img [src]="slide">
+                    </mat-carousel-slide>
+                    </mat-carousel>
                 </div>
                 <div class="prop-info">
                     <h2>{{name}}</h2>

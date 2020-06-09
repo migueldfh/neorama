@@ -46,19 +46,37 @@
 <div fxLayout="row" class="properties-section">
     <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start center" class="baner">
         <div fxFlex="30%" class="details" *ngFor="let prop of properties">
-            <div fxLayout="column">
-                <div fxLayout="row">
-                    <img src="{{prop.image}}">
+            <div fxLayout="column" class="carousel-container">
+                <mat-carousel
+                class="thiscarousel"
+                timings="250ms ease-in"
+                [autoplay]="false"
+                interval="5000"
+                color="primary"
+                slides="5"
+                [loop]="true"
+                [hideArrows]="false"
+                [hideIndicators]="true"
+                [useKeyboard]="false"
+                [useMouseWheel]="false"
+                orientation="ltr">
+                <mat-carousel-slide
+                    #matCarouselSlide
+                    *ngFor="let slide of prop.images let i = index"
+                    overlayColor="#00000040"
+                    [hideOverlay]="false">
+                    <img [src]="slide">
+                </mat-carousel-slide>
+                </mat-carousel>
+            </div>
+            <div fxLayout="row" class="bottom-column">
+                <div class="flex text" fxFlex="60%">
+                    <h3>{{prop.name}}</h3>
+                    <h4 class="nomargin">{{prop.surface}} mts<sup>2</sup></h4>
+                    <h4><span>Desde {{prop.price | currency }}</span></h4>
                 </div>
-                <div fxLayout="row" class="bottom-column">
-                    <div class="flex text" fxFlex="60%">
-                        <h3>{{prop.name}}</h3>
-                        <h4 class="nomargin">{{prop.surface}} mts<sup>2</sup></h4>
-                        <h4><span>Desde {{prop.price | currency }}</span></h4>
-                    </div>
-                    <div class="flex buttons" fxFlex="40%">
-                        <button mat-button class="blue-rounded" (click)="preview(prop)">Ver más</button>
-                    </div>
+                <div class="flex buttons" fxFlex="40%">
+                    <button mat-button class="blue-rounded" (click)="preview(prop)">Ver más</button>
                 </div>
             </div>
         </div>

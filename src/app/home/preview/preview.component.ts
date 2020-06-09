@@ -21,7 +21,8 @@ export class PreviewComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
   ) { 
     //Obtener datos de la propiedad
-    this.img = data.propObj['img'];
+    this.img = data.propObj['images'];
+    console.log("imgs: ", this.img);
     this.name = data.propObj['name'];
     this.price = data.propObj['price'];
     this.address = data.propObj['address'];

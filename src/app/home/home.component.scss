@@ -192,3 +192,16 @@
 .cdk-overlay-container{
     z-index: 99999999999999 !important;
 }
+::ng-deep{
+    .carousel{
+        height: 43vh !important;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        img{
+            width: 100%;
+        }
+    }
+}
+.carousel-container{
+    height: 34vh;
+}
