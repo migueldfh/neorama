@@ -9,7 +9,7 @@ declare var require: any;
   styleUrls: ['./about-us.component.scss']
 })
 export class AboutUsComponent implements OnInit, AfterViewInit {
-  empleados: any = [
+  team: any = [
     {
       name: 'Francisco Banda',
       img: '../../assets/img/attractive-beautiful-beauty-1024311.png',
@@ -60,7 +60,8 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
     },
   ]
   
-  constructor() { }
+  constructor() {
+   }
   public imagesUrl;
 
   ngAfterViewInit() {

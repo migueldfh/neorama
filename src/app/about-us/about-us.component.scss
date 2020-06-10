@@ -56,7 +56,8 @@
 }
 .people{
     background: #acb9c7;
-    height: 70vh;
+    height: 40vh;
+    padding-top: 50px;
     .baner {
         margin-left: 6rem;
         width: 100% !important;
@@ -159,6 +160,35 @@
             img{
                 width: 50%;
             }
+        }
+    }
+}
+::ng-deep{
+    .carousel{
+        height: 43vh !important;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        img{
+            width: 90%;
+        }
+    }
+    .carousel-slide{
+        margin: 0 auto;
+    }
+    .carousel-slide-content{
+        position: relative !important;
+    }
+}
+.col-center{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    .col-3{
+        width: 30%;
+        h3{
+            font-family: Roboto !important;
+            font-weight: 300 !important;
         }
     }
 }

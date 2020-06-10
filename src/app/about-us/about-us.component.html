@@ -71,28 +71,89 @@
         </div>
     </div>
 </div>
-<div fxLayout="row wrap" fxLayoutAlign="flex-start center" class="people">
-    <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start center" class="baner">
-            <!-- <mat-carousel>
-                <mat-carousel-slide> -->
-                    <angular-image-slider [images]="imagesUrl"></angular-image-slider>
-
-                    <!-- <div fxFlex="20%" class="details owl-carousel owl-theme" *ngFor="let prop of empleados">
-                        <div fxLayout="column">
-                            <div fxLayout="row">
-                                <img class="empleados" src="{{prop.img}}">
-                            </div>
-                            <div fxLayout="row">
-                                <div class="flex" fxFlex="100%">
-                                    <h2>{{prop.name}}</h2>
-                                    <p>{{prop.email}}</p>
-                                    <h3>T. {{prop.phone}}</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                <!-- </mat-carousel-slide>
-            </mat-carousel> -->
-    </div>
+<div class="people">
+    <mat-carousel
+    class="thiscarousel"
+    timings="250ms ease-in"
+    [autoplay]="false"
+    interval="5000"
+    color="primary"
+    slides="5"
+    [loop]="true"
+    [hideArrows]="false"
+    [hideIndicators]="true"
+    [useKeyboard]="false"
+    [useMouseWheel]="false"
+    orientation="ltr">
+    <mat-carousel-slide
+        #matCarouselSlide
+        overlayColor="#00000040"
+        [hideOverlay]="false">
+        <div class="col-center">
+            <div class="col-3">
+                <img src="../../assets/img/Adriana Contreras.jpg">
+                <h3>Adriana Contreras</h3>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Edson Banda.jpg">
+                <p>Edson Banda</p>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Erika Melendez.jpg">
+                <p>Erika Melendez</p>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Fernando Garcia.jpg">
+                <p>Fernando Garcia</p>
+            </div>
+        </div>
+    </mat-carousel-slide>
+    <mat-carousel-slide
+    #matCarouselSlide2
+    overlayColor="#00000040"
+    [hideOverlay]="false">
+        <div class="col-center">
+            <div class="col-3">
+                <img src="../../assets/img/Francisco Banda.jpg">
+                <h3>Francisco Banda</h3>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Francisco Belmares.jpg">
+                <h3>Francisco Belmares</h3>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Jorge Ordoñez.jpg">
+                <p>Jorge Ordoñez</p>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Karla Carrillo.jpg">
+                <p>Karla Carrillo</p>
+            </div>
+        </div>
+    </mat-carousel-slide>
+    <mat-carousel-slide
+    #matCarouselSlide3
+    overlayColor="#00000040"
+    [hideOverlay]="false">
+        <div class="col-center">
+            <div class="col-3">
+                <img src="../../assets/img/Liliana Uribe.jpg">
+                <p>Liliana Uribe</p>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Ricardo Herrera.jpg">
+                <h3>Ricardo Herrera</h3>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Rox Ayala.jpg">
+                <p>Rox Ayala</p>
+            </div>
+            <div class="col-3">
+                <img src="../../assets/img/Stephanie Garza.jpg">
+                <p>Stephanie Garza</p>
+            </div>
+        </div>
+    </mat-carousel-slide>
+    </mat-carousel>
 </div>
 <app-footer></app-footer>
