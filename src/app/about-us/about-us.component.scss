@@ -1,15 +1,15 @@
 .aboutus{
-    background: #acb9c7;
-    height: 100vh;
+    background: #f1f1f1;
+    height: 85vh;
     .title{
         h2{
-            color: #fff;
+            color: #001c2b;
             font-size: 4rem;
             position: relative;
             z-index: 1000;
             width: 70%;
             left: 4.5rem;
-            bottom: 11rem;
+            bottom: 13.85rem;
             line-height: 50px;
         }
         img{
@@ -17,7 +17,7 @@
                 position: absolute;
                 width: 50%;
                 left: 4.6rem;
-                top: 27rem;
+                top: 20rem;
             }
         }
     }
@@ -27,27 +27,33 @@
             font-weight: 100;
             font-size: 2rem;
             width: 100%;
+            letter-spacing: 2px;
             position: relative;
-            right: 3rem;
-            bottom: 9rem;
+            left: -0.25rem;
+            top: 9rem;
         }
         img{
             &.logo-middle{
                 position: absolute;
-                width: 55%;
-                left: 33rem;
-                bottom: -8rem;
+                width: 35%;
+                left: 57rem;
+                bottom: 0rem;
             }
         }
     }
 }
 .info{
-    background: #acb9c7;
+    background: #f1f1f1;
     .div-block{
         display: block !important;
         &.us-info{
             margin: 0 auto 5vh auto;
             font-size: 1.2rem;
+            ul{
+                li{
+                    list-style: none;
+                }
+            }
         }
     }
 }
@@ -55,7 +61,7 @@
     background-color: transparent !important;
 }
 .people{
-    background: #acb9c7;
+    background: #f1f1f1;
     height: 40vh;
     padding-top: 50px;
     .baner {
@@ -79,7 +85,7 @@
             position: relative;
             width: 50%;
             font-size: 3rem;
-            color: #fff;
+            color: #001c2b;
             font-weight: bold;
             line-height: 40px;
             bottom: 6rem;
@@ -92,7 +98,7 @@
     }
 }
 .mat-toolbar.mat-primary{
-    background: #acb9c7 !important;
+    background: #f1f1f1 !important;
 }
 .carousel-control-next {
     right: -10%;
@@ -116,7 +122,7 @@
     border-radius: 20%;
   }
 .mainpeople{
-    background: #acb9c7;
+    background: #f1f1f1;
     margin-top: -4vh;
     margin-bottom: 0vh;
     .details{
@@ -124,12 +130,13 @@
             position: relative;
             width: 70%;
             font-size: 3rem;
-            color: #fff;
+            color: #001c2b;
             font-weight: bold;
             line-height: 40px;
             bottom: 6rem;
             z-index: 10000;
-            margin-bottom: -6rem;
+            margin-bottom: -5rem;
+            margin-top: 7rem;
         }
     }
 }
@@ -191,4 +198,7 @@
             font-weight: 300 !important;
         }
     }
+}
+h2, p{
+    font-family: Roboto !important;
 }

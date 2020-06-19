@@ -11,7 +11,7 @@ import { PropertiesComponent } from './properties/properties.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
-  // { path: 'properties', component: PropertiesComponent },
+  { path: 'properties', component: PropertiesComponent },
   // { path: 'develops', component: DesarrollosComponent },
   { path: 'services', component: ServicesComponent },
   { path: 'contact', component: ContactComponent }

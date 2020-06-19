@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserServicesService } from 'src/providers/user-api/user-services.service';
 
 @Component({
   selector: 'app-properties',
@@ -34,45 +35,18 @@ export class PropertiesComponent implements OnInit {
       ]
     }
   ];
-
-  properties: any = [
-    {
-      name: 'Monterrey',
-      img: '../../assets/img/architectural-design-architecture-balcony-2775313.jpg',
-      price: '33000'
-    },
-    {
-      name: 'Escobedo',
-      img: '../../assets/img/apartments-architectural-design-architecture-2334160.jpg',
-      price: '33000'
-    },
-    {
-      name: 'San Nicolás',
-      img: '../../assets/img/pexels-photo-206172.jpeg',
-      price: '33000'
-    },
-    {
-      name: 'Linda Vista',
-      img: '../../assets/img/architectural-design-architecture-country-home-2287310.jpg',
-      price: '33000'
-    },
-    {
-      name: 'Centro de Mty',
-      img: '../../assets/img/architectural-design-architecture-balcony-2775313.jpg',
-      price: '33000'
-    },
-    {
-      name: 'Monterrey',
-      img: '../../assets/img/pexels-photo-293983.jpeg',
-      price: '33000'
-    },
-  ]
+  properties: any = [];
   
-  constructor() { 
+  constructor(
+    public userApi: UserServicesService
+  ) { 
     this.selected = false;
   }
 
   ngOnInit() {
+    this.userApi.propiedades().subscribe(resp=>{
+      this.properties = resp;
+    });
   }
 
   educationLevelChangeAction(education) {

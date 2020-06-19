@@ -2,7 +2,7 @@
     background-image: url(../../assets/img/aerial-shot-architecture-bird-s-eye-view-1626859.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
+    height: auto;
 }
 .baner{
     width: 100%;
@@ -12,7 +12,7 @@
         height: 35vh;
         text-align: center;
         color: #001c2b;
-        margin-top: 15vh;
+        margin: 15vh 0 20vh 0;
         .options{
             .mat-list-base{
                 display: flex;
@@ -139,7 +139,20 @@
 }
 .properties-section{
     background: #f9f9f9;
+    height: auto;
+    padding: 30px;
+    padding-left: 90px;
     img{
         width: 100%;
+    }
+}
+::ng-deep{
+    .carousel{
+        height: 43vh !important;
+        border-top-right-radius: 6px;
+        border-top-left-radius: 6px;
+        img{
+            width: 100%;
+        }
     }
 }

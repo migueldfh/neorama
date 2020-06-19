@@ -24,6 +24,7 @@ import { PreviewComponent } from './home/preview/preview.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SliderModule } from 'angular-image-slider';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { DialogSeeMoreComponent } from './about-us/dialog-see-more/dialog-see-more.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     ContactComponent,
     PreviewComponent,
     StickComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    DialogSeeMoreComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +75,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
   providers: [],
   entryComponents:[
     PreviewComponent,
-    NewsletterComponent
+    NewsletterComponent,
+    DialogSeeMoreComponent
   ],
   bootstrap: [AppComponent]
 })

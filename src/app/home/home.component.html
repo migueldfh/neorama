@@ -2,7 +2,7 @@
 <div class="main" fxLayout="row">
     <app-stick></app-stick>
     <div fxLayout="row" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center" class="baner">
-        <!-- <div fxFlex="80%" class="main-search">
+        <div fxFlex="80%" class="main-search">
             <h3>Propiedades</h3>
             <div class="options">
                 <mat-list fxLayoutGap="5.5%" fxLayoutAlign="center">
@@ -28,7 +28,7 @@
             <div class="last-filters">
                 <button mat-button class="sub">Buscar</button>
             </div>
-        </div> -->
+        </div>
     </div>
 </div>
 <div fxLayout="row" class="text-section">
@@ -72,8 +72,8 @@
             <div fxLayout="row" class="bottom-column">
                 <div class="flex text" fxFlex="60%">
                     <h3>{{prop.name}}</h3>
-                    <h4 class="nomargin">{{prop.surface}} mts<sup>2</sup></h4>
-                    <h4><span>Desde {{prop.price | currency }}</span></h4>
+                    <h4 class="nomargin">{{prop.built_size}} mts<sup>2</sup></h4>
+                    <h4 style="font-size: 1.4rem;">{{prop.price | currency }}</h4>
                 </div>
                 <div class="flex buttons" fxFlex="40%">
                     <button mat-button class="blue-rounded" (click)="preview(prop)">Ver más</button>

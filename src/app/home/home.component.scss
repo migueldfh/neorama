@@ -144,6 +144,7 @@
     img{
         width: 100%;
         border-radius: 5px;
+        height: 35vh;
     }
     .details{
         margin-bottom: 5rem;
@@ -174,7 +175,7 @@
                 border-radius: 20px;
                 padding: 0px 20px;
                 position: relative;
-                top: 4vh;
+                top: 44px !important;
                 &:first-child{
                     margin: 0.5rem 0rem 0 1rem;
                 }
@@ -203,5 +204,5 @@
     }
 }
 .carousel-container{
-    height: 34vh;
+    height: 35vh;
 }

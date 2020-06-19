@@ -1,9 +1,9 @@
 .footer{
     background: #95acbd;
     color: #001c2b;
-    height: 30vh;
+    height: 20vh;
     font-weight: bold;
-    padding: 50px 5px 0px 5px;
+    padding: 40px 5px 0px 5px;
     .block{
         display: block !important;
         &.social{
@@ -32,6 +32,5 @@
     }
     .copy{
         padding-left: 1.8vw;
-        margin-top: 4vh;
     }
 }

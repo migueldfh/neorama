@@ -25,7 +25,7 @@
                     background: #001c2b;
                     opacity: 0.8;
                     color: #fff;
-                    margin-bottom: 15px;
+                    margin: 15px;
                     padding: 0 30px;
                     &:first-child{
                         margin-top: 20vh;
@@ -101,4 +101,8 @@
             }
         }
     }
+}
+.select{
+    background: #fff !important;
+    color: #001c2b !important;
 }
