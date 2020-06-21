@@ -27,8 +27,20 @@
                 </div>
                 <div class="prop-info">
                     <h2>MXN {{price | currency}}</h2>
-                    <h4 style="font-weight: 100;">{{name}}</h4>
-                    <p>{{address}}</p>
+                    <h4 class="light">{{name}}</h4>
+                    <p style="margin-top: 0;">{{address}}</p>
+                    <div class="amenidades">
+                        <div class="flexIcons">
+                            <p><mat-icon>bathtub</mat-icon>Baños {{bathrooms}}</p>
+                            <p><mat-icon>directions_car</mat-icon>Estacionamiento {{parking}}</p>
+                            <p><mat-icon>single_bed</mat-icon>Habitaciones {{bathrooms}}</p>
+                        </div>
+                        <div class="flexIcons">
+                            <p><mat-icon>pets</mat-icon> Se permiten mascotas</p>
+                            <p><mat-icon>smoke_free</mat-icon> No se permite fumar</p>
+                            <p><mat-icon>pool</mat-icon> Alberca</p>
+                        </div>
+                    </div>
                     <button class="mat-raised-button blue" mat-button>Contactar!</button>
                 </div>
             </div>

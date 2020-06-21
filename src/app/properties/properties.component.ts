@@ -38,7 +38,7 @@ export class PropertiesComponent implements OnInit {
   properties: any = [];
   
   constructor(
-    public userApi: UserServicesService
+    public userApi: UserServicesService,
   ) { 
     this.selected = false;
   }

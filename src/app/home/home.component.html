@@ -15,18 +15,26 @@
             </div>
             <div class="search-bar">
                 <div fxFlex="16%" class="select-search">
-                    <p>Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p>
+                    <!-- <p (click)="down()">Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p> -->
+                    <mat-form-field class="search">
+                    <mat-label>Ver Desarrollos </mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
                 </div>
                 <div fxFlex="90%" class="lookfor">
                     <form class="example-form">
-                        <mat-form-field appearance="fill">
+                        <mat-form-field appearance="fill" class="inputback">
                             <input matInput placeholder="Buscar por ubicación" class="classRed">
                         </mat-form-field>
                     </form>
                 </div>
             </div>
             <div class="last-filters">
-                <button mat-button class="sub">Buscar</button>
+                <button mat-button class="sub" (click)="search('element')">Buscar</button>
             </div>
         </div>
     </div>
@@ -71,8 +79,7 @@
             </div>
             <div fxLayout="row" class="bottom-column">
                 <div class="flex text" fxFlex="60%">
-                    <h3>{{prop.name}}</h3>
-                    <h4 class="nomargin">{{prop.built_size}} mts<sup>2</sup></h4>
+                    <h3>{{prop.name}} en {{prop.city}}</h3>
                     <h4 style="font-size: 1.4rem;">{{prop.price | currency }}</h4>
                 </div>
                 <div class="flex buttons" fxFlex="40%">

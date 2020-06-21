@@ -25,7 +25,7 @@ export class AboutUsComponent implements OnInit, AfterViewInit {
 
   seeMore(name, title, desc, phone){
     const dialogRef = this.dialog.open(DialogSeeMoreComponent, {
-      width: '30%',
+      width: '20%',
       data: {
         name: name,
         title: title,

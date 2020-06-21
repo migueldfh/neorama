@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material';
 import { PreviewComponent } from './preview/preview.component';
 import { NewsletterComponent } from '../newsletter/newsletter.component';
 import { UserServicesService } from '../../providers/user-api/user-services.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,10 +20,15 @@ export class HomeComponent implements OnInit {
   gender;
   degreeTitleList = [];
   properties: any = [];
-  
+  foods = [
+    {value: 'steak-0', viewValue: 'Casas'},
+    {value: 'pizza-1', viewValue: 'Departamentos'},
+    {value: 'tacos-2', viewValue: 'Terrenos'}
+  ];
   constructor(
     public dialog: MatDialog,
-    public userApi: UserServicesService
+    public userApi: UserServicesService,
+    private router: Router
   ) { 
     this.selected = false;
   }
@@ -36,6 +42,10 @@ export class HomeComponent implements OnInit {
       this.properties = resp;
       console.log("props: ", this.properties);
     });
+  }
+
+  search(element){
+    this.router.navigate(["search-properties", element]);
   }
 
   status(i){
@@ -56,6 +66,7 @@ export class HomeComponent implements OnInit {
   preview(prop){
     const dialogRef = this.dialog.open(PreviewComponent, {
       width: '30%',
+      height: '85vh',
       data: {
         propObj: prop
       }

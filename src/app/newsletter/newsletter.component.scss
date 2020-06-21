@@ -1,8 +1,13 @@
 h2{
     text-align: center;
 }
+mat-dialog-content{
+    width: 90% !important;
+    margin: 0 auto;
+}
 .m-form{
     height: 45vh;
+    width: 100%;
     .mat-form-field{
         width: 100%;
     }
@@ -23,6 +28,9 @@ h2{
         button{
             background: #001c2b;
             color: #fff;
+            width: 50%;
+            border-radius: 2px;
+            margin: 1rem 0;
         }
     }
 }
@@ -41,4 +49,14 @@ h2{
         border-radius: 30px;
         font-size: 1.7vw !important;
     }
+}
+.flex{
+    display: flex;
+}
+.first{
+    width: 90%;
+    margin-right: 10px;
+}
+.second{
+    width: 90%;
 }

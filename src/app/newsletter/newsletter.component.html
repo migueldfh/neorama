@@ -1,24 +1,30 @@
 <h2 mat-dialog-title>¿Deseas vender, rentar o comprar?</h2>
 
 <mat-dialog-actions class="close">
-    <button mat-button class="mat-raised-button" (click)="close()">x</button>
+    <button mat-button class="mat-raised-button" (click)="close()"><mat-icon>close</mat-icon></button>
 </mat-dialog-actions>
 
 <mat-dialog-content>
     <div class="m-subheader">
         <div fxLayoutAlign="left" class="main-container">
             <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="close()">
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Nombre Completo" name="name" autocomplete="off" ngModel>
+                    <div class="flex">
+                        <mat-form-field appearance="outline" class="first">
+                            <mat-label>Nombre Completo</mat-label>
+                            <input matInput type="text" placeholder="Juan Perez" name="name" autocomplete="off" ngModel>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="second">
+                            <mat-label>Teléfono</mat-label>
+                            <input matInput type="text" placeholder="81290394" name="tel" autocomplete="off" ngModel>
+                        </mat-form-field>
+                    </div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>E-mail</mat-label>
+                        <input matInput type="text" placeholder="correo@ejemplo.com" name="email" autocomplete="off" ngModel>
                     </mat-form-field>
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Teléfono" name="tel" autocomplete="off" ngModel>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="E-mail" name="email" autocomplete="off" ngModel>
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Duda..." name="duda" autocomplete="off" ngModel>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Duda</mat-label>
+                        <input matInput type="text" placeholder="Escriba su mensaje..." name="duda" autocomplete="off" ngModel>
                     </mat-form-field>
                 <div class="m-login__form-action">
                     <button mat-button class="mat-raised-button">Enviar</button>

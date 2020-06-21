@@ -1,48 +1,51 @@
 <app-menu></app-menu>
 <app-stick></app-stick>
 <div class="block">
-    <h2 class="title">¡Contacta con nuestros Consultores!</h2>
-</div>
-<div fxLayout="row wrap" fxLayout="100%" fxLayoutAlign="flex-start center" class="contact">
-    <div fxLayout="100%">
-        <div fxLayout="50%" class="title">
+    <div fxLayout="100%" class="back">
+        <div fxLayout="50%">
+            <h2 class="title">¡Contacta con nuestros Consultores!</h2>
+        </div>
+        <div fxLayout="50%" class="title half-2">
             <p>
             Somos expertos inmobiliarios y estamos listos para apoyarte. <br> <br> Déjanos tus dudas o comentarios
-            y en breve estaremos en contacto para brindarte la asesoría que se ajuste a tus necesidades; o
-            bien para recibir una asesoría completa y personalizada sobre el servicio de tu interés.
+            y en breve estaremos en contacto para brindarte la asesoría que se ajuste a tus necesidades. <br> <br> 
+            O bien para recibir una asesoría completa y personalizada sobre el servicio de tu interés.
             </p>  
-            <!-- <h3>No dude en comunicarse con nosotros en cualquier momento. <br/><br/>Envie sus preguntas y comentarios para que podamos abordar su consulta de manera más efectiva.</h3> -->
-        </div>
-        <div fxLayout="50%">
-            <img src="../../assets/img/chair-discussing-facial-expression-1181557.png" alt="Contacto" class="contact-img">
         </div>
     </div>
+</div>
+<div fxLayout="row wrap" fxLayout="100%" fxLayoutAlign="flex-start center" class="contact">
+    
 </div>
 <div fxLayout="100%">
     <div class="form">
-        <h2>Envíanos tus dudas/comentarios</h2>
-        <form class="m-login__form m-form" #login="ngForm" (ngSubmit)="onClickSubmit(login.value)">
+        <div fxLayout="50%" class="block">
+            <h2>Envíanos tus dudas/comentarios</h2>
+            <form class="m-login__form m-form" #login="ngForm" (ngSubmit)="onClickSubmit(login.value)">
+                <div class="form-group m-form__group">
+                <mat-form-field>
+                    <input matInput class="form-control m-input" type="text" placeholder="E-mail" name="email" autocomplete="off" ngModel>
+                </mat-form-field>
+            </div>
             <div class="form-group m-form__group">
-            <mat-form-field>
-                <input matInput class="form-control m-input" type="text" placeholder="E-mail" name="email" autocomplete="off" ngModel>
-            </mat-form-field>
+                <mat-form-field>
+                    <input matInput class="form-control m-input m-login__form-input--last" type="text" placeholder="Mensaje" name="password" ngModel>
+                </mat-form-field>
+                </div>
+                <div class="m-login__form-action">
+                    <button mat-button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">Enviar</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group m-form__group">
-            <mat-form-field>
-                <input matInput class="form-control m-input m-login__form-input--last" type="text" placeholder="Mensaje" name="password" ngModel>
-            </mat-form-field>
-            </div>
-            <div class="m-login__form-action">
-                <button mat-button id="m_login_signin_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">Enviar</button>
-            </div>
-        </form>
+    </div>
+    <div fxLayout="70%" class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.0688083235486!2d-100.33213448528024!3d25.669013683678894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662be1f26f078df%3A0xbdd554f5cc3d4903!2sValle%20del%20Mirador%20203%2C%20Mirador%2C%2064910%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1582690878299!5m2!1ses-419!2smx" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </div>
 </div>
 
-<div fxLayout="100%" fxLayoutAlign="flex-start center" class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.0688083235486!2d-100.33213448528024!3d25.669013683678894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662be1f26f078df%3A0xbdd554f5cc3d4903!2sValle%20del%20Mirador%20203%2C%20Mirador%2C%2064910%20Monterrey%2C%20N.L.!5e0!3m2!1ses-419!2smx!4v1582690878299!5m2!1ses-419!2smx" width="90%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-    <!-- <agm-map [latitude]="lat" [longitude]="lng">
+<!-- <div fxLayout="100%" fxLayoutAlign="flex-start center" class="map">
+    <agm-map [latitude]="lat" [longitude]="lng">
         <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-    </agm-map> -->
-</div>
+    </agm-map> 
+</div>-->
 <app-footer></app-footer>

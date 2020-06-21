@@ -15,6 +15,9 @@ export class PreviewComponent implements OnInit {
   name: any;
   price: any;
   address: any;
+  bathrooms: any;
+  built_size: any;
+  parking: any;
 
   constructor(
     public dialogRef: MatDialogRef<PreviewComponent>,
@@ -22,9 +25,12 @@ export class PreviewComponent implements OnInit {
   ) { 
     //Obtener datos de la propiedad
     this.img = data.propObj['images'];
-    this.name = data.propObj['name'];
+    this.name = data.propObj['ad_description'];
     this.price = data.propObj['price'];
-    this.address = data.propObj['address'];
+    this.built_size = data.propObj['built_size'];
+    this.bathrooms = data.propObj['bathrooms'];
+    this.parking = data.propObj['parking'];
+    this.address = data.propObj['delegation'];
   }
 
 

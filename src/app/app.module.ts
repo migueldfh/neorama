@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DesarrollosComponent } from './desarrollos/desarrollos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatInputModule, MatTabsModule, MatFormField, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatTableModule, } from '@angular/material';
+import { MatInputModule, MatTabsModule, MatFormField, MatIconModule, MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatTableModule, MatSelectModule, MatRadioModule } from '@angular/material';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MenuComponent } from './menu/menu.component';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -25,6 +25,7 @@ import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SliderModule } from 'angular-image-slider';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { DialogSeeMoreComponent } from './about-us/dialog-see-more/dialog-see-more.component';
+import { SearchPropertiesComponent } from './search-properties/search-properties.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DialogSeeMoreComponent } from './about-us/dialog-see-more/dialog-see-mo
     PreviewComponent,
     StickComponent,
     NewsletterComponent,
-    DialogSeeMoreComponent
+    DialogSeeMoreComponent,
+    SearchPropertiesComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,8 @@ import { DialogSeeMoreComponent } from './about-us/dialog-see-more/dialog-see-mo
     MatDialogModule,
     FlexLayoutModule,
     HttpClientModule,
+    MatSelectModule,
+    MatRadioModule,
     MatCarouselModule.forRoot(),
     MatCarouselModule,
     AgmCoreModule.forRoot({

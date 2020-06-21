@@ -1,5 +1,7 @@
-<h3>{{name}}</h3>
+<div class="flex">
+    <h3><mat-icon class="person-icon">person</mat-icon> {{name}}</h3>
+</div>
 
 <h4>{{title}}</h4>
-<p>{{desc}}</p>
-<span>{{phone}}</span>
+<p><mat-icon>phone_enabled</mat-icon> <a href="tel:{{desc}}" target="_blank">{{desc}}</a></p>
+<p><mat-icon>mail_outline</mat-icon> <a href="mailto:{{phone}}" target="_blank">{{phone}}</a></p>

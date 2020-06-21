@@ -1,10 +1,15 @@
 .contact{
     height: 65vh;
-    margin-top: 10vh;
+    background-image: url("../../assets/img/men_contact.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 65%;
+    opacity: 0.5;
     .title{
         display: block !important;
         padding-left: 7%;
         width: 100%;
+        text-align: center;
         h3{
             font-size: 1.7rem;
             font-weight: 400;
@@ -26,10 +31,34 @@
         }
     }
 }
-h2.title{
-    font-size: 2.4rem;
-    margin-top: 0;
+.half-2{
+    background: #001c2bde;
+    padding: 2%;
+    margin: 4%;
+    width: 40%;
+    border-radius: 3px;
+    position: relative;
+    left: 90px;
+}
+.back{
+    padding: 0 2rem;
+    position: absolute;
+    top: 28%;
+    color: white;
+    margin: 0 8rem;
+    border-radius: 3px;
+    font-size: 1.2rem;
     text-align: center;
+    z-index: 1;
+}
+h2.title{
+    margin-top: 0;
+    color: #001c2bde;
+    text-align: left;
+    font-size: 3rem;
+    position: relative;
+    top: 10%;
+    width: 70%;
 }
 .contact-form{
     height: 25vh;
@@ -67,11 +96,15 @@ h2.title{
     }
 }
 .form{
-    margin-top: 13vh;
+    margin-top: 10vh;
     position: relative;
     z-index: 9999999999999 !important;
-    width: 100%;
-    text-align: center;
+    width: 50%;
+    text-align: right;
+    padding: 0 5rem;
+    .block{
+        display: block !important;
+    }
     .mat-form-field{
         &:first-child{
             margin-top: 1vh;
@@ -79,10 +112,20 @@ h2.title{
         width: 70%;
     }
     h2{
-        margin: 0 !important;
+        margin: 20px 0 !important;
     }
     button{
         background: #001c2b;
         color: #fff;
+        border-radius: 2px;
+        width: 25%;
+        margin: 20px 0;
     }
+    mat-form-field{
+        width: 90% !important;
+    }
+}
+.map{
+    width: 70%;
+    margin: 0 !important;
 }

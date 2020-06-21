@@ -11,10 +11,13 @@
     .main-search{
         background: white;
         border-radius: 35px;
-        height: 35vh;
+        height: 36vh;
         text-align: center;
         color: #001c2b;
-        margin-top: 15vh;
+        margin-top: 5vh;
+        h3{
+            font-size: 1.3rem;
+        }
         .options{
             .mat-list-base{
                 display: flex;
@@ -41,15 +44,15 @@
         .search-bar{
             border: 2px solid #feaa61;
             border-radius: 30px;
-            height: 5vh;
-            margin: 40px 30px;
+            height: 6vh;
+            margin: 40px 30px 25px 30px;
             p{
                 margin: 5px 0 0 0;
             }
             .select-search{
                 border-right: 2px solid #feaa61;
                 text-align: left;
-                margin: 0px 0 0 20px;
+                margin: 3px 0 0 20px;
                 font-size: 0.9rem;
                 font-weight: 500;
                 i{
@@ -84,8 +87,16 @@
                         padding: 0 !important;
                     }
                     ::ng-deep {
-                    .classRed::placeholder {   
+                        .classRed::placeholder {   
                         color: #001c2b;  
+                        }
+                        .inputback{
+                            position: relative;
+                            top: 10px;
+                            color: #feaa61 !important;
+                        }
+                        .mat-form-field-appearance-fill .mat-form-field-flex{
+                            background: transparent !important;
                         }
                     }
                     ::ng-deep .mat-focused .mat-form-field-label {
@@ -110,13 +121,25 @@
                       }         
                 }
             }
-            .last-filters{
-                button.sub{
-                    background: #feaa61;
-                    color: #fff;
-                }
-            }
         }
+    }
+}
+button.sub{
+    background: #feaa61;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    border-radius: 2px;
+    cursor: pointer;
+    z-index: 9999999999999999999999;
+    width: 10%;
+    border-radius: 5px;
+}
+mat-form-field{
+    z-index: 9999999999999999999999;
+    &.search{
+        width: 94%;
     }
 }
 .text-section{
@@ -205,4 +228,7 @@
 }
 .carousel-container{
     height: 35vh;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: transparent !important;
 }

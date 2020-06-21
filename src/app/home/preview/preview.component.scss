@@ -10,7 +10,7 @@
             margin-bottom: 0;
         }
         h2{
-            margin-top: 5px;
+            margin:15px 0px 0px 0px;
         }
         button.blue{
             background: #001c2b;
@@ -23,7 +23,7 @@
     }
 }
 .mat-dialog-content{
-    overflow: hidden;
+    overflow: initial;
 }
 .mat-dialog-container{
     background: #fff !important;
@@ -41,4 +41,22 @@
 }
 .carousel-container{
     height: 35vh;
+}
+.flexIcons{
+    display: block;
+    width: 50%;
+}
+.amenidades{
+    display: flex;
+}
+.nomargin{
+    margin: 0;
+}
+.light{
+    font-weight: 100;
+    margin-top: 15px;
+}
+mat-icon{
+    position: relative;
+    top: 4px;
 }

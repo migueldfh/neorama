@@ -2,6 +2,39 @@ h3,h4,p,span{
     font-family: 'Roboto' !important;
 }
 mat-dialog-container{
-    width: 50% !important;
     margin: 0 auto !important;
+}
+.flex{
+    display: flex;
+}
+.person-icon{
+    position: relative;
+    top: 0.2em;
+
+}
+h3{
+    margin:1em 0;
+    text-align: center;
+    width: 100%;
+}
+h4{
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+p{
+    text-align: center;
+    font-weight: 500;
+    margin: 1em 0;
+    font-size: 1rem;
+    mat-icon{
+        position: relative;
+        font-size: 1rem;
+        top: 2px;
+    }
+    a{
+        color: #001c2b;
+        text-decoration: none;
+    }
 }
