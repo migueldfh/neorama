@@ -106,3 +106,48 @@
     background: #fff !important;
     color: #001c2b !important;
 }
+@media (max-width: 700px){
+    app-stick{
+        display: none;
+    }
+    .services{
+        display: block !important;
+        .img-content{
+            width: 102% !important;
+            .img-back{
+                img{
+                    height: 60vh;
+                }
+            }
+            .subjects{
+                button{
+                    font-size: 0.7rem !important;
+                    &:first-child{
+                        margin-top: 5vh !important;
+                    }
+                }
+            }
+        }
+        .services-tabs{
+            width: 103% !important;
+            .tabs{
+                .over-txt{
+                    padding: 40px 40px 10px 40px !important;
+                    h3{
+                        &:first-child{
+                            padding: 10px 40px 0px 40px !important;
+                        }
+                    }
+                }
+                h3{
+                    padding: 10px 40px 40px 40px !important;
+                }
+            }
+        }
+    }
+    app-footer{
+        .footer{
+            width: 100% !important;
+        }
+    }
+}

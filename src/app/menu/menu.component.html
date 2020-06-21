@@ -3,7 +3,7 @@
         <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
             <mat-icon>menu</mat-icon>
         </button>
-        <div fxFlex="25%" class="center">
+        <div fxFlex="25%" class="center" class="mobileMenu">
             <span>
                 <img
                 class="logo-img"
@@ -12,7 +12,7 @@
                 />
             </span>
         </div>
-        <div fxFlex="50%">
+        <div fxFlex="50%" class="mobileNone">
             <div fxShow="true" fxHide.lt-md class="menu">
                 <!-- The following menu items will be hidden on both SM and XS screen sizes -->
                 <a routerLink="" routerLinkActive="active" mat-button>Inicio</a>
@@ -24,7 +24,7 @@
                 <!-- <a routerLink="/dash" routerLinkActive="active" mat-button>Dash</a> -->
             </div>
         </div>
-        <div fxFlex="25%">
+        <div fxFlex="25%" class="mobileNone">
             <span class="menu-spacer" fxHide.lt-md>
                 <!-- <p>+(52)811 238 1928</p>
                 <p>info@neorama.mx</p> -->
@@ -36,13 +36,13 @@
 <mat-sidenav-container fxFlexFill>
     <mat-sidenav #sidenav>
     <mat-nav-list class="menu-list">
-        <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-        <a href="#" mat-list-item>Inicio</a>
-        <a href="#" mat-list-item>Nosotros</a>
-        <a href="#" mat-list-item>Propiedades</a>
-        <a href="#" mat-list-item>Desarrollos</a>
-        <a href="#" mat-list-item>Servicios</a>
-        <a href="#"mat-list-item>Contacto</a>
+        <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
+        <a routerLink="" routerLinkActive="active" mat-button>Inicio</a>
+        <a routerLink="/about-us" routerLinkActive="active" mat-button>Nosotros</a>
+        <a routerLink="/properties" routerLinkActive="active" mat-button>Propiedades</a>
+        <!-- <a routerLink="/develops" routerLinkActive="active" mat-button>Desarrollos</a> -->
+        <a routerLink="/services" routerLinkActive="active" mat-button>Servicios</a>
+        <a routerLink="/contact" routerLinkActive="active" mat-button>Contacto</a>
     </mat-nav-list>
     </mat-sidenav>
 </mat-sidenav-container>

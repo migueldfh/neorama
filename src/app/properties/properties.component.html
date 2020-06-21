@@ -116,7 +116,7 @@
                                 <p>Publicado el {{prop.created_at | date:'mediumDate'}}</p>
                             </div>
                             <div class="sec">
-                                <button class="mat-raised-button blue" mat-button> <mat-icon>question_answer</mat-icon> CONTACTAR</button>
+                                <button class="mat-raised-button blue" mat-button (click)="getContact(prop)"> <mat-icon>question_answer</mat-icon> CONTACTAR</button>
                             </div>
                         </div>
                     </div>

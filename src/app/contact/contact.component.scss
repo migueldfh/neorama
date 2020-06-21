@@ -129,3 +129,48 @@ h2.title{
     width: 70%;
     margin: 0 !important;
 }
+@media (max-width: 700px){
+    app-stick{
+        display: none;
+    }
+    ::ng-deep{
+        .cdk-overlay-pane{
+            width: 100% !important;
+            height: 80vh !important;
+        }
+        .m-form{
+            height: 60vh !important;
+            .flex{
+                display: block !important;
+            }
+            .close{
+                position: relative !important;
+                top: -33px !important;
+                left: -18px !important;
+            }
+        }
+        app-footer{
+            .footer{
+                width: 98% !important;
+            }
+        }
+    }
+    .half-2{
+        display: none !important;
+    }
+    .back{
+        top: 29% !important;
+        left: 10px !important;
+        margin: 0;
+    }
+    .mobileBlock{
+        display: block !important;
+    }
+    .form{
+        width: 70% !important;
+        height: 50vh !important;
+    }
+    .map{
+        width: 100% !important;
+    }
+}

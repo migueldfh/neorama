@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
+import { PreviewComponentSearch } from '../search-properties/preview/preview.component';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-properties',
@@ -39,6 +41,7 @@ export class PropertiesComponent implements OnInit {
   
   constructor(
     public userApi: UserServicesService,
+    public dialog: MatDialog
   ) { 
     this.selected = false;
   }
@@ -77,5 +80,15 @@ export class PropertiesComponent implements OnInit {
       }
       this.selected = true;
     }
+  }
+
+  getContact(prop){
+    const dialogRef = this.dialog.open(PreviewComponentSearch, {
+      width: '30%',
+      height: '85vh',
+      data: {
+        propObj: prop
+      }
+    });
   }
 }

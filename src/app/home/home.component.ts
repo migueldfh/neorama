@@ -25,12 +25,31 @@ export class HomeComponent implements OnInit {
     {value: 'pizza-1', viewValue: 'Departamentos'},
     {value: 'tacos-2', viewValue: 'Terrenos'}
   ];
+  inmueble = [
+    {value: 'steak-0', viewValue: 'Casas'},
+    {value: 'pizza-1', viewValue: 'Departamentos'},
+    {value: 'tacos-2', viewValue: 'Terrenos'}
+  ];
+  operation = [
+    {value: 'steak-0', viewValue: 'Renta'},
+    {value: 'pizza-1', viewValue: 'Compra'},
+    {value: 'tacos-2', viewValue: 'Renta temporal/Vacacional'}
+  ];
+  selected1: boolean;
+  selected2: boolean;
+  selected3: boolean;
+  selected4: boolean;
+  selected5: boolean;
   constructor(
     public dialog: MatDialog,
     public userApi: UserServicesService,
     private router: Router
   ) { 
-    this.selected = false;
+    this.selected1 = false;
+    this.selected2 = false;
+    this.selected3 = false;
+    this.selected4 = false;
+    this.selected5 = false;
   }
 
   ngOnInit() {
@@ -49,17 +68,40 @@ export class HomeComponent implements OnInit {
   }
 
   status(i){
-    console.log("ch?", this.selected);
-    console.log("index", i);
-    const id = i;
-    this.i = id;
-    if(this.selected){
-      this.selected = false;
-    }else{
-      if(id != 0){
-        this.selected = true;
-      }
-      this.selected = true;
+    if(i == 1){
+      this.selected1 = true;
+      this.selected2 = false;
+      this.selected3 = false;
+      this.selected4 = false;
+      this.selected5 = false;
+    }
+    if(i == 2){
+      this.selected1 = false;
+      this.selected2 = true;
+      this.selected3 = false;
+      this.selected4 = false;
+      this.selected5 = false;
+    }
+    if(i == 3){
+      this.selected1 = false;
+      this.selected2 = false;
+      this.selected3 = true;
+      this.selected4 = false;
+      this.selected5 = false;
+    }
+    if(i == 4){
+      this.selected1 = false;
+      this.selected2 = false;
+      this.selected3 = false;
+      this.selected4 = true;
+      this.selected5 = false;
+    }
+    if(i == 5){
+      this.selected1 = false;
+      this.selected2 = false;
+      this.selected3 = false;
+      this.selected4 = false;
+      this.selected5 = true;
     }
   }
 

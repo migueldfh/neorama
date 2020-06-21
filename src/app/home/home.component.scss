@@ -232,3 +232,83 @@ mat-form-field{
 .mat-form-field-appearance-fill .mat-form-field-flex{
     background-color: transparent !important;
 }
+.desktopNone{
+    display: none;
+}
+@media (max-width: 700px){
+    app-stick{
+        display: none;
+    }
+    .mat-list-base .mat-list-item, button.sub{
+        z-index: inherit !important;
+    }
+    mat-form-field{
+        z-index: 99;
+    }
+    .text-section{
+        .left{
+            max-width: 60% !important;
+        }
+        .logo-n{
+            max-width: 30% !important;
+            img{
+                width: 95%;
+                position: relative;
+                margin-top: 305px;
+                left: 5%;
+            }
+        }
+    }
+    .main{
+        width: 110%;
+    }
+    .baner{
+        width: 100%;
+        margin-left: 2rem;
+        margin-top: 5rem;
+        display: block !important;
+    }
+    .properties-section{
+        width: 110% !important;
+        .details{
+            max-width: 100% !important;
+            margin-right: 2rem;
+        }
+    } 
+    .mobileNone{
+        display: none;
+    }
+    .desktopNone{
+        display: block;
+        background: white;
+        border-radius: 35px;
+        height: 41vh;
+        text-align: center;
+        color: #001c2b;
+        margin-top: 3vh;
+        max-width: 90% !important;
+        padding: 2%;
+        button{
+            background: #feaa61;
+            color: #fff;
+            width: 90%;
+        }
+        h3{
+            font-size: 1.3rem;
+        }
+        .flex{
+            display: flex;
+        }
+        .m-form{
+            mat-form-field{
+                width: 45%;
+                &:first-child{
+                    margin: 0 10px 0 15px;
+                }
+            }
+            .second{
+                width: 90%;
+            }
+        }
+    }
+}

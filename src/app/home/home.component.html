@@ -2,15 +2,15 @@
 <div class="main" fxLayout="row">
     <app-stick></app-stick>
     <div fxLayout="row" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center" class="baner">
-        <div fxFlex="80%" class="main-search">
+        <div fxFlex="80%" class="main-search mobileNone">
             <h3>Propiedades</h3>
             <div class="options">
                 <mat-list fxLayoutGap="5.5%" fxLayoutAlign="center">
-                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 1" (click)="status(1)"><p>Comprar</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 2" (click)="status(2)"><p>Rentar</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 3" (click)="status(3)"><p>Desarrollos</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 4" (click)="status(4)"><p>Comercial</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected && i === 5" (click)="status(5)"><p>Temporal</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected1" (click)="status(1)"><p>Comprar</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected2" (click)="status(2)"><p>Rentar</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected3" (click)="status(3)"><p>Desarrollos</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected4" (click)="status(4)"><p>Comercial</p></mat-list-item>
+                    <mat-list-item fxFlex="10%" [class.blue]="selected5" (click)="status(5)"><p>Temporal</p></mat-list-item>
                 </mat-list>
             </div>
             <div class="search-bar">
@@ -36,6 +36,36 @@
             <div class="last-filters">
                 <button mat-button class="sub" (click)="search('element')">Buscar</button>
             </div>
+        </div>
+        <div fxFlex="80%" class="main-search-mobile desktopNone">
+            <h3>Propiedades</h3>
+            <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="close()">
+                <div class="flex">
+                    <mat-form-field class="search">
+                    <mat-label>Renta</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let food of operation" [value]="food.value">
+                            {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="search">
+                    <mat-label>Casas</mat-label>
+                        <mat-select>
+                            <mat-option *ngFor="let food of inmueble" [value]="food.value">
+                            {{food.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline" class="second">
+                    <mat-label>Busca por ubicación</mat-label>
+                    <input matInput type="text" placeholder="Escriba la ubicación" name="tel" autocomplete="off" ngModel>
+                </mat-form-field>
+            <div class="m-login__form-action">
+                <button mat-button class="mat-raised-button">BUSCAR</button>
+            </div>
+            </form>
         </div>
     </div>
 </div>

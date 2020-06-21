@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
+import { MatDialog } from '@angular/material';
+import { PreviewComponentSearch } from './preview/preview.component';
 
 @Component({
   selector: 'app-search-properties',
@@ -25,7 +27,8 @@ export class SearchPropertiesComponent implements OnInit {
   park3: boolean;
   constructor(
     private readonly route: ActivatedRoute,
-    public userApi: UserServicesService
+    public userApi: UserServicesService,
+    public dialog: MatDialog
   ) { 
     this.userApi.propiedades().subscribe(resp=>{
       this.properties = resp;
@@ -85,4 +88,13 @@ export class SearchPropertiesComponent implements OnInit {
     }
   }
 
+  getContact(prop){
+    const dialogRef = this.dialog.open(PreviewComponentSearch, {
+      width: '30%',
+      height: '85vh',
+      data: {
+        propObj: prop
+      }
+    });
+  }
 }

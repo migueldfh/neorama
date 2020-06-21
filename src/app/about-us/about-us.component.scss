@@ -202,3 +202,74 @@
 h2, p{
     font-family: Roboto !important;
 }
+@media (max-width: 700px){
+    app-stick{
+        display: none;
+    }
+    .aboutus{
+        width: 113%;
+        display: block !important;
+        height: 110vh;
+        .title{
+            h2{
+                width: 80%;
+                left: 2.5rem;
+                bottom: 0;
+                z-index: 0;
+            }
+            img{
+                position: absolute;
+                width: 113% !important;
+                left: 0rem !important;
+                top: 24rem !important;
+            }
+        }
+        .sub{
+            h3{
+                left: 0.5rem !important;
+                top: 17rem !important;
+                width: 80% !important;
+            }
+            img{
+                &.logo-middle{
+                    position: absolute;
+                    width: 100%;
+                    left: 1.5rem;
+                    bottom: -11rem;
+                }
+            }
+        }
+    }
+    .info{
+        width: 113% !important;
+    }
+    .mainpeople{
+        width: 113% !important;
+    }
+    .people{
+        width: 113% !important;
+        height: 20vh;
+    }
+    .mainbaner{
+        .details{
+            max-width: 100% !important;
+            h2{
+                width: 80%º;
+            }
+            &:first-child{
+                margin-left: 45px !important;
+            }
+            margin-left: 45px !important;
+            .director-info{
+                img{
+                    width: 85%;
+                }
+            }
+        }
+    }
+    ::ng-deep{
+        .carousel{
+            height: 17vh !important;
+        }
+    }
+}

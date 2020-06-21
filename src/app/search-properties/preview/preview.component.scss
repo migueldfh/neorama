@@ -44,19 +44,6 @@
     background: #fff !important;
     color: black !important;
 }
-::ng-deep{
-    .carousel{
-        height: 43vh !important;
-        border-top-right-radius: 6px;
-        border-top-left-radius: 6px;
-        img{
-            width: 100%;
-        }
-    }
-}
-.carousel-container{
-    height: 35vh;
-}
 .flexIcons{
     display: block;
     width: 50%;

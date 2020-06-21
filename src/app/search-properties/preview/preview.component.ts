@@ -10,7 +10,7 @@ export interface DialogData {
   templateUrl: './preview.component.html',
   styleUrls: ['./preview.component.scss']
 })
-export class PreviewComponent implements OnInit {
+export class PreviewComponentSearch implements OnInit {
   img: any;
   name: any;
   price: any;
@@ -21,7 +21,7 @@ export class PreviewComponent implements OnInit {
   contact: boolean;
 
   constructor(
-    public dialogRef: MatDialogRef<PreviewComponent>,
+    public dialogRef: MatDialogRef<PreviewComponentSearch>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,
   ) { 
     //Obtener datos de la propiedad
