@@ -3,10 +3,10 @@
     <app-stick></app-stick>
     <div fxLayout="row" fxLayoutWrap fxLayoutAlign="center">
         <div class="sidebar">
-            <div class="filters">
+            <!-- <div class="filters">
                 <h3>Filtros seleccionados:</h3>
                 <span *ngFor="let filter of selectedFilters;let i = index">{{filter.name}} <mat-icon (click)="deleteFilter(i)">close</mat-icon></span>
-            </div>
+            </div> -->
             <div class="addresse">
                 <h3>Dirección</h3>
                 <form class="m-login__form m-form" #register="ngForm" (ngOnChanges)="filter(register.value)">

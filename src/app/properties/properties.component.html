@@ -3,53 +3,58 @@
     <app-stick></app-stick>
     <div fxLayout="row" fxLayoutWrap fxLayoutAlign="center">
         <div class="sidebar">
-            <div class="filters">
+            <!-- <div class="filters">
                 <h3>Filtros seleccionados:</h3>
-                <span *ngFor="let filter of selectedFilters;let i = index">{{filter.name}} <mat-icon (click)="deleteFilter(i)">close</mat-icon></span>
-            </div>
+                <span *ngFor="let filter of selectedFilters;let i = index">{{filter.city}} {{filter.operation}} {{filter.inmueble}} {{filter.baths}} {{filter.parks}} <mat-icon (click)="deleteFilter(i)">close</mat-icon></span>
+            </div> -->
             <div class="addresse">
                 <h3>Dirección</h3>
-                <form class="m-login__form m-form" #register="ngForm" (ngOnChanges)="filter(register.value)">
+                <form class="m-login__form m-form" #register="ngForm">
                     <mat-form-field appearance="outline" class="first">
-                        <input matInput type="text" placeholder="Buscar por diección" name="name" autocomplete="off" ngModel>
+                        <mat-select name="location" [formControl]="location_control" placeholder="Dirección" (selectionChange)="filter(location_control.value)">
+                            <mat-option *ngFor="let country of ext" [value]="country.full">
+                                {{country.full}}
+                            </mat-option>
+                        </mat-select>
+                        <!-- <input matInput type="text" placeholder="Buscar por diección" name="addresse" autocomplete="off" ngModel> -->
                     </mat-form-field>
-                    <button mat-button class="mat-raised-button search"><mat-icon>search</mat-icon></button>
+                    <!-- <button mat-button class="mat-raised-button search" (click)="filter(location_control.value)"><mat-icon>search</mat-icon></button> -->
                 </form>
             </div>
             <div class="operation">
                 <h3>Tipo de operación</h3>
-                <mat-radio-group>
-                    <mat-radio-button value="1">Compra</mat-radio-button>
-                    <mat-radio-button value="2">Renta</mat-radio-button>
-                    <mat-radio-button value="3">Renta/Vacacional temporal</mat-radio-button>
-                    <mat-radio-button value="4">Preventa</mat-radio-button>
+                <mat-radio-group name="opciones" [(ngModel)]="operacionSeleccionada" (change)="operar()">
+                    <mat-radio-button name="opciones" value="compra">Compra</mat-radio-button>
+                    <mat-radio-button name="opciones" value="renta">Renta</mat-radio-button>
+                    <mat-radio-button name="opciones" value="vacacional">Renta/Vacacional temporal</mat-radio-button>
+                    <mat-radio-button name="opciones" value="preventa">Preventa</mat-radio-button>
                 </mat-radio-group>
             </div>
-            <div class="priceContainer">
+            <!-- <div class="priceContainer">
                 <h3>Precio</h3>
                 <form class="m-login__form m-form price" #register="ngForm" (ngOnChanges)="filter(register.value)">
                     <mat-radio-group>
-                        <mat-radio-button value="1">MXN</mat-radio-button>
-                        <mat-radio-button value="2">DLS</mat-radio-button>
+                        <mat-radio-button value="mxn">MXN</mat-radio-button>
+                        <mat-radio-button value="dls">DLS</mat-radio-button>
                     </mat-radio-group>
                     <div class="flex">
                         <mat-form-field appearance="outline" class="first">
-                            <input matInput type="text" placeholder="Desde" name="name" autocomplete="off" ngModel>
+                            <input matInput type="text" placeholder="Desde" name="desde" autocomplete="off" ngModel>
                         </mat-form-field>
                         <mat-form-field appearance="outline" class="first">
-                            <input matInput type="text" placeholder="Hasta" name="name" autocomplete="off" ngModel>
+                            <input matInput type="text" placeholder="Hasta" name="hasta" autocomplete="off" ngModel>
                         </mat-form-field>
                         <button mat-button class="mat-raised-button search"><mat-icon>attach_money</mat-icon></button>
                     </div>
                 </form>
-            </div>
+            </div> -->
             <div class="operation">
                 <h3>Tipo de inmueble</h3>
-                <mat-radio-group>
-                    <mat-radio-button value="1">Casa</mat-radio-button>
-                    <mat-radio-button value="2">Departamento</mat-radio-button>
-                    <mat-radio-button value="3">Terreno / Lote</mat-radio-button>
-                    <mat-radio-button value="4">Local comercial</mat-radio-button>
+                <mat-radio-group name="opcionesInmueble" [(ngModel)]="operacionInmueble" (change)="operarInmueble()">
+                    <mat-radio-button name="opcionesInmueble" value="casa">Casa</mat-radio-button>
+                    <mat-radio-button name="opcionesInmueble" value="departamento">Departamento</mat-radio-button>
+                    <mat-radio-button name="opcionesInmueble" value="terreno">Terreno / Lote</mat-radio-button>
+                    <mat-radio-button name="opcionesInmueble" value="local">Local comercial</mat-radio-button>
                 </mat-radio-group>
             </div>
             <div class="operation">
@@ -68,7 +73,7 @@
                     <button mat-button class="mat-raised-button" [class.selected]="park3" (click)="parking(3)"><mat-icon class="plus">close</mat-icon>3</button>
                 </div>
             </div>
-            <div class="operation">
+            <!-- <div class="operation">
                 <h3>Antigüedad</h3>
                 <mat-radio-group>
                     <mat-radio-button value="1">A estrenar</mat-radio-button>
@@ -76,7 +81,7 @@
                     <mat-radio-button value="3">Más de 5 años</mat-radio-button>
                     <mat-radio-button value="4">Menos de 5 años</mat-radio-button>
                 </mat-radio-group>
-            </div>
+            </div> -->
         </div>
         <div class="container-properties">
             <!-- <p>Casas con alberca en Nuevo León</p> -->

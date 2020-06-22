@@ -49,6 +49,18 @@ export class UserServicesService {
 
     return seq;
   }
+  
+  search(body){
+    let seq = this.api.post("search/", body);
+   
+    seq.subscribe((res: any) => {
+      // console.log("Register resp: ", res);
+    }, err => {
+      console.error('ERROR', err);
+    });
+
+    return seq;
+  }
 
   getEmail(){
     let seq = this.api.get("holding");
