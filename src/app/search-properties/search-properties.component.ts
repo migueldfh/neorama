@@ -48,6 +48,10 @@ export class SearchPropertiesComponent implements OnInit {
     });
   }
 
+  filter(element){
+    console.log("add to filter: ", element);
+  }
+
   deleteFilter(i){
     this.selectedFilters.splice(i, 1);
   }

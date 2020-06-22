@@ -38,7 +38,13 @@ export class PropertiesComponent implements OnInit {
     }
   ];
   properties: any = [];
-  
+  selectedFilters: any = [];
+  val1: boolean;
+  val2: boolean;
+  val3: boolean;
+  park1: boolean;
+  park2: boolean;
+  park3: boolean;
   constructor(
     public userApi: UserServicesService,
     public dialog: MatDialog
@@ -50,6 +56,50 @@ export class PropertiesComponent implements OnInit {
     this.userApi.propiedades().subscribe(resp=>{
       this.properties = resp;
     });
+  }
+  
+  filter(element){
+    console.log("add to filter: ", element);
+  }
+
+  bath(i){
+    if(i == 1){
+      this.val1 = true;
+      this.val2 = false;
+      this.val3 = false;
+    }
+    if(i == 2){
+      this.val1 = false;
+      this.val2 = true;
+      this.val3 = false;
+    }
+    if(i == 3){
+      this.val1 = false;
+      this.val2 = false;
+      this.val3 = true;
+    }
+  }
+  
+  parking(i){
+    if(i == 1){
+      this.park1 = true;
+      this.park2 = false;
+      this.park3 = false;
+    }
+    if(i == 2){
+      this.park1 = false;
+      this.park2 = true;
+      this.park3 = false;
+    }
+    if(i == 3){
+      this.park1 = false;
+      this.park2 = false;
+      this.park3 = true;
+    }
+  }
+
+  deleteFilter(i){
+    this.selectedFilters.splice(i, 1);
   }
 
   educationLevelChangeAction(education) {

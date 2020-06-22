@@ -39,7 +39,7 @@
         </div>
         <div fxFlex="80%" class="main-search-mobile desktopNone">
             <h3>Propiedades</h3>
-            <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="close()">
+            <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="search('element')">
                 <div class="flex">
                     <mat-form-field class="search">
                     <mat-label>Renta</mat-label>
@@ -110,6 +110,7 @@
             <div fxLayout="row" class="bottom-column">
                 <div class="flex text" fxFlex="60%">
                     <h3>{{prop.name}} en {{prop.city}}</h3>
+                    <h4 class="nomargin">{{prop.built_size}} mts<sup>2</sup></h4>
                     <h4 style="font-size: 1.4rem;">{{prop.price | currency }}</h4>
                 </div>
                 <div class="flex buttons" fxFlex="40%">

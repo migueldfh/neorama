@@ -9,7 +9,7 @@
             </div>
             <div class="addresse">
                 <h3>Dirección</h3>
-                <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="close()">
+                <form class="m-login__form m-form" #register="ngForm" (ngOnChanges)="filter(register.value)">
                     <mat-form-field appearance="outline" class="first">
                         <input matInput type="text" placeholder="Buscar por diección" name="name" autocomplete="off" ngModel>
                     </mat-form-field>
@@ -27,7 +27,7 @@
             </div>
             <div class="priceContainer">
                 <h3>Precio</h3>
-                <form class="m-login__form m-form price" #register="ngForm" (ngSubmit)="close()">
+                <form class="m-login__form m-form price" #register="ngForm" (ngOnChanges)="filter(register.value)">
                     <mat-radio-group>
                         <mat-radio-button value="1">MXN</mat-radio-button>
                         <mat-radio-button value="2">DLS</mat-radio-button>
