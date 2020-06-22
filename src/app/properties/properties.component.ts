@@ -94,11 +94,9 @@ export class PropertiesComponent implements OnInit {
       parking: ''
     }
 
-    this.userApi.search(body).subscribe(resp=>{
-      console.log("resp filter: ", resp);
-    });
-
-    
+    // this.userApi.search(body).subscribe(resp=>{
+    //   console.log("resp filter: ", resp);
+    // });
   }
   operar() {
     switch (this.operacionSeleccionada) {
