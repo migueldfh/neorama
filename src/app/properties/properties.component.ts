@@ -49,18 +49,27 @@ export class PropertiesComponent implements OnInit {
     }
   ];
   properties: any = [];
-  selectedFilters: any = [
-    {
-      city: '',
-      inmueble: '',
-      baths: '',
-      parks: '',
-      operation: ''
-    }
-  ];
+  selectedFilters: {
+  city: string,
+  inmueble: string,
+  baths: string,
+  beths: string,
+  parks: string,
+  operation: string
+  } = {
+    city: '',
+    inmueble: '',
+    baths: '',
+    beths: '',
+    parks: '',
+    operation: ''
+  }
   val1: boolean;
   val2: boolean;
   val3: boolean;
+  valh1: boolean;
+  valh2: boolean;
+  valh3: boolean;
   park1: boolean;
   park2: boolean;
   park3: boolean;
@@ -72,10 +81,22 @@ export class PropertiesComponent implements OnInit {
   operacionSeleccionada: string;
   operacionInmueble: string;
   location_control = new FormControl();
+  citySelect: boolean;
+  inmuebleSelect: boolean;
+  bathsSelect: boolean;
+  parksSelect: boolean;
+  operationSelect: boolean;
+  bethsSelect: boolean;
   constructor(
     public userApi: UserServicesService,
     public dialog: MatDialog
   ) { 
+    this.citySelect = false;
+    this.inmuebleSelect = false;
+    this.bathsSelect = false;
+    this.bethsSelect = false;
+    this.parksSelect = false;
+    this.operationSelect = false;
     this.selected = false;
   }
 
@@ -98,6 +119,13 @@ export class PropertiesComponent implements OnInit {
     //   console.log("resp filter: ", resp);
     // });
   }
+
+  filterChanged(value){
+    this.selectedFilters.city = value;
+    this.citySelect = true;
+    // this.order.type=value;
+  }
+
   operar() {
     switch (this.operacionSeleccionada) {
       case 'compra' : this.resultado = 'compra';
@@ -113,6 +141,8 @@ export class PropertiesComponent implements OnInit {
       operation: this.operacionSeleccionada
     }
     console.log("radio: ", this.operacionSeleccionada);
+    this.selectedFilters.operation = this.operacionSeleccionada;
+    this.operationSelect = true;
   }
 
   operarInmueble() {
@@ -127,9 +157,12 @@ export class PropertiesComponent implements OnInit {
         break;
     }
     console.log("radio inmueble: ", this.operacionInmueble);
+    this.inmuebleSelect = true;
+    this.selectedFilters.inmueble = this.operacionInmueble;
   }
 
   bath(i){
+    this.bathsSelect = true;
     if(i == 1){
       this.val1 = true;
       this.val2 = false;
@@ -138,6 +171,7 @@ export class PropertiesComponent implements OnInit {
       let body = {
         baths: 'Baño +1'
       }
+      this.selectedFilters.baths = '1 Baño';
       // this.selectedFilters.push(body);
     }
     if(i == 2){
@@ -148,6 +182,7 @@ export class PropertiesComponent implements OnInit {
       let body = {
         baths: 'Baño +2'
       }
+      this.selectedFilters.baths = '2 Baños';
       // this.selectedFilters.push(body);
     }
     if(i == 3){
@@ -158,11 +193,50 @@ export class PropertiesComponent implements OnInit {
       let body = {
         baths: 'Baño +3'
       }
+      this.selectedFilters.baths = '3 Baños';
+      // this.selectedFilters.push(body);
+    }
+  }
+
+  beth(i){
+    this.bethsSelect = true;
+    if(i == 1){
+      this.valh1 = true;
+      this.valh2 = false;
+      this.valh3 = false;
+      this.bathrooms = 1;
+      let body = {
+        baths: 'Baño +1'
+      }
+      this.selectedFilters.beths = '1 Recámara';
+      // this.selectedFilters.push(body);
+    }
+    if(i == 2){
+      this.valh1 = false;
+      this.valh2 = true;
+      this.valh3 = false;
+      this.bathrooms = 2;
+      let body = {
+        baths: 'Baño +2'
+      }
+      this.selectedFilters.beths = '2 Recámaras';
+      // this.selectedFilters.push(body);
+    }
+    if(i == 3){
+      this.valh1 = false;
+      this.valh2 = false;
+      this.valh3 = true;
+      this.bathrooms = 3;
+      let body = {
+        baths: 'Baño +3'
+      }
+      this.selectedFilters.beths = '3 Recámaras';
       // this.selectedFilters.push(body);
     }
   }
   
   parking(i){
+    this.parksSelect = true;
     if(i == 1){
       this.park1 = true;
       this.park2 = false;
@@ -171,6 +245,7 @@ export class PropertiesComponent implements OnInit {
       let body = {
         parks: 'Estacionamiento +1'
       }
+      this.selectedFilters.parks = '1 Estacionamiento';
       // this.selectedFilters.push(body);
     }
     if(i == 2){
@@ -181,6 +256,7 @@ export class PropertiesComponent implements OnInit {
       let body = {
         parks: 'Estacionamiento +2'
       }
+      this.selectedFilters.parks = '2 Estacionamientos';
       // this.selectedFilters.push(body);
     }
     if(i == 3){
@@ -191,12 +267,30 @@ export class PropertiesComponent implements OnInit {
       let body = {
         parks: 'Estacionamiento +3'
       }
+      this.selectedFilters.parks = '3 Estacionamientos';
       // this.selectedFilters.push(body);
     }
   }
 
   deleteFilter(i){
-    this.selectedFilters.splice(i, 1);
+    if(i == 'city'){
+      this.citySelect = false;
+    }
+    if(i == 'operation'){
+      this.operationSelect = false;
+    }
+    if(i == 'bath'){
+      this.bathsSelect = false;
+    }
+    if(i == 'beth'){
+      this.bethsSelect = false;
+    }
+    if(i == 'park'){
+      this.parksSelect = false;
+    }
+    if(i == 'inmueble'){
+      this.inmuebleSelect = false;
+    }
   }
 
   status(i){

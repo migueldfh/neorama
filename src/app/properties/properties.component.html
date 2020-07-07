@@ -3,15 +3,20 @@
     <app-stick></app-stick>
     <div fxLayout="row" fxLayoutWrap fxLayoutAlign="center">
         <div class="sidebar">
-            <!-- <div class="filters">
+            <div class="filters" [class.filtersHeight]="inmuebleSelect">
                 <h3>Filtros seleccionados:</h3>
-                <span *ngFor="let filter of selectedFilters;let i = index">{{filter.city}} {{filter.operation}} {{filter.inmueble}} {{filter.baths}} {{filter.parks}} <mat-icon (click)="deleteFilter(i)">close</mat-icon></span>
-            </div> -->
+                <span *ngIf="citySelect"> {{selectedFilters.city}} <mat-icon (click)="deleteFilter('city')">close</mat-icon></span> <br>
+                <span *ngIf="operationSelect" style="position:relative;top:20px"> {{selectedFilters.operation}}  <mat-icon (click)="deleteFilter('operation')">close</mat-icon></span> <br>
+                <span *ngIf="inmuebleSelect" style="position:relative;top:40px"> {{selectedFilters.inmueble}}  <mat-icon (click)="deleteFilter('inmueble')">close</mat-icon></span> <br>
+                <span *ngIf="bethsSelect" style="position:relative;top:60px"> {{selectedFilters.beths}}  <mat-icon (click)="deleteFilter('beth')">close</mat-icon></span> <br>
+                <span *ngIf="bathsSelect" style="position:relative;top:80px"> {{selectedFilters.baths}}  <mat-icon (click)="deleteFilter('bath')">close</mat-icon></span> <br>
+                <span *ngIf="parksSelect" style="position:relative;top:100px"> {{selectedFilters.parks}} <mat-icon (click)="deleteFilter('park')">close</mat-icon></span>
+            </div>
             <div class="addresse">
                 <h3>Dirección</h3>
                 <form class="m-login__form m-form" #register="ngForm">
                     <mat-form-field appearance="outline" class="first">
-                        <mat-select name="location" [formControl]="location_control" placeholder="Dirección" (selectionChange)="filter(location_control.value)">
+                        <mat-select name="location" [formControl]="location_control" placeholder="Dirección" (selectionChange)="filterChanged($event.value)">
                             <mat-option *ngFor="let country of ext" [value]="country.full">
                                 {{country.full}}
                             </mat-option>
@@ -55,6 +60,8 @@
                     <mat-radio-button name="opcionesInmueble" value="departamento">Departamento</mat-radio-button>
                     <mat-radio-button name="opcionesInmueble" value="terreno">Terreno / Lote</mat-radio-button>
                     <mat-radio-button name="opcionesInmueble" value="local">Local comercial</mat-radio-button>
+                    <mat-radio-button name="opcionesInmueble" value="oficina">Oficina</mat-radio-button>
+                    <mat-radio-button name="opcionesInmueble" value="bodega">Bodega</mat-radio-button>
                 </mat-radio-group>
             </div>
             <div class="operation">
@@ -63,6 +70,14 @@
                     <button mat-button class="mat-raised-button" [class.selected]="val1" (click)="bath(1)"><mat-icon class="plus">close</mat-icon>1</button>
                     <button mat-button class="mat-raised-button" [class.selected]="val2" (click)="bath(2)"><mat-icon class="plus">close</mat-icon>2</button>
                     <button mat-button class="mat-raised-button" [class.selected]="val3" (click)="bath(3)"><mat-icon class="plus">close</mat-icon>3</button>
+                </div>
+            </div>
+            <div class="operation">
+                <h3>Habitaciones</h3>
+                <div class="btnsOpts">
+                    <button mat-button class="mat-raised-button" [class.selected]="valh1" (click)="beth(1)"><mat-icon class="plus">close</mat-icon>1</button>
+                    <button mat-button class="mat-raised-button" [class.selected]="valh2" (click)="beth(2)"><mat-icon class="plus">close</mat-icon>2</button>
+                    <button mat-button class="mat-raised-button" [class.selected]="valh3" (click)="beth(3)"><mat-icon class="plus">close</mat-icon>3</button>
                 </div>
             </div>
             <div class="operation">
@@ -113,7 +128,8 @@
                 <div class="description">
                     <h2>{{prop.ad_description}}</h2>
                     <p class="sub">{{prop.delegation}}</p>
-                    <p class="mtop">Terreno construido {{prop.built_size}}mts<sup>2</sup> | <mat-icon>single_bed</mat-icon> Recámaras {{prop.bathrooms}} | <mat-icon>bathtub</mat-icon> Baños {{prop.bathrooms}}</p>
+                    <p class="mtop">Terreno {{prop.built_size}}mts<sup>2</sup> | Construcción {{prop.total_built}}mts<sup>2</sup> </p>
+                    <p class="mtop"><mat-icon>single_bed</mat-icon> Recámaras {{prop.bathrooms}} | <mat-icon>bathtub</mat-icon> Baños {{prop.bathrooms}} | <mat-icon>bathtub</mat-icon> Baños Compartidos {{prop.half_bathrooms}}</p>
                     <p> <mat-icon>directions_car</mat-icon>Estacionamiento {{prop.parking}} | <mat-icon>pool</mat-icon> Alberca | <mat-icon>pets</mat-icon> Mascotas permitidas </p>
                     <div class="footer" fxLayout="column" fxLayoutAlign="end stretch">
                         <div class="flex">

@@ -19,6 +19,7 @@ export class PreviewComponent implements OnInit {
   built_size: any;
   parking: any;
   contact: boolean;
+  currency_type: any;
 
   constructor(
     public dialogRef: MatDialogRef<PreviewComponent>,
@@ -32,6 +33,7 @@ export class PreviewComponent implements OnInit {
     this.bathrooms = data.propObj['bathrooms'];
     this.parking = data.propObj['parking'];
     this.address = data.propObj['delegation'];
+    this.currency_type = data.propObj['currency_type'];
     this.contact = false;
   }
 

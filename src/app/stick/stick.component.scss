@@ -4,44 +4,56 @@
     z-index: 100;
     .red{
         background: #D32E85;
-        padding: 20px;
+        padding: 15px;
         margin: 0px;
         width: 43% !important;
         -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
         transition: width 0.5s;
+        img{
+            width: 90%;
+        }
         &:hover{
             width: 70% !important; 
         }
     }
     .blue{
         background: #4267B2;
-        padding: 20px;
+        padding: 15px;
         margin: 0px;
         -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
         transition: width 0.5s;
         width: 43% !important;
+        img{
+            width: 90%;
+        }
         &:hover{
             width: 70% !important; 
         }
     }
     .white{
         background: #62A438;
-        padding: 20px;
+        padding: 15px;
         margin: 0px;
         -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
         transition: width 0.5s;
         width: 43% !important;
+        img{
+            width: 90%;
+        }
         &:hover{
             width: 70% !important; 
         }
     }
     .green{
         background: #FD0101;
-        padding: 20px;
+        padding: 15px;
         margin: 0px;
         -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
         transition: width 0.5s;
         width: 43% !important;
+        img{
+            width: 90%;
+        }
         &:hover{
             width: 70% !important; 
         }

@@ -3,7 +3,7 @@
     <app-stick></app-stick>
     <div fxLayout="row" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center" class="baner">
         <div fxFlex="80%" class="main-search mobileNone">
-            <h3>Propiedades</h3>
+            <h3>Buscador de Propiedades</h3>
             <div class="options">
                 <mat-list fxLayoutGap="5.5%" fxLayoutAlign="center">
                     <mat-list-item fxFlex="10%" [class.blue]="selected1" (click)="status(1)"><p>Comprar</p></mat-list-item>
@@ -73,8 +73,8 @@
     <div fxFlex="20%" class="logo-n">
         <img src="../../assets/img/Neorama_Web_min.png">
     </div>
-    <div fxFlex="40%" class="left content">
-        Somos un nuevo Panorama Inmobiliario, brindamos confianza en soluciones integrales para la
+    <div fxFlex="70%" class="left content">
+        Somos tu nuevo Panorama Inmobiliario, brindamos confianza en soluciones integrales para la
         promoción y comercialización de propiedades.
         Contamos con amplia experiencia y capacidad y damos un valor significativo en la amplia
         diversidad de servicios que manejamos; marcando una pauta de diferenciación en el servicio al
@@ -111,7 +111,7 @@
                 <div class="flex text" fxFlex="60%">
                     <h3>{{prop.name}} en {{prop.maps_url}}</h3>
                     <h4 class="nomargin">{{prop.built_size}} mts<sup>2</sup></h4>
-                    <h4 style="font-size: 1.4rem;">{{prop.price | currency }}</h4>
+                    <h4 style="font-size: 1.4rem;">{{prop.price | currency }} {{prop.currency_type}}</h4>
                 </div>
                 <div class="flex buttons" fxFlex="40%">
                     <button mat-button class="blue-rounded" (click)="preview(prop)">Ver más</button>
