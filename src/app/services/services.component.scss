@@ -106,6 +106,16 @@
     background: #fff !important;
     color: #001c2b !important;
 }
+@media (min-width: 1505px) and (max-width:1550px){
+    .services .img-content .img-back .subjects{
+        width: 78% !important;
+    }
+}
+@media (min-width: 1551px) and (max-width:1600px){
+    .services .img-content .img-back .subjects{
+        width: 75% !important;
+    }
+}
 @media (max-width: 700px){
     app-stick{
         display: none;

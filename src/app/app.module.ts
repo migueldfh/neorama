@@ -28,6 +28,7 @@ import { SliderModule } from 'angular-image-slider';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { DialogSeeMoreComponent } from './about-us/dialog-see-more/dialog-see-more.component';
 import { SearchPropertiesComponent } from './search-properties/search-properties.component';
+import { AvisoPrivacidadComponent } from './aviso-privacidad/aviso-privacidad.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SearchPropertiesComponent } from './search-properties/search-properties
     StickComponent,
     NewsletterComponent,
     DialogSeeMoreComponent,
-    SearchPropertiesComponent
+    SearchPropertiesComponent,
+    AvisoPrivacidadComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { PropertiesComponent } from './properties/properties.component';
 import { SearchPropertiesComponent } from './search-properties/search-properties.component';
+import { AvisoPrivacidadComponent } from './aviso-privacidad/aviso-privacidad.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'search-properties/:id', component: SearchPropertiesComponent },
   // { path: 'develops', component: DesarrollosComponent },
   { path: 'services', component: ServicesComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'aviso-de-privacidad', component: AvisoPrivacidadComponent }
 ];
 
 @NgModule({

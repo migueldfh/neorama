@@ -35,24 +35,6 @@
                     <mat-radio-button name="opciones" value="preventa">Preventa</mat-radio-button>
                 </mat-radio-group>
             </div>
-            <!-- <div class="priceContainer">
-                <h3>Precio</h3>
-                <form class="m-login__form m-form price" #register="ngForm" (ngOnChanges)="filter(register.value)">
-                    <mat-radio-group>
-                        <mat-radio-button value="mxn">MXN</mat-radio-button>
-                        <mat-radio-button value="dls">DLS</mat-radio-button>
-                    </mat-radio-group>
-                    <div class="flex">
-                        <mat-form-field appearance="outline" class="first">
-                            <input matInput type="text" placeholder="Desde" name="desde" autocomplete="off" ngModel>
-                        </mat-form-field>
-                        <mat-form-field appearance="outline" class="first">
-                            <input matInput type="text" placeholder="Hasta" name="hasta" autocomplete="off" ngModel>
-                        </mat-form-field>
-                        <button mat-button class="mat-raised-button search"><mat-icon>attach_money</mat-icon></button>
-                    </div>
-                </form>
-            </div> -->
             <div class="operation">
                 <h3>Tipo de inmueble</h3>
                 <mat-radio-group name="opcionesInmueble" [(ngModel)]="operacionInmueble" (change)="operarInmueble()">
@@ -65,11 +47,49 @@
                 </mat-radio-group>
             </div>
             <div class="operation">
-                <h3>Baños</h3>
-                <div class="btnsOpts">
-                    <button mat-button class="mat-raised-button" [class.selected]="val1" (click)="bath(1)"><mat-icon class="plus">close</mat-icon>1</button>
-                    <button mat-button class="mat-raised-button" [class.selected]="val2" (click)="bath(2)"><mat-icon class="plus">close</mat-icon>2</button>
-                    <button mat-button class="mat-raised-button" [class.selected]="val3" (click)="bath(3)"><mat-icon class="plus">close</mat-icon>3</button>
+                <h3>Antigüedad</h3>
+                <mat-radio-group name="opcionesAnti" [(ngModel)]="operacionAnti" (change)="antiguedad()">
+                    <mat-radio-button name="opcionesAnti" value="estrenar">A estrenar</mat-radio-button>
+                    <mat-radio-button name="opcionesAnti" value="construccion">En construcción</mat-radio-button>
+                    <mat-radio-button name="opcionesAnti" value="5años">Hasta 5 años</mat-radio-button>
+                    <mat-radio-button name="opcionesAnti" value="5-10">Entre 5 y 10 años</mat-radio-button>
+                    <mat-radio-button name="opcionesAnti" value="10-20">Entre 10 y 20 años</mat-radio-button>
+                    <mat-radio-button name="opcionesAnti" value="20-50">Entre 20 y 50 años</mat-radio-button>
+                    <mat-radio-button name="opcionesAnti" value="50+">Más de 50 años</mat-radio-button>
+                </mat-radio-group>
+            </div>
+            <div class="operation">
+                <h3>Superficie</h3>
+                <mat-radio-group name="opcionesSuperficie" [(ngModel)]="operacionSuperficie" (change)="superficie()">
+                    <mat-radio-button name="opcionesSuperficie" value="construccion">Construcción</mat-radio-button>
+                    <mat-radio-button name="opcionesSuperficie" value="terreno">Terreno</mat-radio-button>
+                </mat-radio-group>
+                <div class="inputs">
+                    <mat-form-field appearance="outline" class="half">
+                        <mat-label>Desde</mat-label>
+                        <input matInput type="number" name="mts1" autocomplete="off" ngModel>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="half">
+                        <mat-label>Hasta</mat-label>
+                        <input matInput type="number" name="mts2" autocomplete="off" ngModel>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="operation">
+                <h3>Precio</h3>
+                <mat-radio-group name="opcionesPrecio" [(ngModel)]="operacionPrecio" (change)="precio()">
+                    <mat-radio-button name="opcionesPrecio" value="pesos">Pesos</mat-radio-button>
+                    <mat-radio-button name="opcionesPrecio" value="dolares">Dólares</mat-radio-button>
+                </mat-radio-group>
+                <div class="inputs">
+                    <mat-form-field appearance="outline" class="half">
+                        <mat-label>Desde</mat-label>
+                        <input matInput type="number" name="mts1" autocomplete="off" ngModel>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="half">
+                        <mat-label>Hasta</mat-label>
+                        <input matInput type="number" name="mts2" autocomplete="off" ngModel>
+                    </mat-form-field>
                 </div>
             </div>
             <div class="operation">
@@ -78,6 +98,14 @@
                     <button mat-button class="mat-raised-button" [class.selected]="valh1" (click)="beth(1)"><mat-icon class="plus">close</mat-icon>1</button>
                     <button mat-button class="mat-raised-button" [class.selected]="valh2" (click)="beth(2)"><mat-icon class="plus">close</mat-icon>2</button>
                     <button mat-button class="mat-raised-button" [class.selected]="valh3" (click)="beth(3)"><mat-icon class="plus">close</mat-icon>3</button>
+                </div>
+            </div>
+            <div class="operation">
+                <h3>Baños</h3>
+                <div class="btnsOpts">
+                    <button mat-button class="mat-raised-button" [class.selected]="val1" (click)="bath(1)"><mat-icon class="plus">close</mat-icon>1</button>
+                    <button mat-button class="mat-raised-button" [class.selected]="val2" (click)="bath(2)"><mat-icon class="plus">close</mat-icon>2</button>
+                    <button mat-button class="mat-raised-button" [class.selected]="val3" (click)="bath(3)"><mat-icon class="plus">close</mat-icon>3</button>
                 </div>
             </div>
             <div class="operation">
@@ -128,7 +156,7 @@
                 <div class="description">
                     <h2>{{prop.ad_description}}</h2>
                     <p class="sub">{{prop.delegation}}</p>
-                    <p class="mtop">Terreno {{prop.built_size}}mts<sup>2</sup> | Construcción {{prop.total_built}}mts<sup>2</sup> </p>
+                    <p class="mtop">Superficie: Terreno {{prop.built_size}}mts<sup>2</sup>, Construcción {{prop.total_built}}mts<sup>2</sup> </p>
                     <p class="mtop"><mat-icon>single_bed</mat-icon> Recámaras {{prop.bathrooms}} | <mat-icon>bathtub</mat-icon> Baños {{prop.bathrooms}} | <mat-icon>bathtub</mat-icon> Baños Compartidos {{prop.half_bathrooms}}</p>
                     <p> <mat-icon>directions_car</mat-icon>Estacionamiento {{prop.parking}} | <mat-icon>pool</mat-icon> Alberca | <mat-icon>pets</mat-icon> Mascotas permitidas </p>
                     <div class="footer" fxLayout="column" fxLayoutAlign="end stretch">

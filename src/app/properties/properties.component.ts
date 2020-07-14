@@ -55,14 +55,20 @@ export class PropertiesComponent implements OnInit {
   baths: string,
   beths: string,
   parks: string,
-  operation: string
+  operation: string,
+  superficie: string,
+  precio: string, 
+  antiguedad: string
   } = {
     city: '',
     inmueble: '',
     baths: '',
     beths: '',
     parks: '',
-    operation: ''
+    operation: '',
+    superficie: '',
+    precio: '',
+    antiguedad: ''
   }
   val1: boolean;
   val2: boolean;
@@ -78,11 +84,20 @@ export class PropertiesComponent implements OnInit {
   displayParameter: any;
   resultado=null;
   resultadoInmueble=null;
+  resultadoPrecio=null;
+  resultadoAnti=null;
+  resultadoSuperficie=null;
   operacionSeleccionada: string;
   operacionInmueble: string;
+  operacionAnti: string;
+  operacionPrecio: string;
+  operacionSuperficie: string;
   location_control = new FormControl();
   citySelect: boolean;
   inmuebleSelect: boolean;
+  superficieSelect: boolean;
+  antiSelect: boolean;
+  precioSelect: boolean;
   bathsSelect: boolean;
   parksSelect: boolean;
   operationSelect: boolean;
@@ -93,6 +108,9 @@ export class PropertiesComponent implements OnInit {
   ) { 
     this.citySelect = false;
     this.inmuebleSelect = false;
+    this.superficieSelect = false;
+    this.antiSelect = false;
+    this.precioSelect = false;
     this.bathsSelect = false;
     this.bethsSelect = false;
     this.parksSelect = false;
@@ -104,6 +122,7 @@ export class PropertiesComponent implements OnInit {
     this.userApi.propiedades().subscribe(resp=>{
       this.properties = resp;
     });
+    console.log("change?? ", this.selectedFilters);
   }
   
   filter(modify){
@@ -124,6 +143,10 @@ export class PropertiesComponent implements OnInit {
     this.selectedFilters.city = value;
     this.citySelect = true;
     // this.order.type=value;
+    console.log("localidad= ", value);
+    this.userApi.search(value).subscribe((resp)=>{
+      console.log("busqueda?? ", resp);
+    })
   }
 
   operar() {
@@ -159,6 +182,49 @@ export class PropertiesComponent implements OnInit {
     console.log("radio inmueble: ", this.operacionInmueble);
     this.inmuebleSelect = true;
     this.selectedFilters.inmueble = this.operacionInmueble;
+  }
+
+  superficie() {
+    switch (this.operacionSuperficie) {
+      case 'construccion' : this.resultadoSuperficie = 'construccion';
+        break;
+      case 'terreno' : this.resultadoSuperficie = 'terreno';
+        break;
+    }
+    this.superficieSelect = true;
+    this.selectedFilters.superficie = this.operacionSuperficie;
+  }
+
+  precio() {
+    switch (this.operacionPrecio) {
+      case 'pesos' : this.resultadoPrecio = 'pesos';
+        break;
+      case 'dolares' : this.resultadoPrecio = 'dolares';
+        break;
+    }
+    this.precioSelect = true;
+    this.selectedFilters.precio = this.operacionPrecio;
+  }
+
+  antiguedad() {
+    switch (this.operacionAnti) {
+      case 'estrenar' : this.resultadoAnti = 'estrenar';
+        break;
+      case 'construccion' : this.resultadoAnti = 'construccion';
+        break;
+      case '5años' : this.resultadoAnti = '5años';
+        break;
+      case '5-10' : this.resultadoAnti = '5-10';
+        break;
+      case '10-20' : this.resultadoAnti = '10-20';
+        break;
+      case '20-50' : this.resultadoAnti = '20-50';
+        break;
+      case '50+' : this.resultadoAnti = '50+';
+        break;
+    }
+    this.antiSelect = true;
+    this.selectedFilters.antiguedad = this.operacionAnti;
   }
 
   bath(i){
