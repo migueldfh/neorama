@@ -63,8 +63,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  search(element){
-    this.router.navigate(["properties", element]);
+  search(){
+    this.router.navigate(["/properties"]);
   }
 
   status(i){

@@ -13,7 +13,7 @@ import { AvisoPrivacidadComponent } from './aviso-privacidad/aviso-privacidad.co
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about-us', component: AboutUsComponent },
-  { path: 'properties/:id', component: PropertiesComponent },
+  { path: 'properties', component: PropertiesComponent },
   // { path: 'search-properties/:id', component: SearchPropertiesComponent },
   // { path: 'develops', component: DesarrollosComponent },
   { path: 'services', component: ServicesComponent },

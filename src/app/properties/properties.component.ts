@@ -122,7 +122,6 @@ export class PropertiesComponent implements OnInit {
     this.userApi.propiedades().subscribe(resp=>{
       this.properties = resp;
     });
-    console.log("change?? ", this.selectedFilters);
   }
   
   filter(modify){
@@ -146,7 +145,7 @@ export class PropertiesComponent implements OnInit {
     console.log("localidad= ", value);
     this.userApi.search(value).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
-    })
+    });
   }
 
   operar() {
@@ -166,6 +165,10 @@ export class PropertiesComponent implements OnInit {
     console.log("radio: ", this.operacionSeleccionada);
     this.selectedFilters.operation = this.operacionSeleccionada;
     this.operationSelect = true;
+
+    this.userApi.search(this.operacionSeleccionada).subscribe((resp)=>{
+      console.log("busqueda?? ", resp);
+    });
   }
 
   operarInmueble() {
@@ -182,6 +185,10 @@ export class PropertiesComponent implements OnInit {
     console.log("radio inmueble: ", this.operacionInmueble);
     this.inmuebleSelect = true;
     this.selectedFilters.inmueble = this.operacionInmueble;
+
+    this.userApi.search(this.operacionInmueble).subscribe((resp)=>{
+      console.log("busqueda?? ", resp);
+    });
   }
 
   superficie() {
@@ -193,6 +200,10 @@ export class PropertiesComponent implements OnInit {
     }
     this.superficieSelect = true;
     this.selectedFilters.superficie = this.operacionSuperficie;
+    
+    this.userApi.search(this.operacionSuperficie).subscribe((resp)=>{
+      console.log("busqueda?? ", resp);
+    });
   }
 
   precio() {
@@ -204,6 +215,10 @@ export class PropertiesComponent implements OnInit {
     }
     this.precioSelect = true;
     this.selectedFilters.precio = this.operacionPrecio;
+
+    this.userApi.search(this.operacionPrecio).subscribe((resp)=>{
+      console.log("busqueda?? ", resp);
+    });
   }
 
   antiguedad() {
@@ -225,6 +240,10 @@ export class PropertiesComponent implements OnInit {
     }
     this.antiSelect = true;
     this.selectedFilters.antiguedad = this.operacionAnti;
+
+    this.userApi.search(this.operacionAnti).subscribe((resp)=>{
+      console.log("busqueda?? ", resp);
+    });
   }
 
   bath(i){
@@ -235,10 +254,14 @@ export class PropertiesComponent implements OnInit {
       this.val3 = false;
       this.bathrooms = 1;
       let body = {
-        baths: 'Baño +1'
+        baths: 1
       }
       this.selectedFilters.baths = '1 Baño';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 2){
       this.val1 = false;
@@ -246,10 +269,14 @@ export class PropertiesComponent implements OnInit {
       this.val3 = false;
       this.bathrooms = 2;
       let body = {
-        baths: 'Baño +2'
+        baths: 2
       }
       this.selectedFilters.baths = '2 Baños';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 3){
       this.val1 = false;
@@ -257,10 +284,14 @@ export class PropertiesComponent implements OnInit {
       this.val3 = true;
       this.bathrooms = 3;
       let body = {
-        baths: 'Baño +3'
+        baths: 3
       }
       this.selectedFilters.baths = '3 Baños';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
   }
 
@@ -272,10 +303,14 @@ export class PropertiesComponent implements OnInit {
       this.valh3 = false;
       this.bathrooms = 1;
       let body = {
-        baths: 'Baño +1'
+        beths: 1
       }
       this.selectedFilters.beths = '1 Recámara';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 2){
       this.valh1 = false;
@@ -283,10 +318,14 @@ export class PropertiesComponent implements OnInit {
       this.valh3 = false;
       this.bathrooms = 2;
       let body = {
-        baths: 'Baño +2'
+        beths: 2
       }
       this.selectedFilters.beths = '2 Recámaras';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 3){
       this.valh1 = false;
@@ -294,10 +333,14 @@ export class PropertiesComponent implements OnInit {
       this.valh3 = true;
       this.bathrooms = 3;
       let body = {
-        baths: 'Baño +3'
+        beths: 3
       }
       this.selectedFilters.beths = '3 Recámaras';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
   }
   
@@ -309,10 +352,14 @@ export class PropertiesComponent implements OnInit {
       this.park3 = false;
       this.parkinSize = 1;
       let body = {
-        parks: 'Estacionamiento +1'
+        parks: 1
       }
       this.selectedFilters.parks = '1 Estacionamiento';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 2){
       this.park1 = false;
@@ -320,10 +367,14 @@ export class PropertiesComponent implements OnInit {
       this.park3 = false;
       this.parkinSize = 2;
       let body = {
-        parks: 'Estacionamiento +2'
+        parks: 2
       }
       this.selectedFilters.parks = '2 Estacionamientos';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 3){
       this.park1 = false;
@@ -331,10 +382,14 @@ export class PropertiesComponent implements OnInit {
       this.park3 = true;
       this.parkinSize = 3;
       let body = {
-        parks: 'Estacionamiento +3'
+        parks: 3
       }
       this.selectedFilters.parks = '3 Estacionamientos';
       // this.selectedFilters.push(body);
+
+      this.userApi.search(body).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
   }
 
