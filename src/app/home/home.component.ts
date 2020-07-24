@@ -21,9 +21,12 @@ export class HomeComponent implements OnInit {
   degreeTitleList = [];
   properties: any = [];
   foods = [
-    {value: 'steak-0', viewValue: 'Casas'},
-    {value: 'pizza-1', viewValue: 'Departamentos'},
-    {value: 'tacos-2', viewValue: 'Terrenos'}
+    {viewValue: 'Casas'},
+    {viewValue: 'Departamento'},
+    {viewValue: 'Terreno/Lote'},
+    {viewValue: 'Local comercial'},
+    {viewValue: 'Oficina'},
+    {viewValue: 'Bodega'}
   ];
   inmueble = [
     {value: 'steak-0', viewValue: 'Casas'},

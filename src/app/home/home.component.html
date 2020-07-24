@@ -17,9 +17,9 @@
                 <div fxFlex="16%" class="select-search">
                     <!-- <p (click)="down()">Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p> -->
                     <mat-form-field class="search">
-                    <mat-label>Ver Desarrollos </mat-label>
+                    <mat-label>Tipo de inmueble</mat-label>
                         <mat-select>
-                            <mat-option *ngFor="let food of foods" [value]="food.value">
+                            <mat-option *ngFor="let food of foods" [value]="food.viewValue">
                             {{food.viewValue}}
                             </mat-option>
                         </mat-select>
