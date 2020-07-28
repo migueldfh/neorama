@@ -18,6 +18,7 @@ export class PreviewComponentSearch implements OnInit {
   bathrooms: any;
   built_size: any;
   parking: any;
+  message: any;
   contact: boolean;
 
   constructor(
@@ -35,12 +36,12 @@ export class PreviewComponentSearch implements OnInit {
     this.contact = false;
   }
 
-
   close(): void {
     this.dialogRef.close();
   }
 
   ngOnInit() {
+    this.message = "Hola que tal.";
   }
 
   getContact(){
