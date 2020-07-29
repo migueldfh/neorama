@@ -236,6 +236,9 @@ mat-form-field{
 .desktopNone{
     display: none;
 }
+.last-filters{
+    text-align: center;
+}
 @media (max-width: 700px){
     app-stick{
         display: none;

@@ -51,24 +51,24 @@ export class PropertiesComponent implements OnInit {
   properties: any = [];
   selectedFilters: {
   city: string,
-  inmueble: string,
+  type: string,
   bath: number,
   beds: number,
   parking: number,
   operation: string,
-  superficie: string,
-  precio: string, 
-  antiguedad: string
+  build: string,
+  price: string, 
+  antique: string
   } = {
-    city: null,
-    inmueble: null,
-    bath: null,
-    beds: null,
-    parking: null,
-    operation: null,
-    superficie: null,
-    precio: null,
-    antiguedad: null
+  city: null,
+  type: null,
+  bath: null,
+  beds: null,
+  parking: null,
+  operation: null,
+  build: null,
+  price: null,
+  antique: null
   }
   val1: boolean;
   val2: boolean;
@@ -180,7 +180,7 @@ export class PropertiesComponent implements OnInit {
         break;
     }
     this.inmuebleSelect = true;
-    this.selectedFilters.inmueble = this.operacionInmueble;
+    this.selectedFilters.type = this.operacionInmueble;
 
     this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
@@ -195,7 +195,7 @@ export class PropertiesComponent implements OnInit {
         break;
     }
     this.superficieSelect = true;
-    this.selectedFilters.superficie = this.operacionSuperficie;
+    this.selectedFilters.build = this.operacionSuperficie;
 
     this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
@@ -210,7 +210,7 @@ export class PropertiesComponent implements OnInit {
         break;
     }
     this.precioSelect = true;
-    this.selectedFilters.precio = this.operacionPrecio;
+    this.selectedFilters.price = this.operacionPrecio;
 
     this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
@@ -235,7 +235,7 @@ export class PropertiesComponent implements OnInit {
         break;
     }
     this.antiSelect = true;
-    this.selectedFilters.antiguedad = this.operacionAnti;
+    this.selectedFilters.antique = this.operacionAnti;
 
     this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);

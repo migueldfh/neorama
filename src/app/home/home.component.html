@@ -18,7 +18,7 @@
                     <!-- <p (click)="down()">Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p> -->
                     <mat-form-field class="search">
                     <mat-label>Tipo de inmueble</mat-label>
-                        <mat-select>
+                        <mat-select name="inmueble" (selectionChange)="filterChanged($event.value)">
                             <mat-option *ngFor="let food of foods" [value]="food.viewValue">
                             {{food.viewValue}}
                             </mat-option>
@@ -26,20 +26,20 @@
                     </mat-form-field>
                 </div>
                 <div fxFlex="90%" class="lookfor">
-                    <form class="example-form">
+                    <form class="example-form" #register="ngForm" (keydown.enter)="$event.preventDefault()">
                         <mat-form-field appearance="fill" class="inputback">
-                            <input matInput placeholder="Buscar por ubicación" class="classRed">
+                            <input matInput name="location" placeholder="Buscar por ubicación" type="text" class="classRed" ngModel>
                         </mat-form-field>
+                        <div class="last-filters">
+                            <button mat-button type="submit" class="sub" (click)="search(register.value)">Buscar</button>
+                        </div>
                     </form>
                 </div>
-            </div>
-            <div class="last-filters">
-                <button mat-button class="sub" (click)="search()">Buscar</button>
             </div>
         </div>
         <div fxFlex="80%" class="main-search-mobile desktopNone">
             <h3>Propiedades</h3>
-            <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="search()">
+            <form class="m-login__form m-form" #registerMobile="ngForm" (keydown.enter)="$event.preventDefault()">
                 <div class="flex">
                     <mat-form-field class="search">
                     <mat-label>Renta</mat-label>
@@ -60,10 +60,10 @@
                 </div>
                 <mat-form-field appearance="outline" class="second">
                     <mat-label>Busca por ubicación</mat-label>
-                    <input matInput type="text" placeholder="Escriba la ubicación" name="tel" autocomplete="off" ngModel>
+                    <input matInput type="text" placeholder="Escriba la ubicación" name="location" autocomplete="off" ngModel>
                 </mat-form-field>
             <div class="m-login__form-action">
-                <button mat-button class="mat-raised-button">BUSCAR</button>
+                <button mat-button class="mat-raised-button" (click)="search(registerMobile.value)">BUSCAR</button>
             </div>
             </form>
         </div>
@@ -83,7 +83,7 @@
 </div>
 <div fxLayout="row" class="properties-section">
     <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start center" class="baner">
-        <div fxFlex="30%" class="details" *ngFor="let prop of properties">
+        <div fxFlex="30%" class="details" *ngFor="let prop of propertiesArr">
             <div fxLayout="column" class="carousel-container">
                 <mat-carousel
                 class="thiscarousel"

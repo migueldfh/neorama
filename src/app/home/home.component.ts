@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
   gender;
   degreeTitleList = [];
   properties: any = [];
+  propertiesArr: any = [];
   foods = [
     {viewValue: 'Casas'},
     {viewValue: 'Departamento'},
@@ -43,6 +44,29 @@ export class HomeComponent implements OnInit {
   selected3: boolean;
   selected4: boolean;
   selected5: boolean;
+  selectedFilters: {
+  city: string,
+  inmueble: string,
+  bath: number,
+  beds: number,
+  parking: number,
+  operation: string,
+  superficie: string,
+  precio: string, 
+  antiguedad: string
+  } = {
+    city: null,
+    inmueble: null,
+    bath: null,
+    beds: null,
+    parking: null,
+    operation: null,
+    superficie: null,
+    precio: null,
+    antiguedad: null
+  }
+  locationSearch: any;
+
   constructor(
     public dialog: MatDialog,
     public userApi: UserServicesService,
@@ -63,11 +87,27 @@ export class HomeComponent implements OnInit {
     this.userApi.propiedades().subscribe(resp=>{
       this.properties = resp;
       console.log("props: ", this.properties);
+      if(this.properties.length <= 6){
+        this.propertiesArr = resp;
+      }
     });
   }
 
-  search(){
-    this.router.navigate(["/properties"]);
+  search(x){
+    // console.log("search: ", x);
+    this.selectedFilters.city = x.location;
+    this.userApi.search(this.selectedFilters).subscribe(resp=>{
+      console.log("response of main search: ", resp);
+      this.router.navigate(["/properties"]);
+    });
+  }
+
+  filterChanged(value){
+    this.selectedFilters.inmueble = value;
+    
+    this.userApi.search(this.selectedFilters).subscribe((resp)=>{
+      console.log("busqueda?? ", resp);
+    });
   }
 
   status(i){
@@ -77,6 +117,10 @@ export class HomeComponent implements OnInit {
       this.selected3 = false;
       this.selected4 = false;
       this.selected5 = false;
+      this.selectedFilters.operation = 'comprar';
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 2){
       this.selected1 = false;
@@ -84,6 +128,10 @@ export class HomeComponent implements OnInit {
       this.selected3 = false;
       this.selected4 = false;
       this.selected5 = false;
+      this.selectedFilters.operation = 'rentar';
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 3){
       this.selected1 = false;
@@ -91,6 +139,10 @@ export class HomeComponent implements OnInit {
       this.selected3 = true;
       this.selected4 = false;
       this.selected5 = false;
+      this.selectedFilters.operation = 'desarrollos';
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 4){
       this.selected1 = false;
@@ -98,6 +150,10 @@ export class HomeComponent implements OnInit {
       this.selected3 = false;
       this.selected4 = true;
       this.selected5 = false;
+      this.selectedFilters.operation = 'comercial';
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
     if(i == 5){
       this.selected1 = false;
@@ -105,6 +161,10 @@ export class HomeComponent implements OnInit {
       this.selected3 = false;
       this.selected4 = false;
       this.selected5 = true;
+      this.selectedFilters.operation = 'temporal';
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
+        console.log("busqueda?? ", resp);
+      });
     }
   }
 
