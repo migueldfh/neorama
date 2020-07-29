@@ -11,7 +11,7 @@
     .main-search{
         background: white;
         border-radius: 35px;
-        height: 36vh;
+        height: 40vh;
         text-align: center;
         color: #001c2b;
         margin-top: 5vh;
@@ -240,6 +240,9 @@ mat-form-field{
 }
 .last-filters{
     text-align: center;
+    width: 120%;
+    position: relative;
+    right: 23%;
 }
 @media (max-width: 700px){
     app-stick{
