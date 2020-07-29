@@ -144,7 +144,7 @@ export class PropertiesComponent implements OnInit {
     this.citySelect = true;
     // this.order.type=value;
     console.log("localidad= ", value);
-    this.userApi.search(value).subscribe((resp)=>{
+    this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
     });
   }
