@@ -56,6 +56,8 @@
                 margin: 3px 0 0 20px;
                 font-size: 0.9rem;
                 font-weight: 500;
+                top: -2px;
+                position: relative;
                 i{
                     position: relative;
                     top: 5px;
@@ -93,7 +95,7 @@
                         }
                         .inputback{
                             position: relative;
-                            top: 10px;
+                            top: 7px;
                             color: #feaa61 !important;
                         }
                         .mat-form-field-appearance-fill .mat-form-field-flex{
