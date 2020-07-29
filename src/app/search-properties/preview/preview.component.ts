@@ -19,6 +19,8 @@ export class PreviewComponentSearch implements OnInit {
   built_size: any;
   parking: any;
   message: any;
+  consultor_name: any;
+  consultor_phone: any;
   contact: boolean;
 
   constructor(
@@ -34,6 +36,8 @@ export class PreviewComponentSearch implements OnInit {
     this.parking = data.propObj['parking'];
     this.address = data.propObj['delegation'];
     this.contact = false;
+    this.consultor_name = data.propObj['consultor'];
+    this.consultor_phone = 81248940;
     this.message = "Hola, me interesa este inmueble que vi en su página web y quiero que me contacten. Gracias.";
   }
 

@@ -37,6 +37,29 @@
         }
     }
 }
+.consultor-info{
+    background: #001c2b;
+    color: #fff;
+    margin-top: 2vh;
+    width: 114%;
+    position: relative;
+    right: 25px;
+    padding: 10px;
+    text-align: center;
+    .light{
+        font-weight: 400;
+    }
+}
+.flex{
+    width: 100%;
+    .first{
+        width: 45%;
+        margin-right: 35px;
+    }
+    .second{
+        width: 45%;
+    }
+}
 .mat-dialog-content{
     overflow: initial;
 }

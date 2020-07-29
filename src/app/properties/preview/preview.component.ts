@@ -18,6 +18,8 @@ export class PreviewComponentProperties implements OnInit {
   bathrooms: any;
   built_size: any;
   parking: any;
+  consultor_name: any;
+  consultor_phone: any;
   contact: boolean;
   message: string;
 
@@ -33,6 +35,8 @@ export class PreviewComponentProperties implements OnInit {
     this.bathrooms = data.propObj['bathrooms'];
     this.parking = data.propObj['parking'];
     this.address = data.propObj['delegation'];
+    this.consultor_name = data.propObj['consultor'];
+    this.consultor_phone = 81248940;
     this.contact = false;
     this.message = "Hola, me interesa este inmueble que vi en su página web y quiero que me contacten. Gracias.";
   }
