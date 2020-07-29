@@ -52,23 +52,23 @@ export class PropertiesComponent implements OnInit {
   selectedFilters: {
   city: string,
   inmueble: string,
-  baths: string,
-  beths: string,
-  parks: string,
+  bath: number,
+  beds: number,
+  parking: number,
   operation: string,
   superficie: string,
   precio: string, 
   antiguedad: string
   } = {
-    city: '',
-    inmueble: '',
-    baths: '',
-    beths: '',
-    parks: '',
-    operation: '',
-    superficie: '',
-    precio: '',
-    antiguedad: ''
+    city: null,
+    inmueble: null,
+    bath: null,
+    beds: null,
+    parking: null,
+    operation: null,
+    superficie: null,
+    precio: null,
+    antiguedad: null
   }
   val1: boolean;
   val2: boolean;
@@ -102,6 +102,7 @@ export class PropertiesComponent implements OnInit {
   parksSelect: boolean;
   operationSelect: boolean;
   bethsSelect: boolean;
+
   constructor(
     public userApi: UserServicesService,
     public dialog: MatDialog
@@ -159,14 +160,10 @@ export class PropertiesComponent implements OnInit {
       case 'preventa' : this.resultado = 'preventa';
         break;
     }
-    let body = {
-      operation: this.operacionSeleccionada
-    }
-    console.log("radio: ", this.operacionSeleccionada);
     this.selectedFilters.operation = this.operacionSeleccionada;
     this.operationSelect = true;
-
-    this.userApi.search(this.operacionSeleccionada).subscribe((resp)=>{
+    
+    this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
     });
   }
@@ -182,11 +179,10 @@ export class PropertiesComponent implements OnInit {
       case 'local' : this.resultadoInmueble = 'preventa';
         break;
     }
-    console.log("radio inmueble: ", this.operacionInmueble);
     this.inmuebleSelect = true;
     this.selectedFilters.inmueble = this.operacionInmueble;
 
-    this.userApi.search(this.operacionInmueble).subscribe((resp)=>{
+    this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
     });
   }
@@ -200,8 +196,8 @@ export class PropertiesComponent implements OnInit {
     }
     this.superficieSelect = true;
     this.selectedFilters.superficie = this.operacionSuperficie;
-    
-    this.userApi.search(this.operacionSuperficie).subscribe((resp)=>{
+
+    this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
     });
   }
@@ -216,7 +212,7 @@ export class PropertiesComponent implements OnInit {
     this.precioSelect = true;
     this.selectedFilters.precio = this.operacionPrecio;
 
-    this.userApi.search(this.operacionPrecio).subscribe((resp)=>{
+    this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
     });
   }
@@ -241,7 +237,7 @@ export class PropertiesComponent implements OnInit {
     this.antiSelect = true;
     this.selectedFilters.antiguedad = this.operacionAnti;
 
-    this.userApi.search(this.operacionAnti).subscribe((resp)=>{
+    this.userApi.search(this.selectedFilters).subscribe((resp)=>{
       console.log("busqueda?? ", resp);
     });
   }
@@ -253,13 +249,9 @@ export class PropertiesComponent implements OnInit {
       this.val2 = false;
       this.val3 = false;
       this.bathrooms = 1;
-      let body = {
-        baths: 1
-      }
-      this.selectedFilters.baths = '1 Baño';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.bath = 1;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -268,13 +260,9 @@ export class PropertiesComponent implements OnInit {
       this.val2 = true;
       this.val3 = false;
       this.bathrooms = 2;
-      let body = {
-        baths: 2
-      }
-      this.selectedFilters.baths = '2 Baños';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.bath = 2;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -283,13 +271,9 @@ export class PropertiesComponent implements OnInit {
       this.val2 = false;
       this.val3 = true;
       this.bathrooms = 3;
-      let body = {
-        baths: 3
-      }
-      this.selectedFilters.baths = '3 Baños';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.bath = 3;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -302,13 +286,9 @@ export class PropertiesComponent implements OnInit {
       this.valh2 = false;
       this.valh3 = false;
       this.bathrooms = 1;
-      let body = {
-        beths: 1
-      }
-      this.selectedFilters.beths = '1 Recámara';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.beds = 1;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -317,13 +297,9 @@ export class PropertiesComponent implements OnInit {
       this.valh2 = true;
       this.valh3 = false;
       this.bathrooms = 2;
-      let body = {
-        beths: 2
-      }
-      this.selectedFilters.beths = '2 Recámaras';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.beds = 2;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -332,13 +308,9 @@ export class PropertiesComponent implements OnInit {
       this.valh2 = false;
       this.valh3 = true;
       this.bathrooms = 3;
-      let body = {
-        beths: 3
-      }
-      this.selectedFilters.beths = '3 Recámaras';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.beds = 3;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -351,13 +323,9 @@ export class PropertiesComponent implements OnInit {
       this.park2 = false;
       this.park3 = false;
       this.parkinSize = 1;
-      let body = {
-        parks: 1
-      }
-      this.selectedFilters.parks = '1 Estacionamiento';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.parking = 1;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -366,13 +334,9 @@ export class PropertiesComponent implements OnInit {
       this.park2 = true;
       this.park3 = false;
       this.parkinSize = 2;
-      let body = {
-        parks: 2
-      }
-      this.selectedFilters.parks = '2 Estacionamientos';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.parking = 2;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
@@ -381,13 +345,9 @@ export class PropertiesComponent implements OnInit {
       this.park2 = false;
       this.park3 = true;
       this.parkinSize = 3;
-      let body = {
-        parks: 3
-      }
-      this.selectedFilters.parks = '3 Estacionamientos';
-      // this.selectedFilters.push(body);
+      this.selectedFilters.parking = 3;
 
-      this.userApi.search(body).subscribe((resp)=>{
+      this.userApi.search(this.selectedFilters).subscribe((resp)=>{
         console.log("busqueda?? ", resp);
       });
     }
