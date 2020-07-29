@@ -51,7 +51,7 @@ export class UserServicesService {
   }
   
   search(body){
-    let seq = this.api.post("search/", body);
+    let seq = this.api.post("search", body);
    
     seq.subscribe((res: any) => {
       // console.log("Register resp: ", res);

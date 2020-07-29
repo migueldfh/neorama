@@ -34,6 +34,7 @@ export class PreviewComponentSearch implements OnInit {
     this.parking = data.propObj['parking'];
     this.address = data.propObj['delegation'];
     this.contact = false;
+    this.message = "Hola, me interesa este inmueble que vi en su página web y quiero que me contacten. Gracias.";
   }
 
   close(): void {
@@ -41,7 +42,6 @@ export class PreviewComponentSearch implements OnInit {
   }
 
   ngOnInit() {
-    this.message = "Hola que tal.";
   }
 
   getContact(){

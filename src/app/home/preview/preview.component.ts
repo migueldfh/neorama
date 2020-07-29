@@ -20,6 +20,7 @@ export class PreviewComponent implements OnInit {
   parking: any;
   contact: boolean;
   currency_type: any;
+  message: string;
 
   constructor(
     public dialogRef: MatDialogRef<PreviewComponent>,
@@ -35,6 +36,7 @@ export class PreviewComponent implements OnInit {
     this.address = data.propObj['delegation'];
     this.currency_type = data.propObj['currency_type'];
     this.contact = false;
+    this.message = "Hola, me interesa este inmueble que vi en su página web y quiero que me contacten. Gracias.";
   }
 
 

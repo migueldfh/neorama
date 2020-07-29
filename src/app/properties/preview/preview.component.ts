@@ -19,6 +19,7 @@ export class PreviewComponentProperties implements OnInit {
   built_size: any;
   parking: any;
   contact: boolean;
+  message: string;
 
   constructor(
     public dialogRef: MatDialogRef<PreviewComponentProperties>,
@@ -33,6 +34,7 @@ export class PreviewComponentProperties implements OnInit {
     this.parking = data.propObj['parking'];
     this.address = data.propObj['delegation'];
     this.contact = false;
+    this.message = "Hola, me interesa este inmueble que vi en su página web y quiero que me contacten. Gracias.";
   }
 
 
