@@ -12,6 +12,7 @@
     }
     .prop-info{
         padding: 10px;
+        margin-top: 4vh;
         h4{
             margin-bottom: 0;
         }
@@ -44,6 +45,19 @@
     background: #fff !important;
     color: black !important;
 }
+.consultor-info{
+    background: #001c2b;
+    color: #fff;
+    margin-top: 2vh;
+    width: 114%;
+    position: relative;
+    right: 25px;
+    padding: 10px;
+    text-align: center;
+    .light{
+        font-weight: 400;
+    }
+}
 ::ng-deep{
     .carousel{
         height: 43vh !important;
@@ -51,6 +65,7 @@
         border-top-left-radius: 6px;
         img{
             width: 100%;
+            height: 38vh;
         }
     }
 }
@@ -63,6 +78,16 @@
     font-size: 0.9rem;
     mat-icon{
         font-size: 1.3rem;
+    }
+}
+.flex{
+    width: 100%;
+    .first{
+        width: 45%;
+        margin-right: 35px;
+    }
+    .second{
+        width: 45%;
     }
 }
 .amenidades{

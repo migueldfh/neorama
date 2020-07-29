@@ -2,42 +2,41 @@
     background: #f1f1f1;
     height: 85vh;
     .title{
+        display: block !important;
         h2{
             color: #001c2b;
             font-size: 4rem;
             position: relative;
             z-index: 1000;
-            width: 70%;
             left: 4.5rem;
-            bottom: 13.85rem;
-            line-height: 50px;
         }
         img{
             &.contrato{
-                position: absolute;
-                width: 50%;
-                left: 4.6rem;
-                top: 20rem;
+                position: relative;
+                width: 70%;
+                left: 7%;
+                bottom: 60px;
             }
         }
     }
     .sub{
+        display: block !important;
         h3{
             color: #001c2b;
             font-weight: 100;
             font-size: 2rem;
-            width: 100%;
+            width: 120%;
             letter-spacing: 2px;
             position: relative;
-            left: -0.25rem;
-            top: 9rem;
+            left: -7rem;
+            top: 11rem;
         }
         img{
             &.logo-middle{
-                position: absolute;
-                width: 35%;
-                left: 57rem;
-                bottom: 0rem;
+                position: relative;
+                width: 100%;
+                right: 5rem;
+                bottom: -10rem;
             }
         }
     }

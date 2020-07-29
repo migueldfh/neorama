@@ -26,10 +26,10 @@
                     </mat-carousel>
                 </div>
                 <div class="prop-info">
+                    <h2>{{name}}</h2>
                     <h2>{{price | currency}}</h2>
-                    <h4 class="light">{{name}}</h4>
                     <p style="margin-top: 0;">{{address}}</p>
-                    <p style="margin-top: 0;">Construcción {{address}}mts<sup>2</sup>, Terreno {{address}}mts<sup>2</sup></p>
+                    <p style="margin-top: 0;">Construcción {{built_size}}mts<sup>2</sup>, Terreno {{total_built}}mts<sup>2</sup></p>
                     <div class="amenidades">
                         <div class="flexIcons">
                             <p><mat-icon>single_bed</mat-icon>Habitaciones {{bathrooms}}</p>
@@ -48,7 +48,7 @@
             <div fxLayout="row" class="prop-container" *ngIf="contact">
                 <div class="center">
                     <img src="../../../assets/img/neorama_logof-02.png" alt="">
-                    <h3 style="font-size: 1.4em;">Necesitas más información sobre este inmueble?</h3>
+                    <h3 style="font-size: 1.4em;margin-top: 5px;">Necesitas más información sobre este inmueble?</h3>
                     <h3 style="font-weight: 400;">Ponte en contacto con nosotros!</h3>
                 </div>
                 <form class="m-login__form m-form" #register="ngForm" (ngSubmit)="close()">
@@ -74,6 +74,10 @@
                     <button mat-button class="mat-raised-button">Enviar</button>
                 </div>
                 </form>
+                <div class="consultor-info">
+                    <h3>Consultor {{consultor_name}}</h3>
+                    <h5 class="light"><mat-icon>phone_enabled</mat-icon> {{consultor_phone}}</h5>
+                </div>
             </div>
         </div>
     </div>
