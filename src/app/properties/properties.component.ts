@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServicesService } from 'src/providers/user-api/user-services.service';
-import { PreviewComponentSearch } from '../search-properties/preview/preview.component';
+import { PreviewComponentProperties } from './preview/preview.component';
 import { MatDialog } from '@angular/material';
 import { FormControl } from '@angular/forms';
 
@@ -107,6 +107,9 @@ export class PropertiesComponent implements OnInit {
     public userApi: UserServicesService,
     public dialog: MatDialog
   ) { 
+    this.userApi.propiedades().subscribe(resp=>{
+      this.properties = resp;
+    });
     this.citySelect = false;
     this.inmuebleSelect = false;
     this.superficieSelect = false;
@@ -120,9 +123,9 @@ export class PropertiesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.userApi.propiedades().subscribe(resp=>{
-      this.properties = resp;
-    });
+    // this.userApi.propiedades().subscribe(resp=>{
+    //   this.properties = resp;
+    // });
   }
   
   filter(modify){
@@ -390,7 +393,7 @@ export class PropertiesComponent implements OnInit {
   }
 
   getContact(prop){
-    const dialogRef = this.dialog.open(PreviewComponentSearch, {
+    const dialogRef = this.dialog.open(PreviewComponentProperties, {
       width: '30%',
       height: '85vh',
       data: {

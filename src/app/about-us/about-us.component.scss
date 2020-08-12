@@ -1,6 +1,8 @@
 .aboutus{
     background: #f1f1f1;
-    height: 85vh;
+    display: block;
+    margin: 0;
+    padding-top: 30px;
     .title{
         display: block !important;
         h2{
@@ -8,49 +10,44 @@
             font-size: 4rem;
             position: relative;
             z-index: 1000;
-            left: 4.5rem;
+            left: 3.5rem;
+            width: 80%;
         }
         img{
             &.contrato{
                 position: relative;
-                width: 70%;
+                width: 100%;
                 left: 7%;
-                bottom: 60px;
             }
         }
     }
     .sub{
         display: block !important;
+        margin-left: 60vw;
+        margin-top: -20vh;
         h3{
             color: #001c2b;
             font-weight: 100;
-            font-size: 2rem;
-            width: 120%;
+            font-size: 2em;
             letter-spacing: 2px;
-            position: relative;
-            left: -7rem;
-            top: 11rem;
-        }
-        img{
-            &.logo-middle{
-                position: relative;
-                width: 100%;
-                right: 5rem;
-                bottom: -10rem;
-            }
         }
     }
 }
 .info{
+    margin: 0;
     background: #f1f1f1;
+    padding: 40px 0 0 0;
     .div-block{
         display: block !important;
         &.us-info{
             margin: 0 auto 5vh auto;
-            font-size: 1.2rem;
+            font-size: 1.2em;
             ul{
                 li{
                     list-style: none;
+                    mat-icon{
+                        margin-right: 15px;
+                    }
                 }
             }
         }
@@ -61,7 +58,6 @@
 }
 .people{
     background: #f1f1f1;
-    height: 40vh;
     padding-top: 50px;
     .baner {
         margin-left: 6rem;
@@ -122,8 +118,7 @@
   }
 .mainpeople{
     background: #f1f1f1;
-    margin-top: -4vh;
-    margin-bottom: 0vh;
+    margin: 0;
     .details{
         h2{
             position: relative;
@@ -143,18 +138,9 @@
     display: flex !important;
     .details{
         margin: 0 !important;
-        &:first-child{
-            margin-left: 90px !important;
-        }
     }
     .padd30{
         padding: 30px;
-        // &:nth-child(1){
-        //     margin-left: 35px;
-        //     h2{
-        //         width: 90%;
-        //     }
-        // }
         p{
             font-weight: bold;
         }
@@ -164,7 +150,7 @@
         }
         .director-info{
             img{
-                width: 50%;
+                width: 70%;
             }
         }
     }
@@ -184,18 +170,17 @@
     .carousel-slide-content{
         position: relative !important;
     }
+    .carousel > button{
+        top: 30% !important;
+    }
 }
 .col-center{
     width: 100%;
     margin: 0 auto;
     text-align: center;
     display: flex;
-    .col-3{
-        width: 30%;
-        h3{
-            font-family: Roboto !important;
-            font-weight: 300 !important;
-        }
+    h5{
+        margin-top: 20px;
     }
 }
 h2, p{

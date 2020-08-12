@@ -1,8 +1,8 @@
 <app-menu></app-menu>
-<div class="main flex">
-    <app-stick></app-stick>
-    <div fxLayout="row" fxLayoutWrap fxLayoutAlign="center">
-        <div class="sidebar">
+<app-stick></app-stick>
+<div class="main flex col-lg-12 col-md-12 row">
+    <div class="col-lg-11 col-md-11 col-offset-1 props-container">
+        <div class="sidebar col-md-3 col-lg-3">
             <!-- <div class="filters" [class.filtersHeight]="inmuebleSelect">
                 <h3>Filtros seleccionados:</h3>
                 <span *ngIf="citySelect"> {{selectedFilters.city}} <mat-icon (click)="deleteFilter('city')">close</mat-icon></span> <br>
@@ -13,7 +13,7 @@
                 <span *ngIf="parksSelect" style="position:relative;top:100px"> {{selectedFilters.parks}} <mat-icon (click)="deleteFilter('park')">close</mat-icon></span>
             </div> -->
             <div class="addresse">
-                <h3>Dirección</h3>
+                <h5>Dirección</h5>
                 <form class="m-login__form m-form" #register="ngForm">
                     <mat-form-field appearance="outline" class="first">
                         <mat-select name="location" [formControl]="location_control" placeholder="Dirección" (selectionChange)="filterChanged($event.value)">
@@ -27,7 +27,7 @@
                 </form>
             </div>
             <div class="operation">
-                <h3>Tipo de operación</h3>
+                <h5>Tipo de operación</h5>
                 <mat-radio-group name="opciones" [(ngModel)]="operacionSeleccionada" (change)="operar()">
                     <mat-radio-button name="opciones" value="compra">Compra</mat-radio-button>
                     <mat-radio-button name="opciones" value="renta">Renta</mat-radio-button>
@@ -36,7 +36,7 @@
                 </mat-radio-group>
             </div>
             <div class="operation">
-                <h3>Tipo de inmueble</h3>
+                <h5>Tipo de inmueble</h5>
                 <mat-radio-group name="opcionesInmueble" [(ngModel)]="operacionInmueble" (change)="operarInmueble()">
                     <mat-radio-button name="opcionesInmueble" value="casa">Casa</mat-radio-button>
                     <mat-radio-button name="opcionesInmueble" value="departamento">Departamento</mat-radio-button>
@@ -47,7 +47,7 @@
                 </mat-radio-group>
             </div>
             <div class="operation">
-                <h3>Antigüedad</h3>
+                <h5>Antigüedad</h5>
                 <mat-radio-group name="opcionesAnti" [(ngModel)]="operacionAnti" (change)="antiguedad()">
                     <mat-radio-button name="opcionesAnti" value="estrenar">A estrenar</mat-radio-button>
                     <mat-radio-button name="opcionesAnti" value="construccion">En construcción</mat-radio-button>
@@ -59,7 +59,7 @@
                 </mat-radio-group>
             </div>
             <div class="operation">
-                <h3>Superficie</h3>
+                <h5>Superficie</h5>
                 <mat-radio-group name="opcionesSuperficie" [(ngModel)]="operacionSuperficie" (change)="superficie()">
                     <mat-radio-button name="opcionesSuperficie" value="construccion">Construcción</mat-radio-button>
                     <mat-radio-button name="opcionesSuperficie" value="terreno">Terreno</mat-radio-button>
@@ -76,7 +76,7 @@
                 </div>
             </div>
             <div class="operation">
-                <h3>Precio</h3>
+                <h5>Precio</h5>
                 <mat-radio-group name="opcionesPrecio" [(ngModel)]="operacionPrecio" (change)="precio()">
                     <mat-radio-button name="opcionesPrecio" value="pesos">Pesos</mat-radio-button>
                     <mat-radio-button name="opcionesPrecio" value="dolares">Dólares</mat-radio-button>
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="operation">
-                <h3>Habitaciones</h3>
+                <h5>Habitaciones</h5>
                 <div class="btnsOpts">
                     <button mat-button class="mat-raised-button" [class.selected]="valh1" (click)="beth(1)"><mat-icon class="plus">close</mat-icon>1</button>
                     <button mat-button class="mat-raised-button" [class.selected]="valh2" (click)="beth(2)"><mat-icon class="plus">close</mat-icon>2</button>
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <div class="operation">
-                <h3>Baños</h3>
+                <h5>Baños</h5>
                 <div class="btnsOpts">
                     <button mat-button class="mat-raised-button" [class.selected]="val1" (click)="bath(1)"><mat-icon class="plus">close</mat-icon>1</button>
                     <button mat-button class="mat-raised-button" [class.selected]="val2" (click)="bath(2)"><mat-icon class="plus">close</mat-icon>2</button>
@@ -109,7 +109,7 @@
                 </div>
             </div>
             <div class="operation">
-                <h3>Estacionamientos</h3>
+                <h5>Estacionamientos</h5>
                 <div class="btnsOpts">
                     <button mat-button class="mat-raised-button" [class.selected]="park1" (click)="parking(1)"><mat-icon class="plus">close</mat-icon>1</button>
                     <button mat-button class="mat-raised-button" [class.selected]="park2" (click)="parking(2)"><mat-icon class="plus">close</mat-icon>2</button>
@@ -126,7 +126,7 @@
                 </mat-radio-group>
             </div> -->
         </div>
-        <div class="container-properties">
+        <div class="container-properties col-md-9 col-lg-9">
             <!-- <p>Casas con alberca en Nuevo León</p> -->
             <div *ngFor="let prop of properties;let i = index" class="props">
                 <div fxLayout="column" class="slider carousel-container">

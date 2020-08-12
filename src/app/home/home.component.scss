@@ -6,19 +6,28 @@
 }
 .baner{
     width: 100%;
-    margin-left: 5rem;
-    margin-top: 5rem;
+    align-items: center;
     .main-search{
         background: white;
         border-radius: 35px;
-        height: 40vh;
         text-align: center;
+        margin: 0 auto;
         color: #001c2b;
-        margin-top: 5vh;
+        padding: 40px 30px 80px;
         h3{
-            font-size: 1.3rem;
+            font-size: 1.4em;
+            margin-bottom: 3vh;
         }
         .options{
+            .option-btns{
+                margin: 0 auto;
+                .margin-btwn{
+                    margin: 0 15px;
+                    &:first-child{
+                        margin-left: 20px;
+                    }
+                }
+            }
             .mat-list-base{
                 display: flex;
             }
@@ -46,18 +55,20 @@
             border: 2px solid #feaa61;
             border-radius: 30px;
             height: 6vh;
-            margin: 40px 30px 25px 30px;
+            margin: 0 auto;
+            margin-top: 40px;
             p{
                 margin: 5px 0 0 0;
             }
             .select-search{
                 border-right: 2px solid #feaa61;
                 text-align: left;
-                margin: 3px 0 0 20px;
+                // margin: 3px 0 0 20px;
                 font-size: 0.9rem;
                 font-weight: 500;
-                top: -2px;
-                position: relative;
+                height: 45px;
+                // top: -2px;
+                // position: relative;
                 i{
                     position: relative;
                     top: 5px;
@@ -72,6 +83,7 @@
             .lookfor{
                 text-align: left;
                 font-size: 1.1rem;
+                height: 6vh;
                 .example-form{
                     color: #001c2b; 
                     position: relative;
@@ -130,14 +142,13 @@
 button.sub{
     background: #feaa61;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1em;
     text-transform: uppercase;
     font-weight: 400;
     border-radius: 2px;
     cursor: pointer;
-    z-index: 9999999999999999999999;
-    width: 10%;
     border-radius: 5px;
+    z-index: 9999999999999999999999;
 }
 mat-form-field{
     z-index: 9999999999999999999999;
@@ -150,11 +161,10 @@ mat-form-field{
         text-align: left;
     }
     .content{
-        position: relative;
-        top: 12vh;
-        font-size: 1.4rem;
+        font-size: 1.5em;
         margin-left: 10px;
         color: #001c2b;
+        padding: 8% 0;
     }
     .logo-n{
         img{
@@ -167,10 +177,16 @@ mat-form-field{
 }
 .properties-section{
     background: #f9f9f9;
+    margin: 0;
+    padding: 0;
     img{
         width: 100%;
         border-radius: 5px;
         height: 35vh;
+    }
+    .baner{
+        margin: 0 auto;
+        padding: 60px 0 0 0;
     }
     .details{
         margin-bottom: 5rem;
@@ -183,6 +199,7 @@ mat-form-field{
         .bottom-column{
             margin-top: 1rem;
             height: 20vh;
+            margin-left: 0;
             .buttons{
                 text-align: right;
             }
@@ -203,9 +220,6 @@ mat-form-field{
                 padding: 0px 20px;
                 position: relative;
                 top: 44px !important;
-                &:first-child{
-                    margin: 0.5rem 0rem 0 1rem;
-                }
                 &:hover{
                     border: 2px solid #feaa61;
                     background: #feaa61 !important;
@@ -241,10 +255,7 @@ mat-form-field{
     display: none;
 }
 .last-filters{
-    text-align: center;
-    width: 120%;
-    position: relative;
-    right: 23%;
+    margin-top: 2vh;
 }
 @media (max-width: 700px){
     app-stick{

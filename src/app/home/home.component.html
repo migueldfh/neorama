@@ -1,20 +1,20 @@
 <app-menu></app-menu>
 <div class="main" fxLayout="row">
     <app-stick></app-stick>
-    <div fxLayout="row" fxLayoutGap="0.5%" fxLayoutWrap fxLayoutAlign="center" class="baner">
-        <div fxFlex="80%" class="main-search mobileNone">
+    <div class="baner row">
+        <div class="main-search mobileNone col-lg-9 col-md-9 col-offset-3">
             <h3>Buscador de Propiedades</h3>
             <div class="options">
-                <mat-list fxLayoutGap="5.5%" fxLayoutAlign="center">
-                    <mat-list-item fxFlex="10%" [class.blue]="selected1" (click)="status(1)"><p>Comprar</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected2" (click)="status(2)"><p>Rentar</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected3" (click)="status(3)"><p>Desarrollos</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected4" (click)="status(4)"><p>Comercial</p></mat-list-item>
-                    <mat-list-item fxFlex="10%" [class.blue]="selected5" (click)="status(5)"><p>Temporal</p></mat-list-item>
+                <mat-list class="col-lg-10 col-md-10 col-offset-2 row option-btns">
+                    <mat-list-item class="col-lg-2 margin-btwn" [class.blue]="selected1" (click)="status(1)"><p>Comprar</p></mat-list-item>
+                    <mat-list-item class="col-lg-2 margin-btwn" [class.blue]="selected2" (click)="status(2)"><p>Rentar</p></mat-list-item>
+                    <mat-list-item class="col-lg-2 margin-btwn" [class.blue]="selected3" (click)="status(3)"><p>Desarrollos</p></mat-list-item>
+                    <mat-list-item class="col-lg-2 margin-btwn" [class.blue]="selected4" (click)="status(4)"><p>Comercial</p></mat-list-item>
+                    <mat-list-item class="col-lg-2" [class.blue]="selected5" (click)="status(5)"><p>Temporal</p></mat-list-item>
                 </mat-list>
             </div>
-            <div class="search-bar">
-                <div fxFlex="16%" class="select-search">
+            <div class="search-bar col-lg-10 col-md-10 row">
+                <div class="select-search col-lg-3">
                     <!-- <p (click)="down()">Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p> -->
                     <mat-form-field class="search">
                     <mat-label>Tipo de inmueble</mat-label>
@@ -25,15 +25,15 @@
                         </mat-select>
                     </mat-form-field>
                 </div>
-                <div fxFlex="90%" class="lookfor">
+                <div class="col-lg-9 lookfor">
                     <form class="example-form" #register="ngForm" (keydown.enter)="$event.preventDefault()">
                         <mat-form-field appearance="fill" class="inputback">
                             <input matInput name="location" placeholder="Buscar por ubicación" type="text" class="classRed" ngModel>
                         </mat-form-field>
-                        <div class="last-filters">
-                            <button mat-button type="submit" class="sub" (click)="search(register.value)">Buscar</button>
-                        </div>
                     </form>
+                </div>
+                <div class="last-filters col-lg-12">
+                    <button mat-button type="submit" class="sub col-md-3" (click)="search(register.value)">Buscar</button>
                 </div>
             </div>
         </div>
@@ -69,11 +69,11 @@
         </div>
     </div>
 </div>
-<div fxLayout="row" class="text-section">
-    <div fxFlex="20%" class="logo-n">
+<div class="text-section row col-lg-12 col-sm-12">
+    <div class="logo-n col-lg-3 col-md-3">
         <img src="../../assets/img/Neorama_Web_min.png">
     </div>
-    <div fxFlex="70%" class="left content">
+    <div class="left content col-lg-8">
         Somos tu nuevo Panorama Inmobiliario, brindamos confianza en soluciones integrales para la
         promoción y comercialización de propiedades.
         Contamos con amplia experiencia y capacidad y damos un valor significativo en la amplia
@@ -81,10 +81,10 @@
         cliente.
     </div>
 </div>
-<div fxLayout="row" class="properties-section">
-    <div fxLayout="row wrap" fxLayoutGap="32px" fxLayoutAlign="flex-start center" class="baner">
-        <div fxFlex="30%" class="details" *ngFor="let prop of propertiesArr">
-            <div fxLayout="column" class="carousel-container">
+<div class="properties-section row col-lg-12 col-md-12 col-sm-12">
+    <div class="baner row col-lg-11 col-offset-1 col-md-11 col-offset-1">
+        <div class="details col-lg-4 col-md-4" *ngFor="let prop of propertiesArr">
+            <div class="column carousel-container col-lg-12 col-md-12">
                 <mat-carousel
                 class="thiscarousel"
                 timings="250ms ease-in"
@@ -107,13 +107,13 @@
                 </mat-carousel-slide>
                 </mat-carousel>
             </div>
-            <div fxLayout="row" class="bottom-column">
-                <div class="flex text" fxFlex="60%">
-                    <h3>{{prop.name}} en {{prop.maps_url}}</h3>
-                    <h4 class="nomargin">{{prop.built_size}} mts<sup>2</sup></h4>
-                    <h4 style="font-size: 1.4rem;">{{prop.price | currency }} {{prop.currency_type}}</h4>
+            <div class="row bottom-column col-lg-12 col-md-12">
+                <div class="flex text col-lg-9 col-md-9">
+                    <h5>{{prop.name}} en {{prop.maps_url}}</h5>
+                    <h6 class="nomargin">{{prop.built_size}} mts<sup>2</sup></h6>
+                    <h5>{{prop.price | currency }} {{prop.currency_type}}</h5>
                 </div>
-                <div class="flex buttons" fxFlex="40%">
+                <div class="flex buttons col-lg-2 col-md-2">
                     <button mat-button class="blue-rounded" (click)="preview(prop)">Ver más</button>
                 </div>
             </div>

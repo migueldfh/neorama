@@ -1,17 +1,17 @@
 <app-menu></app-menu>
 <app-stick></app-stick>
-<div fxLayout="row wrap" fxLayout="100%" fxLayoutAlign="flex-start center" class="aboutus">
-    <div fxLayout="50%" class="title">
+<div class="aboutus row col-lg-12 col-md-12">
+    <div class="title col-lg-7 col-md-7">
         <h2>Creamos un futuro para tu familia</h2>
         <img src="../../assets/img/team.jpg" class="contrato" alt="Neorama Logo">
     </div>
-    <div fxLayout="50%" class="sub" fxLayoutAlign="center">
+    <div class="sub col-lg-4 col-md-4">
         <h3>Expertos en el área inmobiliaria</h3>
         <img src="../../assets/img/Neorama_Web_logo_full.png" class="logo-middle" alt="Neorama Logo">
     </div>
 </div>
-<div fxLayout="row wrap" fxLayout="100%" fxLayoutAlign="flex-start center" class="info">
-    <div fxFlex="80%" class="div-block us-info">
+<div class="info row col-md-12 col-lg-12">
+    <div class="div-block us-info col-lg-10 col-md-10 col-offset-2">
         <h3>Construimos las bases para un mejor futuro… ¡Tu futuro!</h3>
         <p style="text-align: justify;">
         Enfocados en brindar confianza y soluciones a nuestros clientes, nace Neorama, 
@@ -36,9 +36,9 @@
         </p>
     </div>
 </div>
-<div fxLayout="row wrap" fxLayoutAlign="flex-start center" class="mainpeople">
-    <div fxLayout="row wrap" fxLayoutGap="10px" fxLayoutAlign="flex-start center" class="mainbaner">
-        <div fxFlex="45%" class="details owl-carousel owl-theme">
+<div class="mainpeople row col-lg-12 col-md-12">
+    <div class="mainbaner container">
+        <div class="details owl-carousel owl-theme col-md-6 col-lg-6">
             <div fxLayout="column" class="padd30">
                 <div fxLayout="row" class="director-info">
                     <img class="empleados" src="../../assets/img/Francisco Belmares.jpg">
@@ -47,7 +47,7 @@
                     <div class="flex" fxFlex="100%">
                         <h2>Francisco Belmares</h2>
                         <p>Director Comercial</p>
-                        <h1 style="text-align: justify;padding: 2% 15% 4% 0;">Licenciado en Psicología por la Universidad Autónoma de Coahuila (UADEC)
+                        <h1 style="text-align: justify;padding: 2% 5% 4% 0;">Licenciado en Psicología por la Universidad Autónoma de Coahuila (UADEC)
                             Con más de 15 años de experiencia en manejo de grupos, Relaciones Humanas y Coaching.
                             Los últimos años con alto desempeño en el área bancaria como Jefe de promoción de
                             negocio y trabajo de directivo.
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div fxFlex="45%" class="details owl-carousel owl-theme">
+        <div class="details owl-carousel owl-theme col-md-6 col-lg-6">
             <div fxLayout="column" class="padd30">
                 <div fxLayout="row" class="director-info">
                     <img class="empleados" src="../../assets/img/Francisco Banda.jpg">
@@ -66,7 +66,7 @@
                     <div class="flex" fxFlex="100%">
                         <h2>Francisco Banda</h2>
                         <p>Director Administrativo</p>
-                        <h1 style="text-align: justify;padding: 2% 15% 4% 0;">Administrador de empresas por la Universidad Autónoma de Nuevo León (UANL) con
+                        <h1 style="text-align: justify;padding: 2% 5% 4% 0;">Administrador de empresas por la Universidad Autónoma de Nuevo León (UANL) con
                             estudios en Technology Commercialization (MSTC) en el Center for Global Innovation and
                             Entrepreneurship of University of Texas at Austin (UTA).
                             Con 10 años de experiencia en planeación estratégica orientada al desarrollo de proyectos
@@ -96,21 +96,21 @@
         overlayColor="#00000040"
         [hideOverlay]="false">
         <div class="col-center">
-            <div class="col-3" (click)="seeMore('Adriana Contreras', 'Consultor Inmobiliario', '8121502473', 'adriana@neorama.mx')">
+            <div class="col-lg-3 col-md-3" (click)="seeMore('Adriana Contreras', 'Consultor Inmobiliario', '8121502473', 'adriana@neorama.mx')">
                 <img src="../../assets/img/Adriana Contreras.jpg">
-                <h3>Adriana Contreras</h3>
+                <h5>Adriana Contreras</h5>
             </div>
-            <div class="col-3" (click)="seeMore('Edson Banda', 'Consultor Inmobiliario', '8119658542', 'edson@neorama.mx')">
+            <div class="col-lg-3 col-md-3" (click)="seeMore('Edson Banda', 'Consultor Inmobiliario', '8119658542', 'edson@neorama.mx')">
                 <img src="../../assets/img/Edson Banda.jpg">
-                <h3>Edson Banda</h3>
+                <h5>Edson Banda</h5>
             </div>
-            <div class="col-3" (click)="seeMore('Erika Melendez', 'Consultor Inmobiliario', '8261279857', 'erika@neorama.mx')">
+            <div class="col-lg-3 col-md-3" (click)="seeMore('Erika Melendez', 'Consultor Inmobiliario', '8261279857', 'erika@neorama.mx')">
                 <img src="../../assets/img/Erika Melendez.jpg">
-                <h3>Erika Melendez</h3>
+                <h5>Erika Melendez</h5>
             </div>
-            <div class="col-3" (click)="seeMore('Fernando Garcia', 'Consultor Inmobiliario', '8123332775', 'fernando@neorama.mx')">
+            <div class="col-lg-3 col-md-3" (click)="seeMore('Fernando Garcia', 'Consultor Inmobiliario', '8123332775', 'fernando@neorama.mx')">
                 <img src="../../assets/img/Fernando Garcia.jpg">
-                <h3>Fernando Garcia</h3>
+                <h5>Fernando Garcia</h5>
             </div>
         </div>
     </mat-carousel-slide>
@@ -119,21 +119,21 @@
     overlayColor="#00000040"
     [hideOverlay]="false">
     <div class="col-center">
-        <div class="col-3" (click)="seeMore('Jorge Ordoñez', 'Consultor Inmobiliario', '8111311660', 'jorgeo@neorama.mx')">
+        <div class="col-lg-3 col-md-3" (click)="seeMore('Jorge Ordoñez', 'Consultor Inmobiliario', '8111311660', 'jorgeo@neorama.mx')">
             <img src="../../assets/img/Jorge Ordoñez.jpg">
-            <h3>Jorge Ordoñez</h3>
+            <h5>Jorge Ordoñez</h5>
         </div>
-        <div class="col-3" (click)="seeMore('Karla Carrillo', 'Consultor Inmobiliario', '8117225290', 'karla@neorama.mx')">
+        <div class="col-lg-3 col-md-3" (click)="seeMore('Karla Carrillo', 'Consultor Inmobiliario', '8117225290', 'karla@neorama.mx')">
             <img src="../../assets/img/Karla Carrillo.jpg">
-            <h3>Karla Carrillo</h3>
+            <h5>Karla Carrillo</h5>
         </div>
-        <div class="col-3" (click)="seeMore('Liliana Uribe', 'Consultor Inmobiliario', '8114134689', 'liliana@neorama.mx')">
+        <div class="col-lg-3 col-md-3" (click)="seeMore('Liliana Uribe', 'Consultor Inmobiliario', '8114134689', 'liliana@neorama.mx')">
             <img src="../../assets/img/Liliana Uribe.jpg">
-            <h3>Liliana Uribe</h3>
+            <h5>Liliana Uribe</h5>
         </div>
-        <div class="col-3" (click)="seeMore('Ricardo Herrera', 'Consultor Inmobiliario', '8117289494', 'ricardo@neorama.mx')">
+        <div class="col-lg-3 col-md-3" (click)="seeMore('Ricardo Herrera', 'Consultor Inmobiliario', '8117289494', 'ricardo@neorama.mx')">
             <img src="../../assets/img/Ricardo Herrera.jpg">
-            <h3>Ricardo Herrera</h3>
+            <h5>Ricardo Herrera</h5>
         </div>
     </div>
     </mat-carousel-slide>
@@ -142,17 +142,17 @@
     overlayColor="#00000040"
     [hideOverlay]="false">
     <div class="col-center">
-        <div class="col-3" (click)="seeMore('Rox Ayala', 'Consultor Inmobiliario', '8121051270', 'rox@neorama.mx')">
-            <img src="../../assets/img/Rox Ayala.jpg" style="width: 80%;">
-            <h3>Rox Ayala</h3>
+        <div class="col-lg-3 col-md-3" (click)="seeMore('Rox Ayala', 'Consultor Inmobiliario', '8121051270', 'rox@neorama.mx')">
+            <img src="../../assets/img/Rox Ayala.jpg" style="width: 90%;">
+            <h5>Rox Ayala</h5>
         </div>
-        <div class="col-3" (click)="seeMore('Stephanie Garza', 'Consultor Inmobiliario', '8122027618', 'stephanie@neorama.mx')">
-            <img src="../../assets/img/Stephanie Garza.jpg" style="width: 80%;">
-            <h3>Stephanie Garza</h3>
+        <div class="col-lg-3 col-md-3" (click)="seeMore('Stephanie Garza', 'Consultor Inmobiliario', '8122027618', 'stephanie@neorama.mx')">
+            <img src="../../assets/img/Stephanie Garza.jpg" style="width: 90%;">
+            <h5>Stephanie Garza</h5>
         </div>
-        <div class="col-3" (click)="seeMore('Alberto Martinez', 'Consultor Inmobiliario', '8126194854', 'alberto@neorama.mx')">
-            <img src="../../assets/img/AM.jpg" style="width: 80%;">
-            <h3>Alberto Martinez</h3>
+        <div class="col-lg-3 col-md-3" (click)="seeMore('Alberto Martinez', 'Consultor Inmobiliario', '8126194854', 'alberto@neorama.mx')">
+            <img src="../../assets/img/AM.jpg" style="width: 90%;">
+            <h5>Alberto Martinez</h5>
         </div>
     </div>
     </mat-carousel-slide>

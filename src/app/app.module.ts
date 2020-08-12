@@ -21,13 +21,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { StickComponent } from './stick/stick.component';
 import { PreviewComponent } from './home/preview/preview.component';
-import { PreviewComponentSearch } from './search-properties/preview/preview.component';
 import { PreviewComponentProperties } from './properties/preview/preview.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { SliderModule } from 'angular-image-slider';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { DialogSeeMoreComponent } from './about-us/dialog-see-more/dialog-see-more.component';
-import { SearchPropertiesComponent } from './search-properties/search-properties.component';
 import { AvisoPrivacidadComponent } from './aviso-privacidad/aviso-privacidad.component';
 
 @NgModule({
@@ -42,12 +40,10 @@ import { AvisoPrivacidadComponent } from './aviso-privacidad/aviso-privacidad.co
     ServicesComponent,
     ContactComponent,
     PreviewComponent,
-    PreviewComponentSearch,
     PreviewComponentProperties,
     StickComponent,
     NewsletterComponent,
     DialogSeeMoreComponent,
-    SearchPropertiesComponent,
     AvisoPrivacidadComponent
   ],
   imports: [
@@ -85,7 +81,6 @@ import { AvisoPrivacidadComponent } from './aviso-privacidad/aviso-privacidad.co
   providers: [],
   entryComponents:[
     PreviewComponent,
-    PreviewComponentSearch,
     PreviewComponentProperties,
     NewsletterComponent,
     DialogSeeMoreComponent
