@@ -257,6 +257,26 @@ mat-form-field{
 .last-filters{
     margin-top: 2vh;
 }
+@media (max-width: 1024px){
+    mat-list-item{
+        &:nth-child(4){
+            position: relative !important;
+            left: 20% !important;
+            top: 10px !important;
+        }
+        &:nth-child(5){
+            position: relative !important;
+            left: 20% !important;
+            top: 10px !important;
+        }
+    }
+    .search-bar{
+        height: 4vh !important;
+    }
+    .last-filters{
+        margin-top: -1vh !important;
+    }
+}
 @media (max-width: 700px){
     app-stick{
         display: none;
