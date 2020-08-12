@@ -40,6 +40,13 @@
         }
     }
 }
+@media (max-width: 1024px){
+    .footer{
+        .row, .copy{
+            width: 100% !important;
+        }
+    }
+}
 @media (max-width: 700px){
     .footer{
         height: 41vh !important;

@@ -22,7 +22,7 @@
         }
     }
     .sub{
-        display: block !important;
+        display: block;
         margin-left: 60vw;
         margin-top: -20vh;
         h3{
@@ -185,6 +185,24 @@
 }
 h2, p{
     font-family: Roboto !important;
+}
+@media (max-width: 1024px){
+    .title{
+        h2{
+            width: 100% !important;
+        }
+    }
+    .sub{
+        display: none !important;
+    }
+    ::ng-deep{
+        .carousel{
+            height: 17vh !important;
+        }
+        .carousel > button {
+            top: 13% !important;
+        }
+    }
 }
 @media (max-width: 700px){
     app-stick{
