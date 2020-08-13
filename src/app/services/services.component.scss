@@ -116,17 +116,22 @@
         width: 75% !important;
     }
 }
-@media (max-width: 700px){
+@media (max-width: 991px){
     app-stick{
         display: none;
     }
     .services{
         display: block !important;
         .img-content{
-            width: 102% !important;
+            width: 100% !important;
             .img-back{
                 img{
                     height: 60vh;
+                }
+                .subjects{
+                    button{
+                        padding: 0 14px;
+                    }
                 }
             }
             .subjects{
@@ -139,18 +144,25 @@
             }
         }
         .services-tabs{
-            width: 103% !important;
+            width: 100% !important;
             .tabs{
                 .over-txt{
                     padding: 40px 40px 10px 40px !important;
                     h3{
-                        &:first-child{
-                            padding: 10px 40px 0px 40px !important;
-                        }
+                        padding: 10px 40px 0px 0px !important;
                     }
                 }
                 h3{
                     padding: 10px 40px 40px 40px !important;
+                }
+            }
+            .tabs-container{
+                .tabs{
+                    h3{
+                        h2{
+                            margin: 10px 0;
+                        }
+                    }
                 }
             }
         }

@@ -277,7 +277,7 @@ mat-form-field{
         margin-top: -1vh !important;
     }
 }
-@media (max-width: 700px){
+@media (max-width: 991px){
     app-stick{
         display: none;
     }
@@ -294,24 +294,26 @@ mat-form-field{
         .logo-n{
             max-width: 30% !important;
             img{
-                width: 95%;
-                position: relative;
-                margin-top: 305px;
-                left: 5%;
+                width: 45%;
             }
+        }
+        .content{
+            padding: 8% 0 0 0;
+            bottom: 30px;
         }
     }
     .main{
-        width: 110%;
+        width: 100%;
+        margin: 0 !important;
     }
     .baner{
         width: 100%;
-        margin-left: 2rem;
+        margin-left: 0rem;
         margin-top: 5rem;
         display: block !important;
     }
     .properties-section{
-        width: 110% !important;
+        width: 100% !important;
         .details{
             max-width: 100% !important;
             margin-right: 2rem;
@@ -330,6 +332,7 @@ mat-form-field{
         margin-top: 3vh;
         max-width: 90% !important;
         padding: 2%;
+        margin: 0 auto;
         button{
             background: #feaa61;
             color: #fff;
@@ -345,12 +348,41 @@ mat-form-field{
             mat-form-field{
                 width: 45%;
                 &:first-child{
+                    margin: 0 10px 0 45px;
+                }
+            }
+            .second{
+                width: 90%;
+            }
+        }
+    }
+}
+@media (max-width: 400px){
+    .desktopNone{
+        height: 32vh;
+        h3{
+            margin-top: 1vh;
+        }
+        .m-form{
+            mat-form-field{
+                &:first-child{
                     margin: 0 10px 0 15px;
                 }
             }
             .second{
                 width: 90%;
             }
+        }
+    }
+    .text-section{
+        .logo-n{
+            display: none;
+        }
+        .left{
+            width: 100%;
+            margin: 0 auto;
+            padding: 8% 0;
+            bottom: 0px;
         }
     }
 }

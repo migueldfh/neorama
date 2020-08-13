@@ -47,9 +47,33 @@
         }
     }
 }
-@media (max-width: 700px){
+@media (max-width: 991px){
     .footer{
         height: 41vh !important;
-        width: 110%;
+        width: 100%;
+    }
+}
+@media (max-width: 400px){
+    .footer{
+        .row{
+            margin: 0;
+            .logo img{
+                position: relative;
+                bottom: 0px;
+                left: 15px;
+            }
+        }
+        .info{
+            width: 87%;
+        }
+        .copy{
+            cursor: pointer;
+            padding-left: 0;
+            width: 100%;
+            text-align: center;
+            p{
+                width: 100%;
+            }
+        }
     }
 }

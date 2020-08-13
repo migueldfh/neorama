@@ -135,7 +135,7 @@
     }
 }
 .mainbaner{
-    display: flex !important;
+    display: flex;
     .details{
         margin: 0 !important;
     }
@@ -186,6 +186,9 @@
 h2, p{
     font-family: Roboto !important;
 }
+.people-mobile{
+    display: none;
+}
 @media (max-width: 1024px){
     .title{
         h2{
@@ -203,27 +206,27 @@ h2, p{
             top: 13% !important;
         }
     }
+    .people-mobile{
+        display: none;
+    }
 }
-@media (max-width: 700px){
+@media (max-width: 991px){
     app-stick{
         display: none;
     }
     .aboutus{
-        width: 113%;
+        width: 100%;
         display: block !important;
-        height: 110vh;
         .title{
             h2{
-                width: 80%;
-                left: 2.5rem;
+                width: 100%;
+                left: 0.5rem;
                 bottom: 0;
                 z-index: 0;
             }
             img{
-                position: absolute;
-                width: 113% !important;
-                left: 0rem !important;
-                top: 24rem !important;
+                left: 0px !important;
+                top: 2rem !important;
             }
         }
         .sub{
@@ -242,36 +245,71 @@ h2, p{
             }
         }
     }
+    .div-block{
+        p{
+            padding: 10px 20px;
+        }
+        ul{
+            padding: 0 20px;
+        }
+    }
     .info{
-        width: 113% !important;
+        width: 100% !important;
     }
     .mainpeople{
-        width: 113% !important;
+        width: 100% !important;
     }
     .people{
-        width: 113% !important;
-        height: 20vh;
+        display: none;
+    }
+    .people-mobile{
+        display: block;
+        height: 25vh;
+        background: #f1f1f1;
+        .col-center{
+            .col-xs-6{
+                width: 50%;
+            }
+        }
     }
     .mainbaner{
+        display: block !important;
         .details{
             max-width: 100% !important;
+            padding: 0;
+            .padd30{
+                padding: 0;
+            }
             h2{
-                width: 80%º;
+                width: 80%;
             }
-            &:first-child{
-                margin-left: 45px !important;
-            }
-            margin-left: 45px !important;
             .director-info{
                 img{
-                    width: 85%;
+                    width: 100%;
                 }
             }
         }
     }
     ::ng-deep{
         .carousel{
-            height: 17vh !important;
+            height: 20vh !important;
         }
+        .carousel-slide-overlay{
+            display: none;
+        }
+        .carousel > button {
+            top: 40% !important;
+        }
+        .cdk-overlay-pane{
+            width: 80% !important;
+        }
+    }
+}
+@media (max-width: 400px){
+    .mainpeople{
+        display: block;
+    }
+    .people{
+        display: none;
     }
 }
