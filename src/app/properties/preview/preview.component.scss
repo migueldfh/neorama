@@ -104,3 +104,11 @@ mat-icon{
         text-transform: uppercase;
     }
 }
+@media (max-width: 1024px){
+    ::ng-deep {
+        .cdk-overlay-pane{
+            width: 80% !important;
+            height: 65vh !important;
+        }
+    }
+}

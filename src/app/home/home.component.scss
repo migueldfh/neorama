@@ -303,13 +303,14 @@ mat-form-field{
         }
     }
     .main{
+        height: 33vh;
         width: 100%;
         margin: 0 !important;
     }
     .baner{
         width: 100%;
         margin-left: 0rem;
-        margin-top: 5rem;
+        margin-top: 3rem;
         display: block !important;
     }
     .properties-section{
@@ -326,7 +327,7 @@ mat-form-field{
         display: block;
         background: white;
         border-radius: 35px;
-        height: 41vh;
+        height: 23vh;
         text-align: center;
         color: #001c2b;
         margin-top: 3vh;

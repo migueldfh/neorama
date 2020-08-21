@@ -4,6 +4,9 @@
         height: 80vh;
         width: 30%;
     }
+    .img-content-mobile{
+        display: none;
+    }
     .img-content{
         width: 40%;
         .img-back{
@@ -110,10 +113,16 @@
     .services .img-content .img-back .subjects{
         width: 78% !important;
     }
+    .img-content-mobile{
+        display: none !important;
+    }
 }
 @media (min-width: 1551px) and (max-width:1600px){
     .services .img-content .img-back .subjects{
         width: 75% !important;
+    }
+    .img-content-mobile{
+        display: none !important;
     }
 }
 @media (max-width: 991px){
@@ -122,15 +131,23 @@
     }
     .services{
         display: block !important;
-        .img-content{
-            width: 100% !important;
+        .img-content-mobile{
+            width: 100%;
+            display: block !important;
+            background-image: url(../../assets/img/pexels-photo-2462015.jpeg);
+            background-size: cover;
             .img-back{
+                width: 100%;
+                padding: 0;
                 img{
-                    height: 60vh;
+                    display: none !important;
                 }
                 .subjects{
+                    display: flex !important;
                     button{
                         padding: 0 14px;
+                        background: #fff;
+                        margin: 5vh 3vh;
                     }
                 }
             }
@@ -143,8 +160,13 @@
                 }
             }
         }
+        .img-content{
+            display: none !important;
+        }
         .services-tabs{
             width: 100% !important;
+            height: 40vh;
+            position: relative;
             .tabs{
                 .over-txt{
                     padding: 40px 40px 10px 40px !important;
@@ -157,6 +179,8 @@
                 }
             }
             .tabs-container{
+                position: relative;
+                bottom: 7%;
                 .tabs{
                     h3{
                         h2{

@@ -15,6 +15,22 @@
             </div>
         </div>
     </div>
+    <div class="img-content-mobile col-sm-12">
+        <!-- <div fxLayout="20%" class="blue-back"></div> -->
+        <div class="img-back col-sm-12">
+            <img src="../../assets/img/pexels-photo-2462015.jpeg" alt="Servicios">
+            <div class="subjects row">
+                <button [class.select]="display1" class="col-sm-3" mat-button (click)="goTo(1)">Comercialización de Inmuebles</button>
+                <button [class.select]="display2" class="col-sm-3" mat-button (click)="goTo(2)">Asesoría financiera</button>
+                <button [class.select]="display3" class="col-sm-3" mat-button (click)="goTo(3)">Trámites hipotecarios</button>
+            </div>
+            <div class="subjects row">
+                <button [class.select]="display4" mat-button class="col-sm-3" (click)="goTo(4)">Asesoría y Acompañamiento legal</button>
+                <button [class.select]="display5" mat-button class="col-sm-3" (click)="goTo(5)">Desarrollo de proyectos arquitectónicos <br> y constructivos</button>
+                <button [class.select]="display6" mat-button class="col-sm-3" (click)="goTo(6)">Desarrollos de proyectos de inversión</button>
+            </div>
+        </div>
+    </div>
     <div fxLayout="80%" class="services-tabs">
         <div class="tabs-container">
             <div class="tabs">

@@ -189,6 +189,9 @@ h2, p{
 .people-mobile{
     display: none;
 }
+.img-edited{
+    width: 90%;
+}
 @media (max-width: 1024px){
     .title{
         h2{
@@ -201,6 +204,9 @@ h2, p{
     ::ng-deep{
         .carousel{
             height: 17vh !important;
+            img{
+                width: 57% !important;
+            }
         }
         .carousel > button {
             top: 13% !important;
@@ -209,10 +215,16 @@ h2, p{
     .people-mobile{
         display: none;
     }
+    .img-edited{
+        width: 57% !important;
+    }
 }
 @media (max-width: 991px){
     app-stick{
         display: none;
+    }
+    .img-edited{
+        width: 57% !important;
     }
     .aboutus{
         width: 100%;
@@ -293,6 +305,9 @@ h2, p{
     ::ng-deep{
         .carousel{
             height: 20vh !important;
+            img{
+                width: 57% !important;
+            }
         }
         .carousel-slide-overlay{
             display: none;
@@ -311,5 +326,8 @@ h2, p{
     }
     .people{
         display: none;
+    }
+    .img-edited{
+        width: 57% !important;
     }
 }
