@@ -70,3 +70,11 @@ mat-dialog-content{
         left: -2px !important;
     }
 }
+@media (max-width: 768px){
+    ::ng-deep{
+        .cdk-overlay-pane{
+            width: 80% !important;
+            height: 43vh;
+        }
+    }
+}

@@ -3,3 +3,57 @@
     background: gray;
     color: white;
 }
+.mat-toolbar-multiple-rows{
+    min-height: 15vh !important;
+}
+.mat-toolbar-row{
+    height: 64px;
+    margin-top: 3vh !important;
+}
+.mobileMenu{
+    img{
+        width: 100%;
+    }
+}
+.mobileNone{
+    text-align: center;
+    a{
+        color: black;
+    }
+}
+.full{
+    padding: 0 !important;
+}
+.mat-toolbar.mat-primary{
+    background: transparent !important;
+}
+@media (max-width: 1450px) and (min-width: 768px) {
+    .mat-toolbar-row{
+        button{
+            display: none !important;
+        }
+    }
+}
+@media (max-width: 768px) and (min-width: 300px) {
+    .mobileNone{
+        display: none !important;
+    }
+    .mobileMenu{
+        img{
+            width: 75%;
+            margin-left: 10%;
+        }
+    }
+    .mat-toolbar-row{
+        button{
+            display: block !important;
+            color: black;
+        }
+    }
+    mat-sidenav{
+        width: 70%;
+        a{
+            color: black !important;
+        }
+    }
+}
