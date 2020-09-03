@@ -102,6 +102,7 @@ export class PropertiesComponent implements OnInit {
   parksSelect: boolean;
   operationSelect: boolean;
   bethsSelect: boolean;
+  mobileActive: boolean = false;
 
   constructor(
     public userApi: UserServicesService,
@@ -110,6 +111,7 @@ export class PropertiesComponent implements OnInit {
     this.userApi.propiedades().subscribe(resp=>{
       this.properties = resp;
     });
+    // this.mobileActive = false;
     this.citySelect = false;
     this.inmuebleSelect = false;
     this.superficieSelect = false;
@@ -120,6 +122,11 @@ export class PropertiesComponent implements OnInit {
     this.parksSelect = false;
     this.operationSelect = false;
     this.selected = false;
+  }
+
+  showFilters(){
+    this.mobileActive = !this.mobileActive;
+    console.log("mobileActive: ", this.mobileActive);
   }
 
   ngOnInit() {

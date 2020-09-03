@@ -112,3 +112,10 @@ mat-icon{
         }
     }
 }
+@media (max-width: 991px){
+    .flex{
+        .first, .second{
+            width: 100%;
+        }
+    }
+}

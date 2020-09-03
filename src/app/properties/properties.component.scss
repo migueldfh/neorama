@@ -136,6 +136,7 @@
             width: 60%;
             h2{
                 margin: 0;
+                font-weight: bold;
             }
             p.sub{
                 font-size: 1rem;
@@ -201,23 +202,85 @@ mat-icon{
     top: 4px;
     font-size: 1.3rem;
 }
-@media (max-width: 700px){
+.mobileShow{
+    display: none;
+}
+@media (max-width: 991px){
     app-stick{
         display: none;
     }
     .sidebar{
         display: none;
     }
+    .mobileShowSidebar{
+        display: block !important;
+        margin: 10px auto;
+        width: 105%;
+        left: 0px;
+    }
+    .center{
+        text-align: center;
+        .filters{
+            width: 70%;
+            text-transform: uppercase;
+        }
+    }
+    .filters{
+        background: #feaa61;
+        color: #fff;
+    }
+    .mobileShow{
+        display: block;
+    }
     .container-properties{
+        width: 105%;
+        margin: 10px 0;
+        .props{
+            margin: 20px 0 !important;
+            padding: 0% !important;
+        }
+    }
+    .mobileShow{
+        margin: 20px 10px;
         width: 100%;
+        text-align: center;
+        button{
+            width: 50%;
+            font-size: 1.1rem;
+            &:focus{
+                outline: none !important;
+            }
+        }
+    }
+    .props-container{
+        display: block !important;
+        padding: 0 !important;
+        position: relative;
+        right: 10px;
     }
     .props{
         display: block !important;
         .slider{
             width: 100% !important;
+            height: 31vh !important;
         }
         .description{
             width: 100% !important;
+            margin: 10px;
+            h2{
+                font-size: 1.3rem;
+            }
+            p{
+                &:first-child{
+                    margin-top: 10px;
+                }
+            }
+            .footer{
+                margin: 30px 20px 0 0 !important;
+                .blue{
+                    width: 100% !important;
+                }
+            }
         }
     }
 ::ng-deep{

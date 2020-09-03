@@ -2,7 +2,7 @@
 <app-stick></app-stick>
 <div class="main flex col-lg-12 col-md-12 row">
     <div class="props-container">
-        <div class="sidebar col-lg-3 col-xl-3 col-sm-11">
+        <div class="sidebar col-lg-3 col-xl-3 col-sm-11" [class.mobileShowSidebar]="mobileActive" *ngIf="mobileActive">
             <!-- <div class="filters" [class.filtersHeight]="inmuebleSelect">
                 <h3>Filtros seleccionados:</h3>
                 <span *ngIf="citySelect"> {{selectedFilters.city}} <mat-icon (click)="deleteFilter('city')">close</mat-icon></span> <br>
@@ -125,8 +125,14 @@
                     <mat-radio-button value="4">Menos de 5 años</mat-radio-button>
                 </mat-radio-group>
             </div> -->
+            <div [class.mobileShowSidebar]="mobileActive" class="center">
+                <button mat-raised-button class="filters" (click)="showFilters()">Aplicar</button>            
+            </div>
         </div>
-        <div class="container-properties col-xl-9 col-lg-7 col-sm-12">
+        <div class="row mobileShow" *ngIf="!mobileActive">
+            <button mat-raised-button class="filters" (click)="showFilters()"><mat-icon>search</mat-icon> Filtrar</button>
+        </div>
+        <div [class.sidebar]="mobileActive" class="container-properties col-xl-9 col-lg-7 col-sm-12">
             <!-- <p>Casas con alberca en Nuevo León</p> -->
             <div *ngFor="let prop of properties;let i = index" class="props">
                 <div fxLayout="column" class="slider carousel-container">
@@ -151,9 +157,10 @@
                         <img [src]="slide">
                     </mat-carousel-slide>
                     </mat-carousel>
-                    <h2>{{prop.price | currency}}{{prop.currency_type}}</h2>
                 </div>
                 <div class="description">
+                    <h6>Desde</h6>
+                    <h2>{{prop.price | currency}}{{prop.currency_type}}</h2>
                     <h2>{{prop.name}}</h2>
                     <p>{{prop.ad_description}}</p>
                     <p class="sub">{{prop.delegation}}</p>
