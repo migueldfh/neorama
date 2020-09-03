@@ -135,7 +135,7 @@ h2.title{
     margin: 0;
     padding: 0;
 }
-@media (max-width: 700px){
+@media (max-width: 991px){
     app-stick{
         display: none;
     }
@@ -166,15 +166,24 @@ h2.title{
     }
     .back{
         top: 29% !important;
-        left: 10px !important;
+        left: 0px !important;
         margin: 0;
+        h2{
+            &.title{
+                top: 0 !important;
+                left: 0 !important;
+                width: 100% !important;
+            }
+        }
     }
     .mobileBlock{
         display: block !important;
     }
     .form{
-        width: 70% !important;
-        height: 50vh !important;
+        width: 100% !important;
+        height: 57vh !important;
+        padding: 0 30px;
+        margin-top: 10px;
     }
     .map{
         width: 100% !important;

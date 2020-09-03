@@ -60,7 +60,7 @@ mat-dialog-content{
 .second{
     width: 90%;
 }
-@media (max-width: 700px){
+@media (max-width: 991px){
     .close{
         float: right;
         position: relative;
@@ -68,6 +68,15 @@ mat-dialog-content{
         width: 8%;
         padding: 0;
         left: -2px !important;
+    }
+    mat-dialog-content{
+        padding: 0;
+        margin: 0 !important;
+        width: 100% !important;
+        position: relative;
+        top: -30px;
+        height: 64vh;
+        overflow: hidden;
     }
 }
 @media (max-width: 768px){

@@ -303,7 +303,7 @@ mat-form-field{
         }
     }
     .main{
-        height: 33vh;
+        height: 50vh;
         width: 100%;
         margin: 0 !important;
     }
@@ -327,7 +327,7 @@ mat-form-field{
         display: block;
         background: white;
         border-radius: 35px;
-        height: 23vh;
+        height: 36vh;
         text-align: center;
         color: #001c2b;
         margin-top: 3vh;
@@ -337,7 +337,7 @@ mat-form-field{
         button{
             background: #feaa61;
             color: #fff;
-            width: 90%;
+            width: 70%;
         }
         h3{
             font-size: 1.3rem;
@@ -360,7 +360,7 @@ mat-form-field{
 }
 @media (max-width: 400px){
     .desktopNone{
-        height: 32vh;
+        height: 36vh;
         h3{
             margin-top: 1vh;
         }
