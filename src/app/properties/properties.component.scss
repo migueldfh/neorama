@@ -209,6 +209,9 @@ mat-icon{
     .none{
         display: none !important;
     }
+    .newWidht{
+        width: 107% !important;
+    }
     app-stick{
         display: none;
     }
@@ -290,6 +293,15 @@ mat-icon{
         }
     }
 ::ng-deep{
+    .carousel-slide{
+        height: 30vh !important;
+        text-align: center;
+    }
+    .carousel{
+        img{
+            width: 60%;
+        }
+    }
     .cdk-overlay-pane{
         width: 100% !important;
         z-index: 0 !important;

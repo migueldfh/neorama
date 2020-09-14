@@ -238,7 +238,7 @@
         <div class="row mobileShow" *ngIf="!mobileActive">
             <button mat-raised-button class="filters" (click)="showFilters()"><mat-icon>search</mat-icon> Filtrar</button>
         </div>
-        <div [class.none]="mobileActive" class="container-properties col-xl-9 col-lg-7 col-sm-12">
+        <div [class.none]="mobileActive" [class.newWidht]="!mobileActive" class="container-properties col-xl-9 col-lg-7 col-sm-12">
             <!-- <p>Casas con alberca en Nuevo León</p> -->
             <div *ngFor="let prop of properties;let i = index" class="props">
                 <div fxLayout="column" class="slider carousel-container">
