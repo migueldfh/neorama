@@ -20,14 +20,14 @@
         <div class="img-back col-sm-12">
             <img src="../../assets/img/pexels-photo-2462015.jpeg" alt="Servicios">
             <div class="subjects row">
-                <button [class.select]="display1" class="col-sm-3" mat-button (click)="goTo(1)">Comercialización de Inmuebles</button>
-                <button [class.select]="display2" class="col-sm-3" mat-button (click)="goTo(2)">Asesoría financiera</button>
-                <button [class.select]="display3" class="col-sm-3" mat-button (click)="goTo(3)">Trámites hipotecarios</button>
+                <button [class.select]="display1" class="col-sm-3" mat-button (click)="goTo(1, '1')" #myProp>Comercialización de Inmuebles</button>
+                <button [class.select]="display2" class="col-sm-3" mat-button (click)="goTo(2, '1')" #myProp>Asesoría financiera</button>
+                <button [class.select]="display3" class="col-sm-3" mat-button (click)="goTo(3, '1')" #myProp>Trámites hipotecarios</button>
             </div>
             <div class="subjects row">
-                <button [class.select]="display4" mat-button class="col-sm-3" (click)="goTo(4)">Asesoría y Acompañamiento legal</button>
-                <button [class.select]="display5" mat-button class="col-sm-3" (click)="goTo(5)">Desarrollo de proyectos arquitectónicos <br> y constructivos</button>
-                <button [class.select]="display6" mat-button class="col-sm-3" (click)="goTo(6)">Desarrollos de proyectos de inversión</button>
+                <button [class.select]="display4" mat-button class="col-sm-3" (click)="goTo(4, '1')" #myProp>Asesoría y Acompañamiento legal</button>
+                <button [class.select]="display5" mat-button class="col-sm-3" (click)="goTo(5, '1')" #myProp>Desarrollo de proyectos arquitectónicos <br> y constructivos</button>
+                <button [class.select]="display6" mat-button class="col-sm-3" (click)="goTo(6, '1')" #myProp>Desarrollos de proyectos de inversión</button>
             </div>
         </div>
     </div>
@@ -39,27 +39,27 @@
                     <h3>Servicios</h3>
                 </div>
                 <h3 *ngIf="display_transparent" class="transparent">...</h3>
-                <h3 *ngIf="display1">
+                <h3 *ngIf="display1" id="1">
                     <h2>Comercialización de Inmuebles</h2>
                     Nos especializamos en la Venta, Renta y Administración de Bienes Inmuebles brindando atención integral durante todo el proceso; ya que contamos con las mejores opciones y recursos para publicitar tu inmueble y garantizar resultados en el menor tiempo y con el mejor servicio.
                 </h3>
-                <h3 *ngIf="display2">
+                <h3 *ngIf="display2" id="1">
                     <h2>Asesoría financiera</h2>
                     Ofrecemos estrategias y planes de inversión en el sector inmobiliario presentando los mejores rendimientos del mercado, podemos realizar un plan de acuerdo a tus necesidades; y lo mejor de todo es que no es necesario que tengas experiencia en inversiones de ningún tipo, nosotros te asesoramos.
                 </h3>
-                <h3 *ngIf="display3">
+                <h3 *ngIf="display3" id="1">
                     <h2>Trámites hipotecarios</h2>
                     Contamos con la información más completa de todas las opciones de crédito hipotecario disponibles en el mercado, te asesoramos para tomar en cuenta todas las posibilidades y variantes, además de que te acompañamos y brindamos la asesoría total durante el trámite.
                 </h3>
-                <h3 *ngIf="display4">
+                <h3 *ngIf="display4" id="1">
                     <h2>Asesoría y Acompañamiento legal</h2>
                     Contamos con la experiencia para dar información y asesoría para los trámites, jurídicos, legales y notariales durante todos los procesos; además de contar con servicios jurídicos de la rama inmobiliaria como garantía jurídica.
                 </h3>
-                <h3 *ngIf="display5">
+                <h3 *ngIf="display5" id="1">
                     <h2>Desarrollo de proyectos arquitectónicos y constructivos</h2>
                     Como socios comerciales de un despacho de Arquitectos contamos con toda la experiencia de asesoría en la planeación de proyectos de manera integral, mejorando significativamente la eficiencia, rentabilidad y aprovechamiento de los proyectos.
                 </h3>
-                <h3 *ngIf="display6">
+                <h3 *ngIf="display6" id="1">
                     <h2>Desarrollos de proyectos de inversión</h2>
                     Tenemos diferentes proyectos inmobiliarios donde se puede invertir, obteniendo siempre la mayor seguridad y rentabilidad.
                 </h3>

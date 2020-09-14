@@ -168,11 +168,14 @@ h2.title{
         top: 29% !important;
         left: 0px !important;
         margin: 0;
+        height: 70vh;
         h2{
             &.title{
-                top: 0 !important;
-                left: 0 !important;
-                width: 100% !important;
+                top: 60px !important;
+                left: -20px !important;
+                width: 110% !important;
+                background: #ffffff78;
+                padding: 10px 40px;
             }
         }
     }

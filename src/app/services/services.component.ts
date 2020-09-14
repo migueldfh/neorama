@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-services',
@@ -8,6 +9,8 @@ import { FormControl } from '@angular/forms';
   encapsulation: ViewEncapsulation.None
 })
 export class ServicesComponent implements OnInit {
+  @ViewChild("myProp", {static: false}) MyProp: ElementRef;
+
   tabs: any = [
     {
       name: 'Comercialización de Inmuebles',
@@ -43,7 +46,7 @@ export class ServicesComponent implements OnInit {
   display5: boolean;
   display6: boolean;
 
-  constructor() {
+  constructor(private vps: ViewportScroller) {
     this.display1 = true;
     this.display2 = false;
     this.display_transparent = false;
@@ -56,7 +59,14 @@ export class ServicesComponent implements OnInit {
   ngOnInit() {
   }
 
-  goTo(x){
+  // scroll(id) {
+  //   this.vps.scrollToAnchor(id);
+  // }
+
+  goTo(x, id){
+    // el.scrollIntoView({behavior:"smooth"});
+    // this.MyProp.nativeElement.scrollIntoView({ behavior: "smooth", block: "end" });
+    this.vps.scrollToAnchor(id);
     if(x == 1){
       this.display1 = true;
       this.display_transparent = false;

@@ -133,6 +133,7 @@
         display: block !important;
         .img-content-mobile{
             width: 100%;
+            z-index: 99;
             display: block !important;
             background-image: url(../../assets/img/pexels-photo-2462015.jpeg);
             background-size: cover;
@@ -147,7 +148,7 @@
                     button{
                         padding: 0 14px;
                         background: #fff;
-                        margin: 5vh 3vh;
+                        margin: 5vh 3vh 1vh 3vh;
                     }
                 }
             }
@@ -156,6 +157,9 @@
                     font-size: 0.7rem !important;
                     &:first-child{
                         margin-top: 5vh !important;
+                    }
+                    &:last-child{
+                        margin-bottom: 2vh !important;
                     }
                 }
             }
