@@ -321,6 +321,33 @@ h2, p{
         width: 57% !important;
     }
 }
+@media only screen and (min-width: 1112px) and (orientation: landscape){
+    .title{
+        h2{
+            width: 100% !important;
+        }
+    }
+    .sub{
+        display: none !important;
+    }
+    ::ng-deep{
+        .carousel{
+            height: 17vh !important;
+            img{
+                width: 57% !important;
+            }
+        }
+        .carousel > button {
+            top: 13% !important;
+        }
+    }
+    .people-mobile{
+        display: none;
+    }
+    .img-edited{
+        width: 57% !important;
+    }
+}
 @media (max-width: 991px){
     app-stick{
         display: none;

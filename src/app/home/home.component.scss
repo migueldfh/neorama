@@ -358,6 +358,26 @@ mat-form-field{
         margin-top: 2vh !important;
     }
 }
+@media only screen and (min-width: 1112px) and (orientation: landscape) {
+    mat-list-item{
+        &:nth-child(4){
+            position: relative !important;
+            left: 20% !important;
+            top: 10px !important;
+        }
+        &:nth-child(5){
+            position: relative !important;
+            left: 20% !important;
+            top: 10px !important;
+        }
+    }
+    .search-bar{
+        height: 6vh !important;
+    }
+    .last-filters{
+        margin-top: 2vh !important;
+    }
+}
 @media (max-width: 991px){
     app-stick{
         display: none;

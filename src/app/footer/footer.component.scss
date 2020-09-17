@@ -40,6 +40,13 @@
         }
     }
 }
+@media only screen and (min-width: 1112px) and (orientation: landscape){
+    .footer{
+        .row, .copy{
+            width: 100% !important;
+        }
+    }
+}
 @media (max-width: 1000px){
     .footer{
         .row, .copy{
