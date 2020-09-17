@@ -87,9 +87,9 @@ export class HomeComponent implements OnInit {
     this.userApi.propiedades().subscribe(resp=>{
       this.properties = resp;
       console.log("props: ", this.properties);
-      if(this.properties.length <= 6){
-        this.propertiesArr = resp;
-      }
+      // if(this.properties.length <= 6){
+      //   this.propertiesArr = resp;
+      // }
     });
   }
 

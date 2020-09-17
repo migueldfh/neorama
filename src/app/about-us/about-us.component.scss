@@ -192,7 +192,109 @@ h2, p{
 .img-edited{
     width: 90%;
 }
-@media (max-width: 1000px){
+@media only screen and (min-width: 834px) and (max-width: 1024px){
+    .title{
+        h2{
+            width: 100% !important;
+        }
+    }
+    .sub{
+        display: none !important;
+    }
+    ::ng-deep{
+        .carousel{
+            height: 17vh !important;
+            img{
+                width: 57% !important;
+            }
+        }
+        .carousel > button {
+            top: 13% !important;
+        }
+    }
+    .people-mobile{
+        display: none;
+    }
+    .img-edited{
+        width: 57% !important;
+    }
+}
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2.0),
+  only screen and (   min--moz-device-pixel-ratio: 2.0),
+  only screen and (     -o-min-device-pixel-ratio: 2.0/1),
+  only screen and (        min-device-pixel-ratio: 2.0),
+  only screen and (                min-resolution: 264 dpi),
+  only screen and (                min-resolution: 2.0dppx) { 
+    /* Retina styles here */
+    .title{
+        h2{
+            width: 100% !important;
+        }
+    }
+    .sub{
+        display: none !important;
+    }
+    ::ng-deep{
+        .carousel{
+            height: 17vh !important;
+            img{
+                width: 57% !important;
+            }
+        }
+        .carousel > button {
+            top: 13% !important;
+        }
+    }
+    .people-mobile{
+        display: none;
+    }
+    .img-edited{
+        width: 57% !important;
+    }
+}
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    /* Retina styles here */
+    .title{
+        h2{
+            width: 100% !important;
+        }
+    }
+    .sub{
+        display: none !important;
+    }
+    ::ng-deep{
+        .carousel{
+            height: 17vh !important;
+            img{
+                width: 57% !important;
+            }
+        }
+        .carousel > button {
+            top: 13% !important;
+        }
+    }
+    .people-mobile{
+        display: none;
+    }
+    .img-edited{
+        width: 57% !important;
+    }
+}
+@media
+  only screen and (-webkit-min-device-pixel-ratio: 3),
+  only screen and (   min--moz-device-pixel-ratio: 3),
+  only screen and (     -o-min-device-pixel-ratio: 3/1),
+  only screen and (        min-device-pixel-ratio: 3),
+  only screen and (                min-resolution: 384dpi),
+  only screen and (                min-resolution: 3dppx) { 
+    /* Retina styles here */
     .title{
         h2{
             width: 100% !important;
