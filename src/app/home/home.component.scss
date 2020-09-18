@@ -257,7 +257,7 @@ mat-form-field{
 .last-filters{
     margin-top: 2vh;
 }
-@media only screen and (min-width: 834px) and (max-width: 1024px){
+@media (max-width: 1024px){
     mat-list-item{
         &:nth-child(4){
             position: relative !important;
@@ -277,88 +277,88 @@ mat-form-field{
         margin-top: 2vh !important;
     }
 }
-@media
-  only screen and (-webkit-min-device-pixel-ratio: 2.0),
-  only screen and (   min--moz-device-pixel-ratio: 2.0),
-  only screen and (     -o-min-device-pixel-ratio: 2.0/1),
-  only screen and (        min-device-pixel-ratio: 2.0),
-  only screen and (                min-resolution: 264 dpi),
-  only screen and (                min-resolution: 2.0dppx) { 
-    /* Retina styles here */
-    mat-list-item{
-        &:nth-child(4){
-            position: relative !important;
-            left: 20% !important;
-            top: 10px !important;
-        }
-        &:nth-child(5){
-            position: relative !important;
-            left: 20% !important;
-            top: 10px !important;
-        }
-    }
-    .search-bar{
-        height: 6vh !important;
-    }
-    .last-filters{
-        margin-top: 2vh !important;
-    }
-}
-@media
-  only screen and (-webkit-min-device-pixel-ratio: 2),
-  only screen and (   min--moz-device-pixel-ratio: 2),
-  only screen and (     -o-min-device-pixel-ratio: 2/1),
-  only screen and (        min-device-pixel-ratio: 2),
-  only screen and (                min-resolution: 192dpi),
-  only screen and (                min-resolution: 2dppx) { 
-    /* Retina styles here */
-    mat-list-item{
-        &:nth-child(4){
-            position: relative !important;
-            left: 20% !important;
-            top: 10px !important;
-        }
-        &:nth-child(5){
-            position: relative !important;
-            left: 20% !important;
-            top: 10px !important;
-        }
-    }
-    .search-bar{
-        height: 6vh !important;
-    }
-    .last-filters{
-        margin-top: 2vh !important;
-    }
-}
-@media
-  only screen and (-webkit-min-device-pixel-ratio: 3),
-  only screen and (   min--moz-device-pixel-ratio: 3),
-  only screen and (     -o-min-device-pixel-ratio: 3/1),
-  only screen and (        min-device-pixel-ratio: 3),
-  only screen and (                min-resolution: 384dpi),
-  only screen and (                min-resolution: 3dppx) { 
-    /* Retina styles here */
-    mat-list-item{
-        &:nth-child(4){
-            position: relative !important;
-            left: 20% !important;
-            top: 10px !important;
-        }
-        &:nth-child(5){
-            position: relative !important;
-            left: 20% !important;
-            top: 10px !important;
-        }
-    }
-    .search-bar{
-        height: 6vh !important;
-    }
-    .last-filters{
-        margin-top: 2vh !important;
-    }
-}
-@media only screen and (min-width: 1112px) and (orientation: landscape) {
+// @media
+//   only screen and (-webkit-min-device-pixel-ratio: 2.0),
+//   only screen and (   min--moz-device-pixel-ratio: 2.0),
+//   only screen and (     -o-min-device-pixel-ratio: 2.0/1),
+//   only screen and (        min-device-pixel-ratio: 2.0),
+//   only screen and (                min-resolution: 264 dpi),
+//   only screen and (                min-resolution: 2.0dppx) { 
+//     /* Retina styles here */
+//     mat-list-item{
+//         &:nth-child(4){
+//             position: relative !important;
+//             left: 20% !important;
+//             top: 10px !important;
+//         }
+//         &:nth-child(5){
+//             position: relative !important;
+//             left: 20% !important;
+//             top: 10px !important;
+//         }
+//     }
+//     .search-bar{
+//         height: 6vh !important;
+//     }
+//     .last-filters{
+//         margin-top: 2vh !important;
+//     }
+// }
+// @media
+//   only screen and (-webkit-min-device-pixel-ratio: 2),
+//   only screen and (   min--moz-device-pixel-ratio: 2),
+//   only screen and (     -o-min-device-pixel-ratio: 2/1),
+//   only screen and (        min-device-pixel-ratio: 2),
+//   only screen and (                min-resolution: 192dpi),
+//   only screen and (                min-resolution: 2dppx) { 
+//     /* Retina styles here */
+//     mat-list-item{
+//         &:nth-child(4){
+//             position: relative !important;
+//             left: 20% !important;
+//             top: 10px !important;
+//         }
+//         &:nth-child(5){
+//             position: relative !important;
+//             left: 20% !important;
+//             top: 10px !important;
+//         }
+//     }
+//     .search-bar{
+//         height: 6vh !important;
+//     }
+//     .last-filters{
+//         margin-top: 2vh !important;
+//     }
+// }
+// @media
+//   only screen and (-webkit-min-device-pixel-ratio: 3),
+//   only screen and (   min--moz-device-pixel-ratio: 3),
+//   only screen and (     -o-min-device-pixel-ratio: 3/1),
+//   only screen and (        min-device-pixel-ratio: 3),
+//   only screen and (                min-resolution: 384dpi),
+//   only screen and (                min-resolution: 3dppx) { 
+//     /* Retina styles here */
+//     mat-list-item{
+//         &:nth-child(4){
+//             position: relative !important;
+//             left: 20% !important;
+//             top: 10px !important;
+//         }
+//         &:nth-child(5){
+//             position: relative !important;
+//             left: 20% !important;
+//             top: 10px !important;
+//         }
+//     }
+//     .search-bar{
+//         height: 6vh !important;
+//     }
+//     .last-filters{
+//         margin-top: 2vh !important;
+//     }
+// }
+@media only screen and (max-width: 1112px) and (orientation: landscape) {
     mat-list-item{
         &:nth-child(4){
             position: relative !important;

@@ -320,7 +320,7 @@ mat-icon{
     }
 }
 }
-@media only screen and (min-width: 1112px) and (orientation: landscape){
+@media only screen and (max-width: 1112px) and (orientation: landscape){
     .none{
         display: none !important;
     }
