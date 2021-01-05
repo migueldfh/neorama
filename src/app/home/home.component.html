@@ -2,72 +2,9 @@
 <div class="main" fxLayout="row">
     <app-stick></app-stick>
     <div class="baner row">
-        <h3>Creamos un futuro para tu familia</h3>
-        <div class="main-search mobileNone col-lg-9 col-md-9 col-offset-3">
-            <h3>Buscador de Propiedades</h3>
-            <div class="options">
-                <mat-list class="col-lg-10 col-md-10 col-offset-2 row option-btns">
-                    <mat-list-item class="col-xl-2 col-lg-3 margin-btwn" [class.blue]="selected1" (click)="status(1)"><p>Comprar</p></mat-list-item>
-                    <mat-list-item class="col-xl-2 col-lg-3 margin-btwn" [class.blue]="selected2" (click)="status(2)"><p>Rentar</p></mat-list-item>
-                    <mat-list-item class="col-xl-2 col-lg-3 margin-btwn" [class.blue]="selected3" (click)="status(3)"><p>Desarrollos</p></mat-list-item>
-                    <mat-list-item class="col-xl-2 col-lg-3 margin-btwn" [class.blue]="selected4" (click)="status(4)"><p>Comercial</p></mat-list-item>
-                    <mat-list-item class="col-xl-2 col-lg-3" [class.blue]="selected5" (click)="status(5)"><p>Temporal</p></mat-list-item>
-                </mat-list>
-            </div>
-            <div class="search-bar col-xl-10 col-lg-10 row">
-                <div class="select-search col-lg-3 col-lx-3">
-                    <!-- <p (click)="down()">Ver Desarrollos <i class="material-icons">keyboard_arrow_down</i></p> -->
-                    <mat-form-field class="search">
-                    <mat-label>Tipo de inmueble</mat-label>
-                        <mat-select name="inmueble" (selectionChange)="filterChanged($event.value)">
-                            <mat-option *ngFor="let food of foods" [value]="food.viewValue">
-                            {{food.viewValue}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-                <div class="col-xl-9 col-lg-8 lookfor">
-                    <form class="example-form" #register="ngForm" (keydown.enter)="$event.preventDefault()">
-                        <mat-form-field appearance="fill" class="inputback">
-                            <input matInput name="location" placeholder="Buscar por ubicación" type="text" class="classRed" ngModel>
-                        </mat-form-field>
-                    </form>
-                </div>
-                <div class="last-filters col-lg-12">
-                    <button mat-button type="submit" class="sub col-md-3" (click)="search(register.value)">Buscar</button>
-                </div>
-            </div>
-        </div>
-        <div fxFlex="80%" class="main-search-mobile desktopNone">
-            <h3>Propiedades</h3>
-            <form class="m-login__form m-form" #registerMobile="ngForm" (keydown.enter)="$event.preventDefault()">
-                <div class="flex">
-                    <mat-form-field class="search">
-                    <mat-label>Renta</mat-label>
-                        <mat-select>
-                            <mat-option *ngFor="let food of operation" [value]="food.value">
-                            {{food.viewValue}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field class="search">
-                    <mat-label>Casas</mat-label>
-                        <mat-select>
-                            <mat-option *ngFor="let food of inmueble" [value]="food.value">
-                            {{food.viewValue}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-                <mat-form-field appearance="outline" class="second">
-                    <mat-label>Busca por ubicación</mat-label>
-                    <input matInput type="text" placeholder="Escriba la ubicación" name="location" autocomplete="off" ngModel>
-                </mat-form-field>
-            <div class="m-login__form-action">
-                <button mat-button class="mat-raised-button" (click)="search(registerMobile.value)">BUSCAR</button>
-            </div>
-            </form>
-        </div>
+      <div class="col-lg-9 col-md-9 col-offset-3">
+        <h3 style="color: white">Creamos un futuro para tu familia</h3>
+      </div>
     </div>
 </div>
 <div class="text-section row col-xl-12 col-lg-12">
